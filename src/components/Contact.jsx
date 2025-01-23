@@ -199,7 +199,8 @@ const Contact = () => {
   };
 
   return (
-    <div className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}>
+    // xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden
+    <div className={``}>
       <div className="flex-[0.75] bg-black-100 p-8 rounded-2xl">
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
@@ -253,7 +254,7 @@ const Contact = () => {
       </div>
 
       <div className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]">
-        <EarthCanvas />
+        {/* <EarthCanvas /> */}
       </div>
     </div>
   );

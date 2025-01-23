@@ -16,10 +16,11 @@ const App = () => {
         <Works />
         <Certifications />
         <Feedbacks />
-        <div className='relative z-0'>
-          <Contact />
+        <Contact />
+        {/* <div className='relative z-0'>
+          
           <StarsCanvas />
-        </div>
+        </div> */}
       </div>
     </BrowserRouter>
   );
