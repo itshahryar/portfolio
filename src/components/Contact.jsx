@@ -200,7 +200,7 @@ const Contact = () => {
 
   return (
     // xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden
-    <div className={`flex xl:flex-row  gap-10 overflow-hidden`}>
+    <div className={`flex overflow-hidden`}>
       <div className="flex-[0.75] bg-black-100 p-8 rounded-2xl">
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact.</h3>

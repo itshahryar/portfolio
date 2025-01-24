@@ -33,7 +33,8 @@ import {
     word,
     dps,
     pgc,
-    cui
+    cui,
+    event
   } from "../assets";
   
   // export const navLinks = [
@@ -266,6 +267,39 @@ export const educationData = [
       ],
       image: carrent,
       source_code_link: "https://github.com/itshahryar/mern-realEstate",
+    },
+    {
+      name: "Al Futtaem (Ongoing)",
+      description:
+        "An ongoing Dubai-based web project for managing events, specifically designed for booking stalls in children's play areas and food stalls across various locations and events in Dubai. It streamlines the booking process and ensures smooth event management.",
+      tags: [
+        {
+          name: "next.js",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "Node.js",
+          color: "green-text-gradient",
+        },
+        {
+          name: "Firebase",
+          color: "orange-text-gradient",
+        },
+        {
+          name: "tailwind",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "mongodb",
+          color: "green-text-gradient",
+        },
+        {
+          name: "event-management",
+          color: "orange-text-gradient",
+        },
+      ],
+      image: event,
+      source_code_link: "https://f-droid.org/repo/com.wesaphzt.privatelock/en-US/icon_OXYL4zPM7m_x9uGup20Ho44fxLBq7Zgtm2NSSUWxt3U=.png",
     },
     {
       name: "FYP (Ongoing)",

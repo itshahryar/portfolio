@@ -34,6 +34,7 @@ import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 import hci from "./hci.jpg";
+import event from "./event.jpeg";
 
 import v3_letter from "./certifications/v3_letter.jpeg";
 import gender from "./certifications/gender.jpeg";
@@ -50,6 +51,7 @@ export {
   backend,
   creator,
   mobile,
+  event,
   web,
   web2,
   web3,
