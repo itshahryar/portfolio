@@ -8,3 +8,8 @@ I am a passionate software developer with a strong background in web development
 
 Feel free to reach out to me if you’d like to collaborate or if you have any questions!
 Thank you for visiting my portfolio!
+
+## Note
+I deployed the project without 3D models, motions, and visuals for now. To explore and check the 3D models and their visuals, you can view the code commented in the files on my GitHub.
+
+I have commented out certain sections related to the 3D models and animations temporarily, as they are still under development and may cause performance issues after deployment.
