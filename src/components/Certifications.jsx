@@ -62,6 +62,7 @@
 
 import React from "react";
 import { Tilt } from "react-tilt";
+import { styles } from "../style";
 
 import { certifications } from "../constants";
 
@@ -94,25 +95,30 @@ const CertificationCard = ({ index, title, date, issuedBy, image }) => {
 
 const Certifications = () => {
   return (
-    <div className="px-6 sm:px-16">
-      <div>
-        <p className="text-secondary uppercase text-sm tracking-wider">My Achievements</p>
-        <h2 className="text-white text-3xl font-bold">Certifications.</h2>
-      </div>
+    <section className="bg-transparent pt-[120px] pb-20">
+      <div className="px-6 sm:px-16">
+        <div className="mt-5">
+          <p className="text-secondary uppercase text-sm tracking-wider">My Achievements</p>
+          <h2 className="text-white text-3xl font-bold">Certifications</h2>
+          <p className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]">
+            I have earned a diverse range of certifications, spanning both technology and other areas that contribute to my personal and professional development. These certifications reflect my unwavering commitment to continuous learning and growth, both within my field and beyond.
+          </p>
+        </div>
 
-      <div className="mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7">
-        {certifications.map((cert, index) => (
-          <CertificationCard
-            key={`certification-${index}`}
-            index={index}
-            title={cert.title}
-            date={cert.date}
-            issuedBy={cert.issuedBy}
-            image={cert.image}
-          />
-        ))}
+        <div className="mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7">
+          {certifications.map((cert, index) => (
+            <CertificationCard
+              key={`certification-${index}`}
+              index={index}
+              title={cert.title}
+              date={cert.date}
+              issuedBy={cert.issuedBy}
+              image={cert.image}
+            />
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

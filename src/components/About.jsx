@@ -69,14 +69,21 @@ import { styles } from "../style";
 import { services } from "../constants";
 import { SectionWrapper } from "../hoc";
 
-const ServiceCard = ({ title, icon }) => (
-  <div className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card">
-    <div className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col">
-      <img src={icon} alt="web-development" className="w-16 h-16 object-contain" />
-      <h3 className="text-white text-[20px] font-bold text-center">{title}</h3>
+const ServiceCard = ({ title, icon }) => {
+  const titleParts = title.split(' ('); // Split the title into two parts at the first '('
+  
+  return (
+    <div className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card">
+      <div className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col">
+        <img src={icon} alt="web-development" className="w-16 h-16 object-contain" />
+        <h3 className="text-white text-[20px] font-bold text-center">
+          {titleParts[0]} <br />
+          <span className="block">{titleParts[1]}</span> {/* "React Native" will go here */}
+        </h3>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 const About = () => {
   return (

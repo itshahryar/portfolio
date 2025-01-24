@@ -31,39 +31,60 @@ import {
     gender2,
     pp,
     word,
+    dps,
+    pgc,
+    cui
   } from "../assets";
   
-  export const navLinks = [
-    {
-      id: "about",
-      title: "About",
-    },
-    {
-      id: "work",
-      title: "Work",
-    },
-    {
-      id: "contact",
-      title: "Contact",
-    },
-  ];
-  
+  // export const navLinks = [
+  //   {
+  //     id: "about",
+  //     title: "About",
+  //   },
+  //   {
+  //     id: "work",
+  //     title: "Work",
+  //   },
+  //   {
+  //     id: "contact",
+  //     title: "Contact",
+  //   },
+  // ];
+// src/constants/index.js
+export const educationData = [
+  {
+    school: "Divisional Public School & College Faisalabad",
+    percentage: "97.1%",
+    board: "BISE FSD Board",
+    year: "2019",
+    image: dps, // Optional: Add an image if desired
+  },
+  {
+    school: "Punjab Group of College Faisalabad",
+    percentage: "98%",
+    year: "2019-2021",
+    image: pgc, // Optional: Add an image if desired
+  },
+  {
+    school: "Comsats University Islamabad",
+    program: "Bachelor of Science in CS",
+    year: "FA21-FA25",
+    image: cui, // Optional: Add an image if desired
+  },
+];
+
   const services = [
     {
-      title: "Full Stack Web Developer (MERN)",
+      title: "Full Stack Web Developer ((MERN)",
       icon: web2,
     },
     {
-      title: "Frontend Mobile App Developer (React Native)",
+      title: "Frontend Mobile App Developer ((React Native)",
       icon: web3,
     },
     {
       title: "UI/UX Designer",
       icon: backend,
-    },
-    {
-      title: "Adobe Photoshop",
-      icon: creator,
     },
   ];
   

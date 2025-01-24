@@ -41,6 +41,10 @@ import gender2 from "./certifications/gender2.jpeg";
 import pp from "./certifications/pp.png";
 import word from "./certifications/office.png";
 
+import dps from "./education/dps.png";
+import pgc from "./education/pgc.png";
+import cui from "./education/cui.jpg";
+
 export {
   logo,
   backend,
@@ -78,6 +82,8 @@ export {
   gender,
   gender2,
   pp,
-  word
+  word,
+  dps,
+  pgc,
+  cui
 };
-
