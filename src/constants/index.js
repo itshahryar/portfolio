@@ -57,17 +57,20 @@ export const educationData = [
     school: "Divisional Public School & College Faisalabad",
     percentage: "97.1%",
     board: "BISE FSD Board",
+    level: "Matriculation (BISE FSD Board)",
     year: "2019",
     image: dps, // Optional: Add an image if desired
   },
   {
     school: "Punjab Group of College Faisalabad",
     percentage: "98%",
+    level: "Intermediate (BISE FSD Board)",
     year: "2019-2021",
     image: pgc, // Optional: Add an image if desired
   },
   {
     school: "Comsats University Islamabad",
+    level: "Bachelors",
     program: "Bachelor of Science in CS",
     year: "FA21-FA25",
     image: cui, // Optional: Add an image if desired
