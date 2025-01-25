@@ -24,7 +24,7 @@ const EducationCard = ({ index, school, marks, percentage, year, program, level,
         {level && <p className="mt-2 text-secondary text-[14px]">Education Level: {level}</p>}
         {percentage && <p className="mt-2 text-secondary text-[14px]">Percentage: {percentage}</p>}
         {program && <p className="mt-2 text-secondary text-[14px]">Program: {program}</p>}
-        {year && <p className="mt-2 text-secondary text-[14px]">Year: {year}</p>}
+        {year && <p className="mt-2 text-secondary text-[14px]">Duration: {year}</p>}
       </div>
     </motion.div>
   );
