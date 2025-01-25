@@ -48,7 +48,7 @@ const Hero = () => {
         </a>
       </div> */}
 
-<div className="absolute xs:bottom-20 bottom-14 w-full flex justify-center items-center">
+<div className="absolute xs:bottom-20 bottom-24 w-full flex justify-center items-center">
   <a href="#about">
     <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-center p-2">
       <span className="block w-3 h-3 border-b-4 border-r-4 border-secondary rotate-45 transform" />
