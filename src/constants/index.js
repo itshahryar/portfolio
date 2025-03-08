@@ -34,7 +34,8 @@ import {
     dps,
     pgc,
     cui,
-    event
+    event,
+    careerCoach
   } from "../assets";
   
   // export const navLinks = [
@@ -270,6 +271,47 @@ export const educationData = [
       ],
       image: carrent,
       source_code_link: "https://github.com/itshahryar/mern-realEstate",
+    },
+    {
+      name: "🚀 AI Career Coach",
+      description:
+        "AI Career Coach is an AI-powered job preparation platform that helps users build professional resumes, generate personalized cover letters, and practice for interviews with real-time AI feedback. It also provides career insights, industry trends, and job recommendations.",
+      tags: [
+        {
+          name: "Next.js",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "Tailwind CSS",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "Shadcn UI",
+          color: "red-text-gradient",
+        },
+        {
+          name: "Prisma",
+          color: "purple-text-gradient",
+        },
+        {
+          name: "NeonDB",
+          color: "green-text-gradient",
+        },
+        {
+          name: "Clerk",
+          color: "orange-text-gradient",
+        },
+        {
+          name: "Gemini AI",
+          color: "cyan-text-gradient",
+        },
+        {
+          name: "Inngest",
+          color: "yellow-text-gradient",
+        },
+      ],
+      image: careerCoach, // Replace with actual image variable
+      source_code_link: "https://github.com/itshahryar/Mern-ai-career-coach",
     },
     {
       name: "Al Futtaem (Ongoing)",

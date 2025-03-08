@@ -35,6 +35,7 @@ import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 import hci from "./hci.jpg";
 import event from "./event.jpeg";
+import careerCoach from "./careerCoach.png";
 
 import v3_letter from "./certifications/v3_letter.jpeg";
 import gender from "./certifications/gender.jpeg";
@@ -87,5 +88,6 @@ export {
   word,
   dps,
   pgc,
-  cui
+  cui,
+  careerCoach
 };
