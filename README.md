@@ -51,6 +51,25 @@ Key Features:
 
 SafeSitePlus is a comprehensive solution for modern construction site oversight and safety.
 
+### 🛠 Tools & Technologies Used:
+
+- **VS Code**
+- **Matplotlib**
+- **Material UI**
+- **Tailwind CSS**
+- **MongoDB**
+- **React**
+- **Node.js**
+- **Express.js**
+- **Langchain**
+- **AI Tools**
+- **Python**
+- **Postman**
+- **OpenCV**
+- **YOLOv8**
+- **GitHub**
+- **DuckDuckGo**
+
 ---
 
 ## 📌 Deployment Note
