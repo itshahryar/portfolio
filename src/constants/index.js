@@ -35,7 +35,12 @@ import {
     pgc,
     cui,
     event,
-    careerCoach
+    careerCoach,
+    finance,
+    portusx,
+    portusx2,
+    bootcamp,
+    workshop
   } from "../assets";
   
   // export const navLinks = [
@@ -73,24 +78,24 @@ export const educationData = [
     school: "Comsats University Islamabad",
     level: "Bachelors",
     program: "Bachelor of Science in Computer Science",
-    year: "FA21 - FA25",
+    year: "FA21 - SP25",
     image: cui, // Optional: Add an image if desired
   },
 ];
 
   const services = [
     {
-      title: "Full Stack Web Developer ((MERN)",
+      title: "Full Stack Web Developer ((MERN & Next.js)",
       icon: web2,
     },
     {
       title: "Frontend Mobile App Developer ((React Native)",
       icon: web3,
     },
-    {
-      title: "UI/UX Designer",
-      icon: backend,
-    },
+  {
+    title: "AI-Powered Solutions ((OpenAI & more)",
+    icon: backend,
+  },
   ];
   
   const technologies = [
@@ -138,61 +143,59 @@ export const educationData = [
       name: "figma",
       icon: figma,
     },
-    {
-      name: "Adobe Photoshop",
-      icon: adobe,
-    },
   ];
   
-  const experiences = [
-    {
-      title: "Junior React Native Mobile App Developer",
-      company_name: "V3 Solution (Private Limited)",
-      icon: v3,
-      iconBg: "#383E56",
-      date: "13 July 2023 - 31 August 2023",
-      points: [
-        "Developed and maintained mobile apps using React Native.",
-        "Collaborated closely with design teams to implement user-friendly app interfaces.",
-        "Worked with backend teams to integrate APIs and ensure smooth data flow.",
-        "Debugged the app to identify and fix issues during development.",
-      ],
-    },
-    {
-      title: "UI/UX Designer",
-      company_name: "Self Practice",
-      date: "Ongoing",
-      icon: tesla, // Add your icon path here
-      iconBg: "#383E56", // Background color for the icon
-      points: [
-        "Designed user interfaces and created wireframes for mobile and web apps.",
-        "Optimized user experience through feedback from users and testing.",
-        "Developed interactive prototypes and high-fidelity mockups in Figma.",
-        "Kept up-to-date with the latest design trends to create modern and user-friendly interfaces.",
-      ],
-    },
-    {
-      title: "Full stack Web Developer",
-      company_name: "Freelancer",
-      icon: meta,
-      iconBg: "#E6DEDD",
-      date: "July 2024 - Present",
-      points: [
-"Building full-stack web applications using the MERN stack (MongoDB, Express.js, React, Node.js).",
-"Implementing responsive designs and ensuring cross-platform functionality.",
-"Developing RESTful APIs to enable communication between the frontend and backend.",
-"Collaborating with clients to transform designs into functional and user-friendly interfaces.",
-      ],
-    },
-  ];
+const experiences = [
+  {
+    title: "Junior React Native Developer (Intern)",
+    company_name: "V3 Solutions Private Limited",
+    icon: v3,
+    iconBg: "#383E56",
+    date: "Jul 2023 – Aug 2023",
+    points: [
+      "Built responsive React Native UI components and integrated APIs under guidance, gaining foundational mobile development skills.",
+      "Assisted in identifying and fixing UI/performance issues, contributing to overall app stability.",
+    ],
+  },
+  {
+    title: "MERN Stack Developer (Employed)",
+    company_name: "Portus X",
+    icon: portusx, // You can replace this with Portus X's logo if available
+    iconBg: "#E6DEDD",
+    date: "Jul 2024 – Sep 2024",
+    points: [
+      "Built web applications using MongoDB, Express.js, React.js, and Node.js, implementing REST APIs and interactive UI components.",
+      "Designed database schemas and optimized queries to enhance performance and ensure data reliability.",
+    ],
+  },
+];
 
   const certifications = [
     {
       title: "React Native Internship Completion Letter",
-      date: "01 September 2023",
+      date: "July 2023 - 01 September 2023",
       issuedBy: "V3 Solution (Private Limited)",
       image: v3_letter,
     },
+    {
+      title: "Mern Stack Developer Experiece Letter",
+      date: "01 July 2024 - 20 September 2024",
+      issuedBy: "Portusx",
+      image: portusx2,
+    },
+    {
+  title: "Build with AI – Workshop",
+  date: "21 April 2025",
+  issuedBy: "Google Developer Groups on Campus (GDGoC) - CUI",
+  image: workshop
+},
+{
+  title: "Web Bootcamp with LLM Workflows",
+  date: "23 May 2025",
+  issuedBy: "GDGoC - CUI",
+  certificateId: "3e61c74f-07b0-4979-bc23-188e4e008224",
+  image: bootcamp
+},
     {
       title: "Microsoft Specialist: Word (Office 2016)",
       date: "15 November 2020",
@@ -244,7 +247,7 @@ export const educationData = [
   
   const projects = [
     {
-      name: "MERN Real-Estate",
+      name: "🏘️ MERN Real-Estate",
       description:
         "Welcome to SherryEstate, a comprehensive real estate application that simplifies the process of buying, selling, and renting properties. With an intuitive interface, powerful search functionality, and seamless integration with Firebase and MongoDB.",
       tags: [
@@ -309,106 +312,122 @@ export const educationData = [
           name: "Inngest",
           color: "yellow-text-gradient",
         },
+        {
+          name: "vercel",
+          color: "black-text-gradient",
+        },
       ],
       image: careerCoach, // Replace with actual image variable
       source_code_link: "https://github.com/itshahryar/Mern-ai-career-coach",
     },
+{
+  name: "📈 AI Finance Platform",
+  description:
+    "A full-stack AI-powered finance platform offering real-time financial insights, analytics, and secure user management. Integrated with intelligent automation features to deliver a seamless user experience.",
+  tags: [
     {
-      name: "Al Futtaem (Ongoing)",
-      description:
-        "An ongoing Dubai-based web project for managing events, specifically designed for booking stalls in children's play areas and food stalls across various locations and events in Dubai. It streamlines the booking process and ensures smooth event management.",
-      tags: [
-        {
-          name: "next.js",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "Node.js",
-          color: "green-text-gradient",
-        },
-        {
-          name: "Firebase",
-          color: "orange-text-gradient",
-        },
-        {
-          name: "tailwind",
-          color: "pink-text-gradient",
-        },
-        {
-          name: "mongodb",
-          color: "green-text-gradient",
-        },
-        {
-          name: "event-management",
-          color: "orange-text-gradient",
-        },
-      ],
-      image: event,
-      source_code_link: "https://f-droid.org/repo/com.wesaphzt.privatelock/en-US/icon_OXYL4zPM7m_x9uGup20Ho44fxLBq7Zgtm2NSSUWxt3U=.png",
+      name: "next.js",
+      color: "blue-text-gradient",
     },
     {
-      name: "FYP (Ongoing)",
-      description:
-        "My FYP is a (web-based) construction site monitoring system that focuses on real-time monitoring, anomaly detection using computer vision, and incident management. It includes user administration, supervisor's supervision, site assigning, camera integration, and reporting tools to improve productivity, security, and efficiency on construction sites.",
-        tags: [
-          {
-            name: "Python",
-            color: "yellow-text-gradient",
-          },
-          {
-            name: "JavaScript",
-            color: "blue-text-gradient",
-          },
-          {
-            name: "Node.js",
-            color: "green-text-gradient",
-          },
-          {
-            name: "React",
-            color: "cyan-text-gradient",
-          },
-          {
-            name: "Pytorch",
-            color: "purple-text-gradient",
-          },
-          {
-            name: "TensorFlow",
-            color: "red-text-gradient",
-          },
-          {
-            name: "FastApi",
-            color: "orange-text-gradient",
-          },
-          {
-            name: "OpenCv",
-            color: "green-text-gradient",
-          },
-          {
-            name: "Matplotlib",
-            color: "pink-text-gradient",
-          },
-          {
-            name: "Yolov8",
-            color: "violet-text-gradient",
-          },
-          {
-            name: "tailwind",
-            color: "pink-text-gradient",
-          },
-          {
-            name: "Material UI",
-            color: "purple-text-gradient",
-          },
-          {
-            name: "Machine Learning",
-            color: "blue-text-gradient",
-          }                    
-        ],        
-      image: jobit,
-      source_code_link: "https://github.com/itshahryar/FYP",
+      name: "tailwind css",
+      color: "pink-text-gradient",
     },
     {
-      name: "MealMentor - UI/UX",
+      name: "prisma",
+      color: "purple-text-gradient",
+    },
+    {
+      name: "gemini-ai",
+      color: "orange-text-gradient",
+    },
+    {
+    name: "Shadcn UI",
+    color: "red-text-gradient",
+    },
+    {
+      name: "clerk",
+      color: "red-text-gradient",
+    },
+    {
+      name: "vercel",
+      color: "black-text-gradient",
+    },
+    {
+      name: "inngest",
+      color: "green-text-gradient",
+    },
+  ],
+  image: finance, // Replace with actual image related to I Finance if available
+  source_code_link: "https://github.com/itshahryar/next-ai-finance", // Replace with your actual link
+},
+{
+  name: "👷‍♂️ FYP - SafeSitePlus",
+  description:
+    "SafeSitePlus is an AI-powered platform for construction site management with robust user administration and supervisor oversight. It enhances safety through incident detection (fire, falls, missing PPE) and prioritized alerts with screenshots. Key features include a policy-based chatbot, digital notepad, automated reporting, and forecasting for risk anticipation and planning.",
+  tags: [
+    {
+      name: "Material UI",
+      color: "purple-text-gradient",
+    },
+    {
+      name: "tailwind css",
+      color: "pink-text-gradient",
+    },
+    {
+      name: "MongoDB",
+      color: "green-text-gradient",
+    },
+    {
+      name: "React",
+      color: "cyan-text-gradient",
+    },
+    {
+      name: "Node.js",
+      color: "green-text-gradient",
+    },
+    {
+      name: "Express.js",
+      color: "blue-text-gradient",
+    },
+    {
+      name: "Langchain",
+      color: "orange-text-gradient",
+    },
+    {
+      name: "AI Tools",
+      color: "red-text-gradient", // Represents Gemini, Grok, etc. collectively
+    },
+    {
+      name: "Python",
+      color: "yellow-text-gradient",
+    },
+    {
+      name: "Postman",
+      color: "orange-text-gradient",
+    },
+    {
+      name: "OpenCV",
+      color: "green-text-gradient",
+    },
+    {
+      name: "Yolo v8",
+      color: "violet-text-gradient",
+    },
+    {
+      name: "GitHub",
+      color: "black-text-gradient",
+    },
+    {
+    name: "DuckDuckGo",
+    color: "orange-text-gradient",
+    },
+  ],
+  image: jobit, // You can replace with an actual project image
+  source_code_link: "https://github.com/Zamin-Raza/SafeSitePlus",
+},
+    {
+      name: "MealMentor - UI",
       description:
         "MealMentor is an app that simplifies meal planning for busy parents by offering personalized recipes based on available ingredients, dietary needs, and health conditions. It features grocery management tools, meal reminders, and visual guides to make cooking easier and healthier.",
       tags: [

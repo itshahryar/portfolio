@@ -101,7 +101,7 @@ const Certifications = () => {
           <p className="text-secondary uppercase text-sm tracking-wider">My Achievements</p>
           <h2 className="text-white text-3xl font-bold">Certifications</h2>
           <p className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]">
-            I have earned a diverse range of certifications, spanning both technology and other areas that contribute to my personal and professional development. These certifications reflect my unwavering commitment to continuous learning and growth, both within my field and beyond.
+            I've earned diverse certifications that reflect my commitment to continuous learning, personal growth, and professional excellence across tech and beyond.
           </p>
         </div>
 

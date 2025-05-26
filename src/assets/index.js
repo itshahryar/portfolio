@@ -29,6 +29,7 @@ import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import v3 from "./company/v3.jpeg";
 import tesla from "./company/tesla.png";
+import portusx2 from "./portusx2.png";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
@@ -36,12 +37,16 @@ import tripguide from "./tripguide.png";
 import hci from "./hci.jpg";
 import event from "./event.jpeg";
 import careerCoach from "./careerCoach.png";
+import finance from "./finance.png";
 
 import v3_letter from "./certifications/v3_letter.jpeg";
 import gender from "./certifications/gender.jpeg";
 import gender2 from "./certifications/gender2.jpeg";
 import pp from "./certifications/pp.png";
 import word from "./certifications/office.png";
+import portusx from "./certifications/portusx.png";
+import bootcamp from "./certifications/bootcamp.png";
+import workshop from "./certifications/workshop.jpeg";
 
 import dps from "./education/dps.png";
 import pgc from "./education/pgc.png";
@@ -89,5 +94,10 @@ export {
   dps,
   pgc,
   cui,
-  careerCoach
+  careerCoach,
+  finance,
+  portusx,
+  portusx2,
+  bootcamp,
+  workshop
 };

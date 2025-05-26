@@ -21,7 +21,6 @@ const App = () => {
               <Experience />
               <Tech />
               <Works />
-              <Feedbacks />
               <Contact />
               {/* <StarsCanvas /> */}
               <Footer /> {/* Add Footer here */}

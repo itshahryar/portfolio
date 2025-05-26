@@ -19,10 +19,10 @@ const Hero = () => {
     <p className="mt-2 text-white text-[14px] sm:text-[10px] lg:text-lg italic mb-4">
     "Pushing boundaries to make digital spaces feel like home, with a vision that stays unforgettable."
     </p>
-    <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-      I build full-stack web solutions, <br className="sm:block hidden" />
-      design intuitive UI/UX, and craft visuals with Adobe Photoshop.
-    </p>
+<p className={`${styles.heroSubText} mt-2 text-white-100`}>
+  I build full-stack web solutions using the MERN stack and Next.js, <br className="sm:block hidden" />
+  with seamless integration of AI technologies to enhance functionality and user experience.
+</p>
   </div>
 </div>
 

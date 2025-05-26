@@ -93,11 +93,10 @@ const About = () => {
         <h2 className={styles.sectionHeadText}>Overview.</h2>
       </div>
 
-      <p className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]">
-        I'm Shahryar, a passionate Computer Scientist focused on the MERN stack (MongoDB, Express.js, React, and Node.js) for web development, with React Native as my secondary skill for frontend mobile app development. I create intuitive UI/UX designs to ensure seamless and user-friendly experiences across platforms.
-        In addition to my development skills, I also work with Adobe Photoshop to design logos, posters, and flyers that stand out.
-        Let’s collaborate and create impactful, seamless digital solutions together!
-      </p>
+<p className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]">
+  I'm Muhammad Shahryar Amjad, a passionate Computer Scientist focused on full-stack web development using the MERN stack and Next.js. I integrate modern AI technologies to build intelligent, efficient, and user-friendly web applications. <br />
+  {/* Let’s collaborate and create impactful digital solutions together! */}
+</p>
 
       <div className="mt-20 flex gap-10 overflow-x-auto">
         {services.map((service) => (
