@@ -179,7 +179,7 @@ const experiences = [
     },
     {
       title: "Mern Stack Developer Experiece Letter",
-      date: "01 July 2024 - 20 September 2024",
+      date: "20 July 2024 - 20 September 2024",
       issuedBy: "Portusx",
       image: portusx2,
     },
