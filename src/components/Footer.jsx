@@ -96,7 +96,7 @@ const Footer = () => {
         <div className="mt-8 text-center text-sm">
           <p>&copy; {new Date().getFullYear()} Shahryar. All rights reserved.</p>
           <p className="mt-2">
-            Where every pixel has a purpose and every line of code speaks volumes.
+            Where every pixel has a purpose and every line of code speaks volumes!
           </p>
         </div>
       </div>
