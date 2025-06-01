@@ -60,7 +60,7 @@ const Hero = () => {
   );
 };
 
-// export default Hero;
+export default Hero;
 
 // import { motion } from "framer-motion";
 // import { styles } from "../style";
