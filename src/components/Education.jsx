@@ -39,7 +39,7 @@ const Education = () => {
         <p className="text-secondary uppercase text-sm tracking-wider">My Educational Journey</p>
         <h2 className="text-white text-3xl font-bold">Education</h2>
         <p className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]">
-        My education has provided me with a strong foundation in key areas of knowledge, empowering me to continuously expand my skills and stay ahead in my field. It reflects my commitment to learning, problem-solving, and developing a well-rounded understanding of various academic disciplines.
+        My education has laid a strong foundation, nurturing my passion for learning, problem-solving, and continuous growth in an ever-evolving field.
         </p>
       </motion.div>
 

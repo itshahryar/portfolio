@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaInstagram, FaFacebook, FaEnvelope, FaGithub } from 'react-icons/fa'; // Added FaGithub
+import { FaInstagram, FaFacebook, FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa'; // Added FaLinkedin
 import logo from "../assets/logo2.png";
 
 const Footer = () => {
@@ -72,6 +72,22 @@ const Footer = () => {
                 className="text-sm text-white hover:text-[#915EFF]"
               >
                 itshahryar
+              </a>
+            </div>
+          </div>
+
+          {/* LinkedIn */}
+          <div className="flex items-center space-x-3">
+            <FaLinkedin className="w-6 h-6 text-[#915EFF]" />
+            <div>
+              <p className="text-sm font-bold">LinkedIn</p>
+              <a
+                href="https://www.linkedin.com/in/shahryar-amjad-2481542b8/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-white hover:text-[#915EFF]"
+              >
+                Shahryar Amjad
               </a>
             </div>
           </div>
