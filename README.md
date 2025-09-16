@@ -29,10 +29,6 @@ With projects in **web development, YOLO, computer vision, AI, and machine learn
 - **Computer Vision Projects**  
   *(YOLO & OpenCV)*  
 
-**Core Skills:**  
-`HTML5` • `CSS3` • `JavaScript` • `TypeScript` • `Redux Toolkit` • `Tailwind CSS` •  
-`Node.js` • `MongoDB` • `React Native` • `Git` • `Figma`  
-
 ---
 
 ## 💼 Work Experience  
