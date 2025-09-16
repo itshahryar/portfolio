@@ -1,6 +1,5 @@
 import React from "react";
 import { Tilt } from "react-tilt";
-import { styles } from "../style";
 
 import { certifications } from "../constants";
 

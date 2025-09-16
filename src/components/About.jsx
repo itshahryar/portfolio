@@ -6,7 +6,7 @@ import { services } from "../constants";
 import { SectionWrapper } from "../hoc";
 
 const ServiceCard = ({ title, subtitle, icon }) => (
-  <Tilt className="xs:w-[250px] w-full" options={{ max: 25, scale: 1.05, speed: 1000, glare: true, "max-glare": 0.2 }}>
+  <div className="xs:w-[250px] w-full">
     <div className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card hover:shadow-card-hover transition-shadow duration-300">
       <div className="bg-tertiary rounded-[20px] py-6 px-8 min-h-[300px] flex flex-col items-center justify-between transition-all duration-300 hover:bg-tertiary-light">
         <div className="flex flex-col items-center">
@@ -19,14 +19,14 @@ const ServiceCard = ({ title, subtitle, icon }) => (
           <h3 className="text-white text-[22px] font-bold text-center mb-2 font-poppins tracking-wide">
             {title}
           </h3>
-          
+
           <p className="text-secondary text-[16px] text-center leading-relaxed font-semibold font-raleway px-2">
             {subtitle}
           </p>
         </div>
       </div>
     </div>
-  </Tilt>
+  </div>
 );
 
 const About = () => {
