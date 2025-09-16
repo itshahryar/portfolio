@@ -70,7 +70,7 @@ const Navbar = () => {
               to="/certifications"
               className="text-[18px] font-medium cursor-pointer text-secondary hover:text-white"
             >
-              Certifications
+              Achievements
             </Link>
           </li>
                     {/* Education link */}
@@ -125,7 +125,7 @@ const Navbar = () => {
                   setActive("Certifications");
                 }}
               >
-                <Link to="/certifications">Certifications</Link>
+                <Link to="/certifications">Achievements</Link>
               </li>
                             {/* Education link */}
                             <li

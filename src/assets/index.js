@@ -5,6 +5,7 @@ import mobile from "./mobile.png";
 import web from "./web.png";
 import web2 from "./web2.png";
 import web3 from "./web3.png";
+import compV from "./compV.png"
 
 import github from "./github.png";
 import menu from "./menu.svg";
@@ -30,6 +31,7 @@ import shopify from "./company/shopify.png";
 import v3 from "./company/v3.jpeg";
 import tesla from "./company/tesla.png";
 import portusx2 from "./portusx2.png";
+import niten from "./company/niten.png";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
@@ -47,6 +49,10 @@ import word from "./certifications/office.png";
 import portusx from "./certifications/portusx.png";
 import bootcamp from "./certifications/bootcamp.png";
 import workshop from "./certifications/workshop.jpeg";
+import hpCybersecurity from "./certifications/hpCybersecurity.jpg";
+import hpResume from "./certifications/hpResume.jpg";
+import chineseCourse from "./certifications/chineseCourse.jpg";
+import unicefCertificate from "./certifications/unicefCertificate.jpg";
 
 import dps from "./education/dps.png";
 import pgc from "./education/pgc.png";
@@ -80,6 +86,7 @@ export {
   meta,
   shopify,
   v3,
+  niten,
   tesla,
   carrent,
   jobit,
@@ -99,5 +106,10 @@ export {
   portusx,
   portusx2,
   bootcamp,
-  workshop
+  workshop,
+  compV,
+  unicefCertificate,
+chineseCourse,
+hpResume,
+hpCybersecurity,
 };
