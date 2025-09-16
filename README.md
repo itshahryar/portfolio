@@ -72,12 +72,5 @@ SafeSitePlus is a comprehensive solution for modern construction site oversight 
 
 ---
 
-## 📌 Deployment Note
-
-> I deployed the project **without 3D models, motions, and advanced visuals** for now. While the website works correctly on desktops and laptops, **certain mobile devices may experience issues due to limited GPU capabilities**.
-
-You can view the full code, including commented sections for 3D models and animations, on my GitHub repository.
-
----
 Feel free to reach out to me if you’d like to collaborate or if you have any questions!  
 Thank you for visiting my portfolio!
