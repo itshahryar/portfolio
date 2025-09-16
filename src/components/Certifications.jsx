@@ -1,18 +1,8 @@
-import React from "react";
-import { Tilt } from "react-tilt";
-
 import { certifications } from "../constants";
 
 const CertificationCard = ({ index, title, date, issuedBy, image }) => {
   return (
-    <Tilt
-      options={{
-        max: 45,
-        scale: 1,
-        speed: 450,
-      }}
-      className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full lg:h-[420px] h-auto flex flex-col"
-    >
+    <div className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full lg:h-[420px] h-auto flex flex-col">
       <div className="relative w-full h-[230px]">
         <img
           src={image}
@@ -26,7 +16,7 @@ const CertificationCard = ({ index, title, date, issuedBy, image }) => {
         <p className="mt-2 text-secondary text-[14px]">Issued By: {issuedBy}</p>
         <p className="mt-2 text-secondary text-[14px]">{date}</p>
       </div>
-    </Tilt>
+    </div>
   );
 };
 
