@@ -47,6 +47,14 @@ import {
   hpResume,
   chineseCourse,
   unicefCertificate,
+  shadcn,
+  postman,
+  next,
+  yolo,
+  Ai,
+  gemini,
+  prisma,
+  flood
 } from "../assets";
 
 // export const navLinks = [
@@ -122,6 +130,14 @@ const technologies = [
     icon: css,
   },
   {
+    name: "Tailwind CSS",
+    icon: tailwind,
+  },
+  {
+    name: "Shadcn UI",
+    icon: shadcn,
+  },
+  {
     name: "JavaScript",
     icon: javascript,
   },
@@ -134,24 +150,48 @@ const technologies = [
     icon: redux,
   },
   {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
-  {
     name: "Node JS",
     icon: nodejs,
-  },
-  {
-    name: "MongoDB",
-    icon: mongodb,
   },
   {
     name: "React Native",
     icon: threejs,
   },
   {
+    name: "Next JS",
+    icon: next,
+  },
+  {
+    name: "Ai",
+    icon: Ai,
+  },
+  {
+    name: "Gemini",
+    icon: gemini,
+  },
+  {
+    name: "Yolo",
+    icon: yolo,
+  },
+    {
+    name: "CV",
+    icon: compV,
+  },
+  {
+    name: "MongoDB",
+    icon: mongodb,
+  },
+  {
+    name: "Prisma",
+    icon: prisma,
+  },
+  {
     name: "git",
     icon: git,
+  },
+  {
+    name: "Postman",
+    icon: postman,
   },
   {
     name: "figma",
@@ -363,6 +403,35 @@ const projects = [
     ],
     image: jobit, // You can replace with an actual project image
     source_code_link: "https://github.com/Zamin-Raza/SafeSitePlus",
+  },
+  {
+    name: "🌊 FloodAware",
+    description:
+      "AI-powered flood detection system that helps communities prepare for and respond to flood emergencies. Users can upload images or enter coordinates to analyze flood risk levels and plan safety measures through intelligent AI algorithms. Currently in prototype stage with continuous improvements to prediction accuracy and capabilities.",
+    tags: [
+      {
+        name: "Next.js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Tailwind",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "FastAPI",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Python",
+        color: "yellow-text-gradient",
+      },
+      {
+        name: "Gemini",
+        color: "cyan-text-gradient",
+      },
+    ],
+    image: flood,
+    source_code_link: "https://github.com/itshahryar/flood-risk-frontend/",
   },
   {
     name: "🚀 AI Career Coach",

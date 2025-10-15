@@ -25,6 +25,13 @@ import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.png";
 import adobe from "./tech/adobe.png";
+import next from "./tech/next.png";
+import yolo from "./tech/yolo.png";
+import Ai from "./tech/Ai.png";
+import postman from "./tech/postman.png";
+import gemini from "./tech/gemini.png";
+import shadcn from "./tech/shadcn.png";
+import prisma from "./tech/prisma.png";
 
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
@@ -40,6 +47,7 @@ import hci from "./hci.jpg";
 import event from "./event.jpeg";
 import careerCoach from "./careerCoach.png";
 import finance from "./finance.png";
+import flood from "./flood.png";
 
 import v3_letter from "./certifications/v3_letter.jpeg";
 import gender from "./certifications/gender.jpeg";
@@ -60,6 +68,14 @@ import cui from "./education/cui.jpg";
 
 export {
   logo,
+  next,
+  yolo,
+  Ai,
+  gemini,
+  postman,
+  shadcn,
+  prisma,
+  flood,
   backend,
   creator,
   mobile,
