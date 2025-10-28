@@ -205,7 +205,7 @@ const experiences = [
     company_name: "Nitensclue",
     icon: niten,
     iconBg: "#E6DEDD",
-    date: "Aug 2025 – Current",
+    date: "Aug 2025 – Present",
     points: [
       "Developing scalable web and mobile applications using MERN stack, Next.js, and React Native, with API and cloud service integrations for end-to-end functionality.",
       "Collaborating with cross-functional teams on feature planning, code reviews, and deployment to deliver user-friendly, reliable, and high-quality software.",
