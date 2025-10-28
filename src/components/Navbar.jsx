@@ -77,32 +77,49 @@ const Navbar = () => {
             >
               <Link to="/">Home</Link>
             </li>
+            
+            {/* Experience link */}
+            <li
+              className={`${
+                active === "Experience" ? "text-white" : "text-secondary"
+              } hover:text-white text-[18px] font-medium cursor-pointer`}
+              onClick={() => setActive("Experience")}
+            >
+              <Link
+                to="/experience"
+                className="text-[18px] font-medium cursor-pointer text-secondary hover:text-white"
+              >
+                Experience
+              </Link>
+            </li>
+            
+            {/* Works link */}
+            <li
+              className={`${
+                active === "Works" ? "text-white" : "text-secondary"
+              } hover:text-white text-[18px] font-medium cursor-pointer`}
+              onClick={() => setActive("Works")}
+            >
+              <Link
+                to="/projects"
+                className="text-[18px] font-medium cursor-pointer text-secondary hover:text-white"
+              >
+                Projects
+              </Link>
+            </li>
+            
             {/* Certifications link */}
             <li
-                      className={`${
-                        active === "Certifications" ? "text-white" : "text-secondary"
-                      } hover:text-white text-[18px] font-medium cursor-pointer`}
-                      onClick={() => setActive("Certifications")}
+              className={`${
+                active === "Certifications" ? "text-white" : "text-secondary"
+              } hover:text-white text-[18px] font-medium cursor-pointer`}
+              onClick={() => setActive("Certifications")}
             >
               <Link
                 to="/certifications"
                 className="text-[18px] font-medium cursor-pointer text-secondary hover:text-white"
               >
                 Achievements
-              </Link>
-            </li>
-                      {/* Education link */}
-                      <li
-                      className={`${
-                        active === "Education" ? "text-white" : "text-secondary"
-                      } hover:text-white text-[18px] font-medium cursor-pointer`}
-                      onClick={() => setActive("Education")}
-            >
-              <Link
-                to="/education"
-                className="text-[18px] font-medium cursor-pointer text-secondary hover:text-white"
-              >
-                Education
               </Link>
             </li>
           </ul>
@@ -133,6 +150,33 @@ const Navbar = () => {
                 >
                   <Link to="/">Home</Link>
                 </li>
+                
+                {/* Experience link */}
+                <li
+                  className={`font-poppins font-medium cursor-pointer text-[16px] ${
+                    active === "Experience" ? "text-white" : "text-secondary"
+                  }`}
+                  onClick={() => {
+                    setToggle(!toggle);
+                    setActive("Experience");
+                  }}
+                >
+                  <Link to="/experience">Experience</Link>
+                </li>
+                
+                {/* Works link */}
+                <li
+                  className={`font-poppins font-medium cursor-pointer text-[16px] ${
+                    active === "Works" ? "text-white" : "text-secondary"
+                  }`}
+                  onClick={() => {
+                    setToggle(!toggle);
+                    setActive("Works");
+                  }}
+                >
+                  <Link to="/projects">Projects</Link>
+                </li>
+                
                 {/* Certifications link */}
                 <li
                   className={`font-poppins font-medium cursor-pointer text-[16px] ${
@@ -144,18 +188,6 @@ const Navbar = () => {
                   }}
                 >
                   <Link to="/certifications">Achievements</Link>
-                </li>
-                              {/* Education link */}
-                              <li
-                  className={`font-poppins font-medium cursor-pointer text-[16px] ${
-                    active === "Education" ? "text-white" : "text-secondary"
-                  }`}
-                  onClick={() => {
-                    setToggle(!toggle);
-                    setActive("Education");
-                  }}
-                >
-                  <Link to="/education">Education</Link>
                 </li>
               </ul>
             </div>

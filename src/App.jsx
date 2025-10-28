@@ -18,12 +18,39 @@ const App = () => {
                 <Hero />
               </div>
               <About />
-              <Experience />
               <Tech />
-              <Works />
+              <Education />
               <Contact />
               {/* <StarsCanvas /> */}
-              <Footer /> {/* Add Footer here */}
+              <Footer />
+            </div>
+          }
+        />
+
+        {/* Experience Page */}
+        <Route
+          path="/experience"
+          element={
+            <div className="relative z-0 bg-primary">
+              <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
+                <Navbar />
+              </div>
+              <Experience />
+              <Footer />
+            </div>
+          }
+        />
+
+        {/* Works Page */}
+        <Route
+          path="/projects"
+          element={
+            <div className="relative z-0 bg-primary">
+              <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
+                <Navbar />
+              </div>
+              <Works />
+              <Footer />
             </div>
           }
         />
@@ -37,21 +64,7 @@ const App = () => {
                 <Navbar />
               </div>
               <Certifications />
-              <Footer /> {/* Add Footer here */}
-            </div>
-          }
-        />
-
-        {/* Education Page */}
-        <Route
-          path="/education"
-          element={
-            <div className="relative z-0 bg-primary">
-              <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
-                <Navbar />
-              </div>
-              <Education />
-              <Footer /> {/* Add Footer here */}
+              <Footer />
             </div>
           }
         />
