@@ -88,7 +88,7 @@ export const educationData = [
     image: pgc, // Optional: Add an image if desired
   },
   {
-    school: "Divisional Public School & College Faisalabad",
+    school: "DPS & C Faisalabad",
     percentage: "97.1%",
     board: "BISE FSD Board",
     level: "Matriculation (BISE FSD Board)",
