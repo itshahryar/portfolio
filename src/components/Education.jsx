@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import { educationData } from "../constants"; // Import education data from constants
 
 // EducationCard Component
-// EducationCard Component
 const EducationCard = ({ index, school, marks, percentage, year, program, level, image }) => {
   return (
     <motion.div
@@ -12,19 +11,24 @@ const EducationCard = ({ index, school, marks, percentage, year, program, level,
         visible: { opacity: 1, y: 0 },
       }}
       transition={{ duration: 0.75, delay: index * 0.5 }}
-      className="bg-tertiary p-5 rounded-2xl w-full lg:h-[460px] h-auto flex flex-col"
+      className="bg-tertiary p-4 rounded-xl w-full max-w-[380px] lg:h-[340px] h-auto flex flex-col shadow-md"
     >
-      <div className="relative w-full h-[230px]">
-        {/* Optionally, add an image */}
-        {image && <img src={image} alt={school} className="w-full h-full object-cover rounded-2xl" />}
+      <div className="relative w-full h-[160px] flex items-center justify-center bg-[#1d1836] rounded-xl overflow-hidden">
+        {image && (
+          <img
+            src={image}
+            alt={school}
+            className="w-[100%] h-auto object-contain rounded-xl"
+          />
+        )}
       </div>
 
-      <div className="mt-5 flex-1 flex flex-col justify-between">
-        <h3 className="text-white font-bold text-[24px]">{school}</h3>
-        {level && <p className="mt-2 text-secondary text-[14px]">Education Level: {level}</p>}
-        {percentage && <p className="mt-2 text-secondary text-[14px]">Percentage: {percentage}</p>}
-        {program && <p className="mt-2 text-secondary text-[14px]">Program: {program}</p>}
-        {year && <p className="mt-2 text-secondary text-[14px]">Duration: {year}</p>}
+      <div className="mt-3 flex-1 flex flex-col justify-between">
+        <h3 className="text-white font-bold text-[18px]">{school}</h3>
+        {level && <p className="mt-1 text-secondary text-[13px]">Education Level: {level}</p>}
+        {percentage && <p className="mt-1 text-secondary text-[13px]">Percentage: {percentage}</p>}
+        {program && <p className="mt-1 text-secondary text-[13px]">Program: {program}</p>}
+        {year && <p className="mt-1 text-secondary text-[13px]">Duration: {year}</p>}
       </div>
     </motion.div>
   );

@@ -51,9 +51,13 @@ const ExperienceCard = ({ experience, isLeft }) => {
 const Experience = () => {
   return (
     <>
-      <div>
-        <p className={`${styles.sectionSubText} text-center`}>What I have done so far</p>
-        <h2 className={`${styles.sectionHeadText} text-center`}>Work Experience.</h2>
+      <div className="mt-5 text-center">
+        <p className="text-secondary uppercase text-sm tracking-wider">
+          What I have done so far
+        </p>
+        <h2 className="text-white text-3xl font-bold">
+          Work Experience.
+        </h2>
       </div>
 
       <div className="mt-20 flex justify-center items-center relative">
