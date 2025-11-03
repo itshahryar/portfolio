@@ -11,6 +11,9 @@ import Certifications from './Certifications';
 import Education from './Education';
 import Footer from './Footer';
 
+import Exp from "../pages/home/Exp"
+import Wrk from '../pages/home/Wrk';
+
 export {
   Hero,
   Navbar,
@@ -26,5 +29,8 @@ export {
   StarsCanvas,
   Certifications,
   Education,
-  Footer
+  Footer,
+
+  Exp,
+  Wrk
 }

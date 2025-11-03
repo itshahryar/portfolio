@@ -34,7 +34,7 @@ const About = () => {
     <>
       <div>
         <p className={`${styles.sectionSubText} font-mono tracking-widest`}>Introduction</p>
-        <h2 className={`${styles.sectionHeadText} font-bold tracking-tight`}>Overview.</h2>
+        <h2 className={`${styles.sectionHeadText} font-bold tracking-tight`}>About.</h2>
       </div>
 
       <p className="mt-6 text-secondary text-[18px] max-w-3xl leading-[32px] font-light font-raleway">

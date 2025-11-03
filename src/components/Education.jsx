@@ -1,8 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { educationData } from "../constants"; // Import education data from constants
+import { educationData } from "../constants";
 
-// EducationCard Component
+// EducationCard Component - Unchanged
 const EducationCard = ({ index, school, marks, percentage, year, program, level, image }) => {
   return (
     <motion.div
@@ -34,20 +34,35 @@ const EducationCard = ({ index, school, marks, percentage, year, program, level,
   );
 };
 
-// Education Page
+// Education Page - Enhanced styling while preserving cards
 const Education = () => {
   return (
-    <section className="bg-transparent pt-[120px] pb-20">
-    <div className="px-6 sm:px-16">
-      <motion.div variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }} transition={{ duration: 0.75 }}>
-        <p className="text-secondary uppercase text-sm tracking-wider">My Educational Journey</p>
-        <h2 className="text-white text-3xl font-bold">Education</h2>
-        <p className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]">
-        My education has laid a strong foundation, nurturing my passion for learning, problem-solving, and continuous growth in an ever-evolving field.
-        </p>
-      </motion.div>
+    <section id="education" className="mt-24 px-6 md:px-12 max-w-7xl mx-auto">
+      {/* Enhanced Section Header */}
+      <div className="mb-16 text-center">
+        <motion.div 
+          variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }} 
+          transition={{ duration: 0.75 }}
+          className="mb-4"
+        >
+          <p className="text-secondary uppercase text-sm tracking-wider mb-2">
+            My Educational Journey
+          </p>
+          <h2 className="text-white text-3xl font-bold">Education</h2>
+          <div className="w-16 h-1 bg-purple-500 mx-auto mt-3 rounded-full"></div>
+        </motion.div>
+        
+        <motion.p 
+          variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }} 
+          transition={{ duration: 0.75, delay: 0.2 }}
+          className="mt-4 text-secondary text-[17px] max-w-3xl mx-auto leading-[30px]"
+        >
+          My education has laid a strong foundation, nurturing my passion for learning, problem-solving, and continuous growth in an ever-evolving field.
+        </motion.p>
+      </div>
 
-      <div className="mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7">
+      {/* Preserved Card Grid */}
+      <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7 justify-items-center">
         {educationData.map((edu, index) => (
           <EducationCard
             key={`education-${index}`}
@@ -62,7 +77,6 @@ const Education = () => {
           />
         ))}
       </div>
-    </div>
     </section>
   );
 };
