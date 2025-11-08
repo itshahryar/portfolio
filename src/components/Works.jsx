@@ -1,8 +1,10 @@
+import { useNavigate } from 'react-router-dom';
 import { github } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 
 const ProjectCard = ({
+  id, // Add id prop
   index,
   name,
   description,
@@ -10,8 +12,22 @@ const ProjectCard = ({
   image,
   source_code_link,
 }) => {
+  const navigate = useNavigate();
+
+  const handleCardClick = () => {
+    navigate(`/project/${id}`);
+  };
+
+  const handleGithubClick = (e) => {
+    e.stopPropagation(); // Prevent card navigation
+    window.open(source_code_link, "_blank");
+  };
+
   return (
-    <div className='bg-tertiary p-5 rounded-2xl w-full sm:w-[360px] lg:h-[640px]'>  
+    <div 
+      onClick={handleCardClick}
+      className='bg-tertiary p-5 rounded-2xl w-full sm:w-[360px] lg:h-[640px] cursor-pointer hover:scale-[1.02] transition-transform duration-300'
+    >  
       <div className='relative w-full h-[230px]'>
         <img
           src={image}
@@ -21,7 +37,7 @@ const ProjectCard = ({
 
         <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
           <div
-            onClick={() => window.open(source_code_link, "_blank")}
+            onClick={handleGithubClick}
             className='bg-blue-100 w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
           >
             <img
@@ -49,7 +65,6 @@ const ProjectCard = ({
   );
 };
 
-
 const Works = () => {
   return (
     <>
@@ -65,7 +80,12 @@ const Works = () => {
 
       <div className='mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7'>
         {projects.map((project, index) => (
-          <ProjectCard key={`project-${index}`} index={index} {...project} />
+          <ProjectCard 
+            key={`project-${index}`} 
+            id={project.id} // Pass the id
+            index={index} 
+            {...project} 
+          />
         ))}
       </div>
     </>

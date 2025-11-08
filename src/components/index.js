@@ -13,6 +13,7 @@ import Footer from './Footer';
 
 import Exp from "../pages/home/Exp"
 import Wrk from '../pages/home/Wrk';
+import ProjectDetails from '../pages/project/ProjectDetails';
 
 export {
   Hero,
@@ -32,5 +33,6 @@ export {
   Footer,
 
   Exp,
-  Wrk
+  Wrk,
+  ProjectDetails
 }

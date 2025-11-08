@@ -340,6 +340,7 @@ const testimonials = [
 
 const projects = [
   {
+    id: "safesiteplus",
     name: "👷‍♂️ FYP - SafeSitePlus",
     description:
       "SafeSitePlus is an AI-powered platform for construction site management with robust user administration and supervisor oversight. It enhances safety through incident detection (fire, falls, missing PPE) and prioritized alerts with screenshots. Key features include a policy-based chatbot, digital notepad, automated reporting, and forecasting for risk anticipation and planning.",
@@ -405,6 +406,7 @@ const projects = [
     source_code_link: "https://github.com/Zamin-Raza/SafeSitePlus",
   },
   {
+    id: "floodaware",
     name: "🌊 FloodAware",
     description:
       "AI-powered flood detection system that helps communities prepare for and respond to flood emergencies. Users can upload images or enter coordinates to analyze flood risk levels and plan safety measures through intelligent AI algorithms. Currently in prototype stage with continuous improvements to prediction accuracy and capabilities.",
@@ -434,6 +436,7 @@ const projects = [
     source_code_link: "https://github.com/itshahryar/flood-risk-frontend/",
   },
   {
+    id: "aicareercoach",
     name: "🚀 AI Career Coach",
     description:
       "AI Career Coach is an AI-powered job preparation platform that helps users build professional resumes, generate personalized cover letters, and practice for interviews with real-time AI feedback. It also provides career insights, industry trends, and job recommendations.",
@@ -479,6 +482,7 @@ const projects = [
     source_code_link: "https://github.com/itshahryar/Mern-ai-career-coach",
   },
   {
+    id: "aifinanceplatform",
     name: "📈 AI Finance Platform",
     description:
       "A full-stack AI-powered finance platform offering real-time financial insights, analytics, and secure user management. Integrated with intelligent automation features to deliver a seamless user experience.",
@@ -520,6 +524,7 @@ const projects = [
     source_code_link: "https://github.com/itshahryar/next-ai-finance", // Replace with your actual link
   },
   {
+    id: "mernreal-estate",
     name: "🏘️ MERN Real-Estate",
     description:
       "Welcome to SherryEstate, a comprehensive real estate application that simplifies the process of buying, selling, and renting properties. With an intuitive interface, powerful search functionality, and seamless integration with Firebase and MongoDB.",
@@ -550,6 +555,7 @@ const projects = [
   },
 
   {
+    id: "mealmentor-ui",
     name: "MealMentor - UI",
     description:
       "MealMentor is an app that simplifies meal planning for busy parents by offering personalized recipes based on available ingredients, dietary needs, and health conditions. It features grocery management tools, meal reminders, and visual guides to make cooking easier and healthier.",

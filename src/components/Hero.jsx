@@ -23,18 +23,31 @@ const Hero = () => {
             Associate Software Engineer | Full Stack | (MERN, Next.js & FastAPI) | Exploring AI & Computer Vision | CUI ‘25
           </p>
 
-          {/* Download CV Button */}
+          {/* Download CV Button with shine effect */}
           <motion.a
             href="/Shahryar Resume.pdf"
             download="Shahryar_Resume.pdf"
-            className="mt-6 inline-flex items-center justify-center px-4 py-2 sm:px-6 sm:py-3 bg-[#915EFF] text-white font-medium rounded-lg shadow-lg hover:bg-[#7a4de6] transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-[#915EFF] focus:ring-opacity-50"
+            className="mt-6 relative overflow-hidden inline-flex items-center justify-center px-4 py-2 sm:px-6 sm:py-3 bg-[#915EFF] text-white font-medium rounded-lg shadow-lg hover:bg-[#7a4de6] transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-[#915EFF] focus:ring-opacity-50"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 sm:h-5 sm:w-5 mr-1 sm:mr-2" viewBox="0 0 20 20" fill="currentColor">
+            {/* Shine effect */}
+            <motion.span
+              className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white/30 to-transparent"
+              style={{ transform: 'skewX(-25deg)' }}
+              animate={{ x: ['-100%', '200%'] }}
+              transition={{ 
+                duration: 2, 
+                repeat: Infinity, 
+                ease: 'linear',
+                repeatType: 'loop'
+              }}
+            />
+            
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 sm:h-5 sm:w-5 mr-1 sm:mr-2 relative z-10" viewBox="0 0 20 20" fill="currentColor">
               <path fillRule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clipRule="evenodd" />
             </svg>
-            <span className="text-xs sm:text-sm">Grab My Resume</span>
+            <span className="text-xs sm:text-sm relative z-10">Grab My Resume</span>
           </motion.a>
         </div>
       </div>
@@ -71,3 +84,4 @@ const Hero = () => {
 };
 
 export default Hero;
+

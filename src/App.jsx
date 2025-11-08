@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, StarsCanvas, Certifications, Education, Footer, Exp,Wrk } from "./components";
+import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, StarsCanvas, Certifications, Education, Footer, Exp,Wrk,ProjectDetails } from "./components";
 import ScrollToTop from './components/ScrollToTop';
 
 const App = () => {
@@ -52,6 +52,19 @@ const App = () => {
                 <Navbar />
               </div>
               <Works />
+              <Footer />
+            </div>
+          }
+        />
+
+        <Route
+          path="/project/:id"
+          element={
+            <div className="relative z-0 bg-primary">
+              <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
+                <Navbar />
+              </div>
+              <ProjectDetails />
               <Footer />
             </div>
           }
