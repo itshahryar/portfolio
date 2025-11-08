@@ -2,14 +2,26 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { projects } from "../../constants";
 import { motion } from "framer-motion";
-import { github } from "../../assets";
+import { FaGithub, FaEye } from "react-icons/fa";
 
 const ProjectPreviewCard = ({ project }) => {
+  const navigate = useNavigate();
+
+  const handleGithubClick = (e) => {
+    e.stopPropagation();
+    window.open(project.source_code_link, "_blank");
+  };
+
+  const handleViewDetails = (e) => {
+    e.stopPropagation();
+    navigate(`/project/${project.id}`);
+  };
+
   return (
     <motion.div
       whileHover={{ scale: 1.03 }}
       transition={{ duration: 0.2 }}
-      className="bg-tertiary p-5 rounded-2xl w-full sm:w-[360px] h-[640px] text-left shadow-lg hover:shadow-purple-800/30 transition-shadow duration-300"
+      className="bg-tertiary p-5 rounded-2xl w-full sm:w-[360px] h-[720px] text-left shadow-lg hover:shadow-purple-800/30 transition-shadow duration-300"
     >
       <div className='relative w-full h-[230px]'>
         <img
@@ -17,19 +29,24 @@ const ProjectPreviewCard = ({ project }) => {
           alt='project_image'
           className='w-full h-full object-cover rounded-2xl'
         />
+      </div>
 
-        <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
-          <div
-            onClick={() => window.open(project.source_code_link, "_blank")}
-            className='bg-blue-100 w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
-          >
-            <img
-              src={github}
-              alt='source code'
-              className='w-1/2 h-1/2 object-contain'
-            />
-          </div>
-        </div>
+      {/* Buttons Section */}
+      <div className='mt-4 flex gap-3'>
+        <button
+          onClick={handleViewDetails}
+          className="flex-1 py-1.5 px-3 bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white rounded-lg text-xs font-medium transition-all duration-300 shadow-md shadow-purple-500/20 flex items-center justify-center gap-1"
+        >
+          <FaEye className="text-white text-sm" />
+          View Details
+        </button>
+        <button
+          onClick={handleGithubClick}
+          className="flex-1 py-1.5 px-3 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white rounded-lg text-xs font-medium transition-all duration-300 shadow-md shadow-blue-500/20 flex items-center justify-center gap-1"
+        >
+          <FaGithub className="text-white text-sm" />
+          View Code
+        </button>
       </div>
 
       <div className='mt-5'>
@@ -75,7 +92,7 @@ const Wrk = () => {
           whileTap={{ scale: 0.98 }}
           transition={{ duration: 0.2 }}
           onClick={() => navigate("/projects")}
-          className="flex flex-col justify-center items-center p-6 rounded-2xl shadow-lg bg-gradient-to-r from-purple-700 to-purple-500 text-white font-semibold w-full sm:w-[360px] h-[640px] hover:shadow-purple-800/30 transition-shadow duration-300 cursor-pointer relative overflow-hidden"
+          className="flex flex-col justify-center items-center p-6 rounded-2xl shadow-lg bg-gradient-to-r from-purple-700 to-purple-500 text-white font-semibold w-full sm:w-[360px] h-[720px] hover:shadow-purple-800/30 transition-shadow duration-300 cursor-pointer relative overflow-hidden"
         >
           {/* Subtle pattern overlay */}
           <div className="absolute inset-0 opacity-10">
@@ -115,3 +132,4 @@ const Wrk = () => {
 };
 
 export default Wrk;
+

@@ -14,7 +14,8 @@ const ProjectCard = ({
 }) => {
   const navigate = useNavigate();
 
-  const handleCardClick = () => {
+  const handleViewDetails = (e) => {
+    e.stopPropagation();
     navigate(`/project/${id}`);
   };
 
@@ -25,8 +26,7 @@ const ProjectCard = ({
 
   return (
     <div 
-      onClick={handleCardClick}
-      className='bg-tertiary p-5 rounded-2xl w-full sm:w-[360px] lg:h-[720px] cursor-pointer hover:scale-[1.02] transition-transform duration-300'
+      className='bg-tertiary p-5 rounded-2xl w-full sm:w-[360px] lg:h-[720px] hover:scale-[1.02] transition-transform duration-300'
     >  
       <div className='relative w-full h-[230px]'>
         <img
@@ -39,10 +39,7 @@ const ProjectCard = ({
       {/* Buttons Section */}
       <div className='mt-4 flex gap-3'>
         <button
-          onClick={(e) => {
-            e.stopPropagation();
-            handleCardClick();
-          }}
+          onClick={handleViewDetails}
           className="flex-1 py-1.5 px-3 bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white rounded-lg text-xs font-medium transition-all duration-300 shadow-md shadow-purple-500/20 flex items-center justify-center gap-1"
         >
           <FaEye className="text-white text-sm" />
@@ -101,3 +98,4 @@ const Works = () => {
 };
 
 export default SectionWrapper(Works, "");
+
