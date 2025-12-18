@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 import { styles } from "../style";
 import { menu, close } from "../assets";
@@ -9,6 +9,8 @@ const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,6 +26,20 @@ const Navbar = () => {
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const handleContactClick = (e) => {
+    e.preventDefault();
+    setActive("Contact");
+
+    if (location.pathname !== "/") {
+      navigate("/", { state: { scrollTo: "contact" } });
+    } else {
+      const contactSection = document.getElementById("contact");
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
 
   return (
     <>
@@ -92,7 +108,22 @@ const Navbar = () => {
                 Experience
               </Link>
             </li>
-            
+
+            {/* Services link */}
+            <li
+              className={`${
+                active === "Services" ? "text-white" : "text-secondary"
+              } hover:text-white text-[18px] font-medium cursor-pointer`}
+              onClick={() => setActive("Services")}
+            >
+              <Link
+                to="/services"
+                className="text-[18px] font-medium cursor-pointer text-secondary hover:text-white"
+              >
+                Services
+              </Link>
+            </li>
+
             {/* Works link */}
             <li
               className={`${
@@ -122,6 +153,21 @@ const Navbar = () => {
                 Achievements
               </Link>
             </li>
+            
+            {/* Contact link */}
+            <li
+              className={`${
+                active === "Contact" ? "text-white" : "text-secondary"
+              } hover:text-white text-[18px] font-medium cursor-pointer`}
+            >
+              <a
+                href="#contact"
+                className="text-[18px] font-medium cursor-pointer text-secondary hover:text-white"
+                onClick={handleContactClick}
+              >
+                Contact
+              </a>
+            </li>
           </ul>
 
           <div className="sm:hidden flex flex-1 justify-end items-center">
@@ -135,7 +181,7 @@ const Navbar = () => {
             <div
               className={`${
                 !toggle ? "hidden" : "flex"
-              } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
+              } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl shadow-2xl border border-purple-500/20`}
             >
               <ul className="list-none flex justify-end items-start flex-1 flex-col gap-4">
                 {/* Home link */}
@@ -163,6 +209,19 @@ const Navbar = () => {
                 >
                   <Link to="/experience">Experience</Link>
                 </li>
+
+                {/* Services link */}
+                <li
+                  className={`font-poppins font-medium cursor-pointer text-[16px] ${
+                    active === "Services" ? "text-white" : "text-secondary"
+                  }`}
+                  onClick={() => {
+                    setToggle(!toggle);
+                    setActive("Services");
+                  }}
+                >
+                  <Link to="/services">Services</Link>
+                </li>
                 
                 {/* Works link */}
                 <li
@@ -188,6 +247,23 @@ const Navbar = () => {
                   }}
                 >
                   <Link to="/certifications">Achievements</Link>
+                </li>
+                
+                {/* Contact link */}
+                <li
+                  className={`font-poppins font-medium cursor-pointer text-[16px] ${
+                    active === "Contact" ? "text-white" : "text-secondary"
+                  }`}
+                >
+                  <a
+                    href="#contact"
+                    onClick={(e) => {
+                      setToggle(false);
+                      handleContactClick(e);
+                    }}
+                  >
+                    Contact
+                  </a>
                 </li>
               </ul>
             </div>

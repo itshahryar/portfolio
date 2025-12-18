@@ -61,7 +61,7 @@ const ContactPage = () => {
   };
 
   return (
-    <div className="min-h-screen w-full bg-primary">
+    <div id="contact" className="min-h-screen w-full bg-primary">
       {/* Header Section - Matching the provided section header style */}
       <div className="pt-32 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 2xl:px-32">
         <motion.div
@@ -87,7 +87,7 @@ const ContactPage = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="max-w-3xl mx-auto bg-black-100 p-6 sm:p-8 md:p-10 lg:p-12 rounded-2xl"
+          className="max-w-3xl mx-auto bg-black-100 p-6 sm:p-8 md:p-10 lg:p-12 rounded-2xl border border-purple-500/20 shadow-xl"
         >
           <form
             ref={formRef}
@@ -102,7 +102,7 @@ const ContactPage = () => {
                 value={form.name}
                 onChange={handleChange}
                 placeholder="What's your good name?"
-                className="bg-tertiary py-3 sm:py-4 px-4 sm:px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium text-sm sm:text-base w-full"
+                className="bg-tertiary py-3 sm:py-4 px-4 sm:px-6 placeholder:text-secondary text-white rounded-lg outline-none border border-purple-500/20 focus:border-purple-500 font-medium text-sm sm:text-base w-full transition-all duration-300"
               />
             </label>
             
@@ -114,7 +114,7 @@ const ContactPage = () => {
                 value={form.email}
                 onChange={handleChange}
                 placeholder="What's your web address?"
-                className="bg-tertiary py-3 sm:py-4 px-4 sm:px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium text-sm sm:text-base w-full"
+                className="bg-tertiary py-3 sm:py-4 px-4 sm:px-6 placeholder:text-secondary text-white rounded-lg outline-none border border-purple-500/20 focus:border-purple-500 font-medium text-sm sm:text-base w-full transition-all duration-300"
               />
             </label>
             
@@ -126,16 +126,18 @@ const ContactPage = () => {
                 value={form.message}
                 onChange={handleChange}
                 placeholder="What you want to say?"
-                className="bg-tertiary py-3 sm:py-4 px-4 sm:px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium text-sm sm:text-base w-full"
+                className="bg-tertiary py-3 sm:py-4 px-4 sm:px-6 placeholder:text-secondary text-white rounded-lg outline-none border border-purple-500/20 focus:border-purple-500 font-medium text-sm sm:text-base w-full transition-all duration-300 resize-none"
               />
             </label>
 
-            <button
+            <motion.button
               type="submit"
-              className="bg-tertiary py-3 px-6 sm:px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary text-sm sm:text-base"
+              className="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 py-3 px-6 sm:px-8 rounded-xl outline-none w-fit text-white font-bold shadow-lg shadow-purple-500/30 text-sm sm:text-base transition-all duration-300"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
               {loading ? "Sending..." : "Send Message"}
-            </button>
+            </motion.button>
           </form>
         </motion.div>
       </div>

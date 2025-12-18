@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, StarsCanvas, Certifications, Education, Footer, Exp,Wrk,ProjectDetails } from "./components";
+import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, StarsCanvas, Certifications, Education, Footer, Exp,Wrk,ProjectDetails, Chatbot, Services } from "./components";
 import ScrollToTop from './components/ScrollToTop';
 
 const App = () => {
@@ -25,6 +25,7 @@ const App = () => {
               <Contact />
               {/* <StarsCanvas /> */}
               <Footer />
+              <Chatbot />
             </div>
           }
         />
@@ -39,6 +40,7 @@ const App = () => {
               </div>
               <Experience />
               <Footer />
+              <Chatbot />
             </div>
           }
         />
@@ -53,6 +55,22 @@ const App = () => {
               </div>
               <Works />
               <Footer />
+              <Chatbot />
+            </div>
+          }
+        />
+
+        {/* Services Page */}
+        <Route
+          path="/services"
+          element={
+            <div className="relative z-0 bg-primary">
+              <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
+                <Navbar />
+              </div>
+              <Services />
+              <Footer />
+              <Chatbot />
             </div>
           }
         />
@@ -66,6 +84,7 @@ const App = () => {
               </div>
               <ProjectDetails />
               <Footer />
+              <Chatbot />
             </div>
           }
         />
@@ -80,6 +99,7 @@ const App = () => {
               </div>
               <Certifications />
               <Footer />
+              <Chatbot />
             </div>
           }
         />

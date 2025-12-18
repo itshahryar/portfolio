@@ -1,5 +1,7 @@
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FaGithub, FaEye } from "react-icons/fa";
+import { motion } from "framer-motion";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 
@@ -26,14 +28,15 @@ const ProjectCard = ({
 
   return (
     <div 
-      className='bg-tertiary p-5 rounded-2xl w-full sm:w-[360px] lg:h-[720px] hover:scale-[1.02] transition-transform duration-300'
+      className='bg-tertiary p-5 rounded-2xl w-full sm:w-[360px] lg:h-[720px] hover:scale-[1.02] transition-all duration-300 border border-purple-500/20 hover:border-purple-500/40 shadow-lg hover:shadow-xl'
     >  
-      <div className='relative w-full h-[230px]'>
+      <div className='relative w-full h-[230px] overflow-hidden rounded-2xl group'>
         <img
           src={image}
           alt='project_image'
-          className='w-full h-full object-cover rounded-2xl'
+          className='w-full h-full object-cover rounded-2xl transition-transform duration-500 group-hover:scale-110'
         />
+        <div className='absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl' />
       </div>
 
       {/* Buttons Section */}
@@ -60,17 +63,46 @@ const ProjectCard = ({
       </div>
 
       <div className='mt-4 flex flex-wrap gap-2'>
-        {tags.map((tag) => (
-          <p key={`${name}-${tag.name}`} className={`text-[14px] ${tag.color}`}>
+        {tags.slice(0, 4).map((tag) => (
+          <span 
+            key={`${name}-${tag.name}`} 
+            className={`text-[12px] px-2 py-1 rounded-md bg-black-100 border border-purple-500/20 ${tag.color}`}
+          >
             #{tag.name}
-          </p>
+          </span>
         ))}
+        {tags.length > 4 && (
+          <span className="text-[12px] px-2 py-1 rounded-md bg-black-100 border border-purple-500/20 text-secondary">
+            +{tags.length - 4} more
+          </span>
+        )}
       </div>
     </div>
   );
 };
 
 const Works = () => {
+  const [activeFilter, setActiveFilter] = useState('All');
+
+  // Categorize projects
+  const getProjectCategory = (project) => {
+    // Check if project is UI-only (Figma projects)
+    const isUI = project.tags.some(tag => 
+      tag.name.toLowerCase() === 'figma'
+    );
+    
+    if (isUI) return 'UI';
+    return 'Web';
+  };
+
+  const filteredProjects = activeFilter === 'All'
+    ? projects
+    : projects.filter(project => getProjectCategory(project) === activeFilter);
+
+  const totalProjects = projects.length;
+  const filteredCount = filteredProjects.length;
+  const categories = ['All', 'Web', 'UI'];
+
   return (
     <>
       <div className="mt-5">
@@ -83,15 +115,58 @@ const Works = () => {
         </p>
       </div>
 
-      <div className='mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7'>
-        {projects.map((project, index) => (
-          <ProjectCard 
-            key={`project-${index}`} 
-            id={project.id} // Pass the id
-            index={index} 
-            {...project} 
-          />
+      {/* Category Filter Buttons */}
+      <div className="mt-12 flex flex-wrap gap-4">
+        {categories.map((category) => (
+          <motion.button
+            key={category}
+            onClick={() => setActiveFilter(category)}
+            className={`px-6 py-2.5 rounded-lg font-medium text-sm transition-all duration-300 ${
+              activeFilter === category
+                ? 'bg-gradient-to-r from-purple-600 to-purple-700 text-white shadow-lg shadow-purple-500/30'
+                : 'bg-tertiary text-secondary hover:text-white hover:bg-black-100 border border-purple-500/20'
+            }`}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            {category}
+          </motion.button>
         ))}
+      </div>
+
+      {/* Project Count */}
+      <div className="mt-4 text-secondary text-sm">
+        Showing{" "}
+        <span className="text-white font-semibold">{filteredCount}</span> of{" "}
+        <span className="text-white font-semibold">{totalProjects}</span>{" "}
+        projects
+        {activeFilter !== 'All' && (
+          <> in <span className="capitalize">{activeFilter}</span></>
+        )}
+        .
+      </div>
+
+      <div className='mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7'>
+        {filteredProjects.length > 0 ? (
+          filteredProjects.map((project, index) => (
+            <motion.div
+              key={`project-${index}`}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
+              <ProjectCard 
+                id={project.id}
+                index={index} 
+                {...project} 
+              />
+            </motion.div>
+          ))
+        ) : (
+          <div className="col-span-full text-center py-12">
+            <p className="text-secondary text-lg">No projects found in this category.</p>
+          </div>
+        )}
       </div>
     </>
   );

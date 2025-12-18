@@ -1,6 +1,6 @@
 import logo from "./logo.svg";
 import backend from "./backend.png";
-import creator from "./creator.png";
+import creator from "./creator.jpg";
 import mobile from "./mobile.png";
 import web from "./web.png";
 import web2 from "./web2.png";

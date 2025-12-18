@@ -14,6 +14,8 @@ import Footer from './Footer';
 import Exp from "../pages/home/Exp"
 import Wrk from '../pages/home/Wrk';
 import ProjectDetails from '../pages/project/ProjectDetails';
+import Chatbot from './Chatbot';
+import Services from './Services';
 
 export {
   Hero,
@@ -31,6 +33,8 @@ export {
   Certifications,
   Education,
   Footer,
+  Chatbot,
+  Services,
 
   Exp,
   Wrk,
