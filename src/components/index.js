@@ -16,6 +16,7 @@ import Wrk from '../pages/home/Wrk';
 import ProjectDetails from '../pages/project/ProjectDetails';
 import Chatbot from './Chatbot';
 import Services from './Services';
+import Skills from './Skills';
 
 export {
   Hero,
@@ -35,6 +36,7 @@ export {
   Footer,
   Chatbot,
   Services,
+  Skills,
 
   Exp,
   Wrk,

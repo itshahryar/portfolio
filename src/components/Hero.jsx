@@ -53,7 +53,15 @@ const Hero = () => {
       </div>
 
       <div className="absolute xs:bottom-20 bottom-24 w-full flex justify-center items-center">
-        <a href="#about">
+        <button
+          type="button"
+          onClick={() => {
+            const aboutSection = document.getElementById("about");
+            if (aboutSection) {
+              aboutSection.scrollIntoView({ behavior: "smooth" });
+            }
+          }}
+        >
           <motion.div 
             className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-center p-2"
             animate={{ y: [0, 8, 0] }}
@@ -77,7 +85,7 @@ const Hero = () => {
               }}
             />
           </motion.div>
-        </a>
+        </button>
       </div>
     </section>
   );

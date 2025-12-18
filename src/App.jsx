@@ -1,12 +1,14 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, StarsCanvas, Certifications, Education, Footer, Exp,Wrk,ProjectDetails, Chatbot, Services } from "./components";
+import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, StarsCanvas, Certifications, Education, Footer, Exp,Wrk,ProjectDetails, Chatbot, Services, Skills } from "./components";
 import ScrollToTop from './components/ScrollToTop';
+import RouteLoader from './components/RouteLoader';
 
 const App = () => {
   return (
     <BrowserRouter>
-      <ScrollToTop /> 
+      <ScrollToTop />
+      <RouteLoader />
       <Routes>
         {/* Main page routes */}
         <Route
@@ -19,7 +21,6 @@ const App = () => {
               </div>
               <About />
               <Exp />
-              <Tech />
               <Wrk />
               <Education />
               <Contact />
@@ -69,6 +70,21 @@ const App = () => {
                 <Navbar />
               </div>
               <Services />
+              <Footer />
+              <Chatbot />
+            </div>
+          }
+        />
+
+        {/* Skills Page */}
+        <Route
+          path="/skills"
+          element={
+            <div className="relative z-0 bg-primary">
+              <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
+                <Navbar />
+              </div>
+              <Skills />
               <Footer />
               <Chatbot />
             </div>

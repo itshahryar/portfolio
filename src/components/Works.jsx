@@ -146,6 +146,15 @@ const Works = () => {
         .
       </div>
 
+      {/* Extra context for Web projects */}
+      {activeFilter === 'Web' && (
+        <p className="mt-2 text-secondary text-xs md:text-sm max-w-3xl">
+          Many of these web experiences also weave in supporting stacks like AI assistants,
+          computer‑vision (YOLO / CV), FastAPI services, and robust DevTools — so each project
+          is more than just a UI.
+        </p>
+      )}
+
       <div className='mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7'>
         {filteredProjects.length > 0 ? (
           filteredProjects.map((project, index) => (

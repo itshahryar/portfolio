@@ -125,6 +125,19 @@ Answer questions naturally and conversationally while staying focused on Shahrya
 
   return (
     <>
+      {/* Floating helper label above the chatbot button */}
+      {!isOpen && (
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+         className="fixed bottom-24 right-6 z-50 flex items-center px-4 py-2 rounded-full bg-black-100/90 border border-purple-500/40 shadow-lg"
+        >
+          <span className="text-xs text-white font-medium">
+            How may I help you?
+          </span>
+        </motion.div>
+      )}
+
       {/* Chatbot Toggle Button */}
       <motion.button
         onClick={() => setIsOpen(!isOpen)}
