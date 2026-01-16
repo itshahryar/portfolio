@@ -84,31 +84,38 @@ const ContactPage = () => {
 
       {/* Main Content */}
       <div className="px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 2xl:px-32">
-        {/* Contact Badges - Matching the Image Style */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="mb-8 flex justify-center gap-4"
-        >
-          <a
-            href="mailto:shahryaramjadmos@gmail.com"
-            className="flex items-center gap-3 py-2 px-4 bg-tertiary rounded-lg border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300"
+        {/* Contact Badges - Two Rows on Small Screens Only */}
+        <div className="mb-8 flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <FaEnvelope className="w-5 h-5 text-[#915EFF]" />
-            <span className="text-white text-sm">shahryaramjadmos@gmail.com</span>
-          </a>
+            <a
+              href="mailto:shahryaramjadmos@gmail.com"
+              className="flex items-center gap-3 py-2 px-4 bg-tertiary rounded-lg border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300"
+            >
+              <FaEnvelope className="w-5 h-5 text-[#915EFF]" />
+              <span className="text-white text-sm">shahryaramjadmos@gmail.com</span>
+            </a>
+          </motion.div>
           
-          <a
-            href="https://www.linkedin.com/in/muhammad-shahryar-amjad-270185364/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-3 py-2 px-4 bg-tertiary rounded-lg border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300"
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
           >
-            <FaLinkedin className="w-5 h-5 text-[#915EFF]" />
-            <span className="text-white text-sm">LinkedIn Profile</span>
-          </a>
-        </motion.div>
+            <a
+              href="https://www.linkedin.com/in/muhammad-shahryar-amjad-270185364/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 py-2 px-4 bg-tertiary rounded-lg border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300"
+            >
+              <FaLinkedin className="w-5 h-5 text-[#915EFF]" />
+              <span className="text-white text-sm">LinkedIn Profile</span>
+            </a>
+          </motion.div>
+        </div>
 
         {/* Contact Form */}
         <motion.div 
@@ -174,4 +181,3 @@ const ContactPage = () => {
 };
 
 export default ContactPage;
-
