@@ -165,7 +165,7 @@ const Navbar = () => {
                 to="/certifications"
                 className="text-[18px] font-medium cursor-pointer text-secondary hover:text-white"
               >
-                Achievements
+                Credentials
               </Link>
             </li>
             

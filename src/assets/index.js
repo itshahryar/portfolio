@@ -65,6 +65,7 @@ import hpCybersecurity from "./certifications/hpCybersecurity.jpg";
 import hpResume from "./certifications/hpResume.jpg";
 import chineseCourse from "./certifications/chineseCourse.jpg";
 import unicefCertificate from "./certifications/unicefCertificate.jpg";
+import englishProef from "./certifications/englishProef.jpg";
 
 import dps from "./education/dps.png";
 import pgc from "./education/pgc.png";
@@ -136,4 +137,5 @@ doctorPortfolioImage,
 artistPortfolioImage,
 bio,
 hamnaPortfolioImage,
+englishProef,
 };

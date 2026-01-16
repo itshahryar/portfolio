@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, StarsCanvas, Certifications, Education, Footer, Exp,Wrk,ProjectDetails, Chatbot, Services, Skills } from "./components";
+import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, StarsCanvas, Certifications, Education, Footer, Exp,Wrk,ProjectDetails, Chatbot, Services, Skills, QuickLinks } from "./components";
 import ScrollToTop from './components/ScrollToTop';
 import RouteLoader from './components/RouteLoader';
 
@@ -23,6 +23,7 @@ const App = () => {
               <Exp />
               <Wrk />
               <Education />
+              <QuickLinks />
               <Contact />
               {/* <StarsCanvas /> */}
               <Footer />

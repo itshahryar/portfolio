@@ -59,6 +59,7 @@ import {
   artistPortfolioImage,
   bio,
   hamnaPortfolioImage,
+  englishProef,
 } from "../assets";
 
 // export const navLinks = [
@@ -277,42 +278,56 @@ const certifications = [
     date: "July 2023 - 01 September 2023",
     issuedBy: "V3 Solution (Private Limited)",
     image: v3_letter,
+    type: "experience",
   },
   {
     title: "Mern Stack Developer Experiece Letter",
     date: "20 July 2024 - 20 September 2024",
     issuedBy: "Portusx",
     image: portusx2,
+    type: "experience",
   },
   {
     title: "HP LIFE Cybersecurity Awareness",
     date: "17 August 2025",
     issuedBy: "HP LIFE",
     image: hpCybersecurity, // You'll need to import this image
+    type: "credential",
   },
   {
     title: "HP LIFE Resume Writing",
     date: "9 September 2025",
     issuedBy: "HP LIFE",
     image: hpResume, // You'll need to import this image
+    type: "credential",
   },
   {
     title: "Beginners' Chinese: A Taster Course",
     date: "15 February 2025",
     issuedBy: "OpenLearn",
     image: chineseCourse, // You'll need to import this image
+    type: "language",
+  },
+  {
+    title: "English Proficiency Certificate",
+    date: "14 January 2026",
+    issuedBy: "COMSATS University Islamabad",
+    image: englishProef, // You'll need to import this image
+    type: "language",
   },
   {
     title: "Child Protection Systems Strengthening",
     date: "2025", // Add the specific date if available
     issuedBy: "UNICEF",
     image: unicefCertificate, // You'll need to import this image
+    type: "social-impact",
   },
   {
     title: "Build with AI – Workshop",
     date: "21 April 2025",
     issuedBy: "Google Developer Groups on Campus (GDGoC) - CUI",
     image: workshop,
+    type: "workshop",
   },
   {
     title: "Web Bootcamp with LLM Workflows",
@@ -320,30 +335,49 @@ const certifications = [
     issuedBy: "GDGoC - CUI",
     certificateId: "3e61c74f-07b0-4979-bc23-188e4e008224",
     image: bootcamp,
+    type: "workshop",
   },
   {
     title: "Microsoft Specialist: Word (Office 2016)",
     date: "15 November 2020",
     issuedBy: "Microsoft",
     image: word,
+    type: "credential",
   },
   {
     title: "Microsoft Specialist: PowerPoint (Office 2016)",
     date: "07 January 2021",
     issuedBy: "Microsoft",
     image: pp,
+    type: "credential",
   },
   {
     title: "An Introduction to Gender Equality for UN staff",
     date: "28 July 2023",
     issuedBy: "United Nations",
     image: gender,
+    type: "social-impact",
   },
   {
     title: "Building Gender IQ - Gender Equality",
     date: "July 2023",
     issuedBy: "UN Women",
     image: gender2,
+    type: "social-impact",
+  },
+  {
+    title: "Letter of Recommendation",
+    date: "2026",
+    issuedBy: "COMSATS University Islamabad",
+    image: cui,
+    type: "recommendation",
+  },
+  {
+    title: "Letter of Recommendation",
+    date: "2026",
+    issuedBy: "COMSATS University Islamabad",
+    image: cui,
+    type: "recommendation",
   },
 ];
 
@@ -440,6 +474,7 @@ const projects = [
     image: jobit, // You can replace with an actual project image
     source_code_link: "https://github.com/Zamin-Raza/SafeSitePlus",
     isLive: false,
+    type: "academic",
   },
   {
     id: "floodaware",
@@ -471,6 +506,7 @@ const projects = [
     image: flood,
     source_code_link: "https://github.com/itshahryar/flood-risk-frontend/",
     isLive: false,
+    type: "solo",
   },
   {
     id: "aicareercoach",
@@ -518,6 +554,7 @@ const projects = [
     image: careerCoach, // Replace with actual image variable
     source_code_link: "https://github.com/itshahryar/Mern-ai-career-coach",
     isLive: false,
+    type: "solo",
   },
   {
     id: "aifinanceplatform",
@@ -561,6 +598,7 @@ const projects = [
     image: finance, // Replace with actual image related to I Finance if available
     source_code_link: "https://github.com/itshahryar/next-ai-finance", // Replace with your actual link
     isLive: false,
+    type: "solo",
   },
   {
     id: "mernreal-estate",
@@ -592,6 +630,7 @@ const projects = [
     image: carrent,
     source_code_link: "https://github.com/itshahryar/mern-realEstate",
     isLive: false,
+    type: "solo",
   },
   {
     id: "proteoaging-oocytes",
@@ -610,6 +649,7 @@ const projects = [
     image: bio,
     source_code_link: "https://github.com/itshahryar/ProteoAging-Oocytes",
     isLive: false,
+    type: "client-project",
   },
   {
     id: "doctor-portfolio",
@@ -628,6 +668,7 @@ const projects = [
     source_code_link: "https://github.com/itshahryar/doctor-portfolio",
     isLive: true,
     liveLink: "https://dr-ibtisam.vercel.app/",
+    type: "client-portfolio",
   },
   {
     id: "artist-portfolio",
@@ -646,6 +687,7 @@ const projects = [
     source_code_link: "https://github.com/itshahryar/Artist-portfolio",
     isLive: true,
     liveLink: "https://artist-portfolio-azure.vercel.app/",
+    type: "client-portfolio",
   },
   {
     id: "graphic-designer-portfolio",
@@ -665,6 +707,7 @@ const projects = [
     source_code_link: "https://github.com/itshahryar/client-portfolio",
     isLive: true,
     liveLink: "https://hamnas-portfolio.vercel.app/",
+    type: "client-portfolio",
   },
    {
     id: "mealmentor-ui",
@@ -681,6 +724,7 @@ const projects = [
     source_code_link:
       "https://www.figma.com/design/QlqOhw2cJg8llLHrX7S4ib/MealMentor-HCI-Lab-Terminal?node-id=0-1&p=f&t=YSSEaiYXV8GAu70L-0",
     isLive: false,
+    type: "ui-ux",
   },
 
 ];

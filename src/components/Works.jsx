@@ -101,36 +101,30 @@ const ProjectCard = ({
 const Works = () => {
   const [activeFilter, setActiveFilter] = useState('All');
 
-  // Categorize projects
-  const getProjectCategory = (project) => {
-    // Check if project is FYP (Final Year Project)
-    if (project.name.includes('FYP') || project.id === 'safesiteplus') {
-      return 'Academic Projects';
-    }
-    
-    // Check if project is UI-only (Figma projects)
-    const isUI = project.tags.some(tag => 
-      tag.name.toLowerCase() === 'figma'
-    );
-    if (isUI) return 'UI/UX Design';
-    
-    // Check if project is a portfolio
-    if (project.name.includes('Portfolio') || project.id.includes('portfolio')) {
-      return 'Client Portfolios';
-    }
-    
-    // Check if project is for a client (like ProteoAging-Oocytes)
-    if (project.id === 'proteoaging-oocytes') {
-      return 'Client Projects';
-    }
-    
-    // Otherwise, it's a solo project
-    return 'Solo Projects';
+  // Map project types to display names
+  const typeToDisplayName = {
+    'academic': 'Academic Projects',
+    'solo': 'Solo Projects',
+    'client-project': 'Client Projects',
+    'client-portfolio': 'Client Portfolios',
+    'ui-ux': 'UI/UX Design',
+  };
+
+  // Map display names to project types
+  const displayNameToType = {
+    'Academic Projects': 'academic',
+    'Solo Projects': 'solo',
+    'Client Projects': 'client-project',
+    'Client Portfolios': 'client-portfolio',
+    'UI/UX Design': 'ui-ux',
   };
 
   const filteredProjects = activeFilter === 'All'
     ? projects
-    : projects.filter(project => getProjectCategory(project) === activeFilter);
+    : projects.filter(project => {
+        const projectType = displayNameToType[activeFilter];
+        return project.type === projectType;
+      });
 
   const totalProjects = projects.length;
   const filteredCount = filteredProjects.length;

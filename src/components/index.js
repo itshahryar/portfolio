@@ -17,6 +17,7 @@ import ProjectDetails from '../pages/project/ProjectDetails';
 import Chatbot from './Chatbot';
 import Services from './Services';
 import Skills from './Skills';
+import QuickLinks from './QuickLinks';
 
 export {
   Hero,
@@ -37,6 +38,7 @@ export {
   Chatbot,
   Services,
   Skills,
+  QuickLinks,
 
   Exp,
   Wrk,
