@@ -143,7 +143,7 @@ A collection of **credentials, workshops, experience letters, and certifications
 ## 📬 Contact Me  
 
 📧 **Email:** shahryaramjadmos@gmail.com  
-🔗 **LinkedIn:** [Shahryar Amjad](https://www.linkedin.com/in/muhammad-shahryar-amjad-2481542b8/)  
+🔗 **LinkedIn:** [Shahryar Amjad](https://www.linkedin.com/in/muhammad-shahryar-amjad-270185364/)  
 💻 **GitHub:** [itshahryar](https://github.com/itshahryar)  
 📷 **Instagram:** [its._shahryar](https://www.instagram.com/its._shahryar)  
 🌍 **Facebook:** [shahryar](https://www.facebook.com/share/1Ao4ESuB99/)  

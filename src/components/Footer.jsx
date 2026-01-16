@@ -23,7 +23,7 @@ const Footer = () => {
             <div>
               <p className="text-sm font-bold">LinkedIn</p>
               <a
-                href="https://www.linkedin.com/in/muhammad-shahryar-amjad-2481542b8/"
+                href="https://www.linkedin.com/in/muhammad-shahryar-amjad-270185364/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm text-white hover:text-[#915EFF]"
