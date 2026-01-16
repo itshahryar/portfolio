@@ -52,7 +52,20 @@ const CompanyLogosSlider = () => {
   );
 };
 
-const CertificationCard = ({ title, date, issuedBy, image }) => {
+const CertificationCard = ({ title, date, issuedBy, image, downloadTo }) => {
+  const handleDownload = () => {
+    // Create a temporary anchor element
+    const link = document.createElement('a');
+    link.href = downloadTo;
+    link.target = '_blank';
+    link.download = title.replace(/[^a-z0-9]/gi, '_').toLowerCase() + '.pdf';
+    
+    // Append to the body, click, and remove
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full lg:h-[420px] h-auto flex flex-col">
       <div className="relative w-full h-[230px]">
@@ -61,12 +74,38 @@ const CertificationCard = ({ title, date, issuedBy, image }) => {
           alt={title}
           className="w-full h-full object-cover rounded-2xl"
         />
+        {/* Positioned download button overlay on the image */}
+        <motion.button
+          onClick={handleDownload}
+          className="absolute bottom-4 right-4 w-12 h-12 md:w-10 md:h-10 lg:w-9 lg:h-9 bg-gradient-to-r from-purple-600 to-purple-700 rounded-full flex items-center justify-center shadow-lg shadow-purple-500/30"
+          whileHover={{ 
+            scale: 1.1,
+            boxShadow: "0 10px 25px -5px rgba(147, 51, 234, 0.5)"
+          }}
+          whileTap={{ scale: 0.95 }}
+          aria-label="Download document"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-6 w-6 md:h-5 md:w-5 lg:h-4 lg:w-4 text-white"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              fillRule="evenodd"
+              d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
+              clipRule="evenodd"
+            />
+          </svg>
+        </motion.button>
       </div>
 
-      <div className="mt-5 flex-1 flex flex-col justify-between">
-        <h3 className="text-white font-bold text-[24px]">{title}</h3>
-        <p className="mt-2 text-secondary text-[14px]">Issued By: {issuedBy}</p>
-        <p className="mt-2 text-secondary text-[14px]">{date}</p>
+      <div className="mt-5 flex-1 flex flex-col">
+        <div>
+          <h3 className="text-white font-bold text-[24px]">{title}</h3>
+          <p className="mt-2 text-secondary text-[14px]">Issued By: {issuedBy}</p>
+          <p className="mt-2 text-secondary text-[14px]">{date}</p>
+        </div>
       </div>
     </div>
   );
@@ -137,6 +176,7 @@ const Certifications = () => {
               date={cert.date}
               issuedBy={cert.issuedBy}
               image={cert.image}
+              downloadTo={cert.downloadTo}
             />
           ))}
         </div>
@@ -211,6 +251,7 @@ const Certifications = () => {
                   date={cert.date}
                   issuedBy={cert.issuedBy}
                   image={cert.image}
+                  downloadTo={cert.downloadTo}
                 />
               ))}
             </div>

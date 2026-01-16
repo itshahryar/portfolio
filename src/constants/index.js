@@ -279,6 +279,7 @@ const certifications = [
     issuedBy: "V3 Solution (Private Limited)",
     image: v3_letter,
     type: "experience",
+    downloadTo: "/certificates/react-native-internship.pdf"
   },
   {
     title: "Mern Stack Developer Experiece Letter",
@@ -286,41 +287,47 @@ const certifications = [
     issuedBy: "Portusx",
     image: portusx2,
     type: "experience",
+    downloadTo: "/certificates/mern-stack-experience.pdf"
   },
   {
     title: "HP LIFE Cybersecurity Awareness",
     date: "17 August 2025",
     issuedBy: "HP LIFE",
-    image: hpCybersecurity, // You'll need to import this image
+    image: hpCybersecurity,
     type: "credential",
+    downloadTo: "/certificates/hp-cybersecurity.pdf"
   },
   {
     title: "HP LIFE Resume Writing",
     date: "9 September 2025",
     issuedBy: "HP LIFE",
-    image: hpResume, // You'll need to import this image
+    image: hpResume,
     type: "credential",
+    downloadTo: "/certificates/hp-resume-writing.pdf"
   },
   {
     title: "Beginners' Chinese: A Taster Course",
     date: "15 February 2025",
     issuedBy: "OpenLearn",
-    image: chineseCourse, // You'll need to import this image
+    image: chineseCourse,
     type: "language",
+    downloadTo: "/certificates/chinese-course.pdf"
   },
   {
     title: "English Proficiency Certificate",
     date: "14 January 2026",
     issuedBy: "COMSATS University Islamabad",
-    image: englishProef, // You'll need to import this image
+    image: englishProef,
     type: "language",
+    downloadTo: "/certificates/english-proficiency.pdf"
   },
   {
     title: "Child Protection Systems Strengthening",
-    date: "2025", // Add the specific date if available
+    date: "2025",
     issuedBy: "UNICEF",
-    image: unicefCertificate, // You'll need to import this image
+    image: unicefCertificate,
     type: "social-impact",
+    downloadTo: "/certificates/unicef-child.pdf"
   },
   {
     title: "Build with AI – Workshop",
@@ -328,6 +335,7 @@ const certifications = [
     issuedBy: "Google Developer Groups on Campus (GDGoC) - CUI",
     image: workshop,
     type: "workshop",
+    downloadTo: "/certificates/gdgoc-ai-workshop.pdf"
   },
   {
     title: "Web Bootcamp with LLM Workflows",
@@ -336,6 +344,7 @@ const certifications = [
     certificateId: "3e61c74f-07b0-4979-bc23-188e4e008224",
     image: bootcamp,
     type: "workshop",
+    downloadTo: "/certificates/gdgoc-web-bootcamp.pdf"
   },
   {
     title: "Microsoft Specialist: Word (Office 2016)",
@@ -343,6 +352,7 @@ const certifications = [
     issuedBy: "Microsoft",
     image: word,
     type: "credential",
+    downloadTo: "/certificates/ms-word.pdf"
   },
   {
     title: "Microsoft Specialist: PowerPoint (Office 2016)",
@@ -350,6 +360,7 @@ const certifications = [
     issuedBy: "Microsoft",
     image: pp,
     type: "credential",
+    downloadTo: "/certificates/ms-powerpoint.pdf"
   },
   {
     title: "An Introduction to Gender Equality for UN staff",
@@ -357,6 +368,7 @@ const certifications = [
     issuedBy: "United Nations",
     image: gender,
     type: "social-impact",
+    downloadTo: "/certificates/un-gender-equality.pdf"
   },
   {
     title: "Building Gender IQ - Gender Equality",
@@ -364,6 +376,7 @@ const certifications = [
     issuedBy: "UN Women",
     image: gender2,
     type: "social-impact",
+    downloadTo: "/certificates/un-women-gender.pdf"
   },
   {
     title: "Letter of Recommendation",
@@ -371,6 +384,7 @@ const certifications = [
     issuedBy: "COMSATS University Islamabad",
     image: cui,
     type: "recommendation",
+    downloadTo: "/certificates/recommendation-1.pdf"
   },
   {
     title: "Letter of Recommendation",
@@ -378,6 +392,7 @@ const certifications = [
     issuedBy: "COMSATS University Islamabad",
     image: cui,
     type: "recommendation",
+    downloadTo: "/certificates/recommendation-2.pdf"
   },
 ];
 
