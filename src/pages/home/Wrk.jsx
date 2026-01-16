@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { projects } from "../../constants";
 import { motion } from "framer-motion";
-import { FaGithub, FaEye } from "react-icons/fa";
+import { FaGithub, FaEye, FaExternalLinkAlt } from "react-icons/fa";
 
 const ProjectPreviewCard = ({ project }) => {
   const navigate = useNavigate();
@@ -15,6 +15,11 @@ const ProjectPreviewCard = ({ project }) => {
   const handleViewDetails = (e) => {
     e.stopPropagation();
     navigate(`/project/${project.id}`);
+  };
+
+  const handleLiveLinkClick = (e) => {
+    e.stopPropagation();
+    window.open(project.liveLink, "_blank");
   };
 
   return (
@@ -32,21 +37,32 @@ const ProjectPreviewCard = ({ project }) => {
       </div>
 
       {/* Buttons Section */}
-      <div className='mt-4 flex gap-3'>
-        <button
-          onClick={handleViewDetails}
-          className="flex-1 py-1.5 px-3 bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white rounded-lg text-xs font-medium transition-all duration-300 shadow-md shadow-purple-500/20 flex items-center justify-center gap-1"
-        >
-          <FaEye className="text-white text-sm" />
-          View Details
-        </button>
-        <button
-          onClick={handleGithubClick}
-          className="flex-1 py-1.5 px-3 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white rounded-lg text-xs font-medium transition-all duration-300 shadow-md shadow-blue-500/20 flex items-center justify-center gap-1"
-        >
-          <FaGithub className="text-white text-sm" />
-          View Code
-        </button>
+      <div className="mt-4 flex flex-col gap-3">
+        <div className="flex gap-3">
+          <button
+            onClick={handleViewDetails}
+            className="flex-1 py-1.5 px-3 bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white rounded-lg text-xs font-medium transition-all duration-300 shadow-md shadow-purple-500/20 flex items-center justify-center gap-1"
+          >
+            <FaEye className="text-white text-sm" />
+            View Details
+          </button>
+          <button
+            onClick={handleGithubClick}
+            className="flex-1 py-1.5 px-3 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white rounded-lg text-xs font-medium transition-all duration-300 shadow-md shadow-blue-500/20 flex items-center justify-center gap-1"
+          >
+            <FaGithub className="text-white text-sm" />
+            View Code
+          </button>
+        </div>
+        {project.isLive && project.liveLink && (
+          <button
+            onClick={handleLiveLinkClick}
+            className="w-full py-1.5 px-3 bg-gradient-to-r from-violet-600 to-violet-700 hover:from-violet-700 hover:to-violet-800 text-white rounded-lg text-xs font-medium transition-all duration-300 shadow-md shadow-violet-500/20 flex items-center justify-center gap-1"
+          >
+            <FaExternalLinkAlt className="text-white text-sm" />
+            Visit Live Site
+          </button>
+        )}
       </div>
 
       <div className='mt-5'>

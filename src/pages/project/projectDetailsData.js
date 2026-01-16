@@ -48,6 +48,7 @@ export const projectDetails = [
       { name: "Figma", color: "pink-text-gradient" }
     ],
     source_code_link: "https://github.com/Zamin-Raza/SafeSitePlus",
+    isLive: false,
     video: "/videos/safesiteplus-demo.mp4",
     videoPoster: "/images/safesiteplus-poster.jpg",
     images: [
@@ -97,6 +98,7 @@ export const projectDetails = [
       { name: "GitHub", color: "orange-text-gradient" }
     ],
     source_code_link: "https://github.com/itshahryar/flood-risk-frontend/",
+    isLive: false,
     images: [
       "/images/floodaware-upload.jpg",
       "/images/floodaware-analysis.jpg",
@@ -146,6 +148,7 @@ export const projectDetails = [
       { name: "Clerk", color: "orange-text-gradient" }
     ],
     source_code_link: "https://github.com/itshahryar/Mern-ai-career-coach",
+    isLive: false,
     video: "/videos/careercoach-demo.mp4",
     videoPoster: "/images/careercoach-poster.jpg",
     images: [
@@ -198,6 +201,7 @@ export const projectDetails = [
       { name: "Vercel", color: "black-text-gradient" }
     ],
     source_code_link: "https://github.com/itshahryar/next-ai-finance",
+    isLive: false,
     images: [
       "/images/finance-dashboard.jpg",
       "/images/finance-analytics.jpg",
@@ -245,6 +249,7 @@ export const projectDetails = [
       { name: "Firebase", color: "orange-text-gradient" }
     ],
     source_code_link: "https://github.com/itshahryar/mern-realEstate",
+    isLive: false,
     images: [
       "/images/realestate-home.jpg",
       "/images/realestate-search.jpg",
@@ -287,6 +292,7 @@ export const projectDetails = [
       { name: "Figma", color: "pink-text-gradient" },
     ],
     source_code_link: "https://www.figma.com/design/QlqOhw2cJg8llLHrX7S4ib/MealMentor-HCI-Lab-Terminal?node-id=0-1&p=f&t=YSSEaiYXV8GAu70L-0",
+    isLive: false,
     images: [
       "/images/mealmentor-home.jpg",
       "/images/mealmentor-recipes.jpg",
@@ -331,6 +337,8 @@ export const projectDetails = [
       { name: "GitHub", color: "gray-text-gradient" }
     ],
     source_code_link: "https://github.com/itshahryar/doctor-portfolio",
+    isLive: true,
+    liveLink: "https://dr-ibtisam.vercel.app/",
     images: [
       "/images/doctor-portfolio-home.jpg",
       "/images/doctor-portfolio-academics.jpg",
@@ -375,6 +383,8 @@ export const projectDetails = [
       { name: "GitHub", color: "gray-text-gradient" }
     ],
     source_code_link: "https://github.com/itshahryar/Artist-portfolio",
+    isLive: true,
+    liveLink: "https://artist-portfolio-azure.vercel.app/",
     images: [
       "/images/artist-portfolio-home.jpg",
       "/images/artist-portfolio-gallery.jpg",
@@ -419,6 +429,7 @@ export const projectDetails = [
       { name: "GitHub", color: "gray-text-gradient" }
     ],
     source_code_link: "https://github.com/itshahryar/ProteoAging-Oocytes",
+    isLive: false,
     images: [
       "/images/proteoaging-home.jpg",
       "/images/proteoaging-search.jpg",
@@ -463,6 +474,8 @@ export const projectDetails = [
       { name: "GitHub", color: "gray-text-gradient" }
     ],
     source_code_link: "https://github.com/itshahryar/client-portfolio",
+    isLive: true,
+    liveLink: "https://hamnas-portfolio.vercel.app/",
     images: [
       "/images/graphic-designer-home.jpg",
       "/images/graphic-designer-projects.jpg",

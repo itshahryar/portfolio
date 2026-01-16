@@ -439,6 +439,7 @@ const projects = [
     ],
     image: jobit, // You can replace with an actual project image
     source_code_link: "https://github.com/Zamin-Raza/SafeSitePlus",
+    isLive: false,
   },
   {
     id: "floodaware",
@@ -469,6 +470,7 @@ const projects = [
     ],
     image: flood,
     source_code_link: "https://github.com/itshahryar/flood-risk-frontend/",
+    isLive: false,
   },
   {
     id: "aicareercoach",
@@ -515,6 +517,7 @@ const projects = [
     ],
     image: careerCoach, // Replace with actual image variable
     source_code_link: "https://github.com/itshahryar/Mern-ai-career-coach",
+    isLive: false,
   },
   {
     id: "aifinanceplatform",
@@ -557,6 +560,7 @@ const projects = [
     ],
     image: finance, // Replace with actual image related to I Finance if available
     source_code_link: "https://github.com/itshahryar/next-ai-finance", // Replace with your actual link
+    isLive: false,
   },
   {
     id: "mernreal-estate",
@@ -587,6 +591,7 @@ const projects = [
     ],
     image: carrent,
     source_code_link: "https://github.com/itshahryar/mern-realEstate",
+    isLive: false,
   },
   {
     id: "proteoaging-oocytes",
@@ -603,7 +608,8 @@ const projects = [
       { name: "Responsive UI", color: "orange-text-gradient" }
     ],
     image: bio,
-    source_code_link: "https://github.com/itshahryar/ProteoAging-Oocytes"
+    source_code_link: "https://github.com/itshahryar/ProteoAging-Oocytes",
+    isLive: false,
   },
   {
     id: "doctor-portfolio",
@@ -619,7 +625,9 @@ const projects = [
       { name: "GitHub", color: "black-text-gradient" }
     ],
     image: doctorPortfolioImage,
-    source_code_link: "https://github.com/itshahryar/doctor-portfolio"
+    source_code_link: "https://github.com/itshahryar/doctor-portfolio",
+    isLive: true,
+    liveLink: "https://dr-ibtisam.vercel.app/",
   },
   {
     id: "artist-portfolio",
@@ -635,7 +643,9 @@ const projects = [
       { name: "GitHub", color: "black-text-gradient" }
     ],
     image: artistPortfolioImage,
-    source_code_link: "https://github.com/itshahryar/Artist-portfolio"
+    source_code_link: "https://github.com/itshahryar/Artist-portfolio",
+    isLive: true,
+    liveLink: "https://artist-portfolio-azure.vercel.app/",
   },
   {
     id: "graphic-designer-portfolio",
@@ -652,7 +662,9 @@ const projects = [
       { name: "GitHub", color: "black-text-gradient" }
     ],
     image: hamnaPortfolioImage,
-    source_code_link: "https://github.com/itshahryar/client-portfolio"
+    source_code_link: "https://github.com/itshahryar/client-portfolio",
+    isLive: true,
+    liveLink: "https://hamnas-portfolio.vercel.app/",
   },
    {
     id: "mealmentor-ui",
@@ -668,6 +680,7 @@ const projects = [
     image: hci,
     source_code_link:
       "https://www.figma.com/design/QlqOhw2cJg8llLHrX7S4ib/MealMentor-HCI-Lab-Terminal?node-id=0-1&p=f&t=YSSEaiYXV8GAu70L-0",
+    isLive: false,
   },
 
 ];

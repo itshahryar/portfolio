@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { FaArrowLeft, FaGithub, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import { FaArrowLeft, FaGithub, FaChevronLeft, FaChevronRight, FaExternalLinkAlt } from 'react-icons/fa';
 import { projectDetails } from './projectDetailsData';
 
 const ProjectDetails = () => {
@@ -87,19 +87,33 @@ const ProjectDetails = () => {
               A detailed look at the project, its challenges, and solutions implemented.
             </motion.p>
             
-            {/* GitHub Link */}
-            {project.source_code_link && (
-              <motion.a
-                href={project.source_code_link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 mt-6 px-6 py-3 bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white rounded-lg font-medium transition-all duration-300 shadow-lg shadow-purple-500/30"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <FaGithub /> View Source Code
-              </motion.a>
-            )}
+            {/* GitHub Link and Live Link */}
+            <div className="flex flex-wrap items-center justify-center gap-4 mt-6">
+              {project.source_code_link && (
+                <motion.a
+                  href={project.source_code_link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white rounded-lg font-medium transition-all duration-300 shadow-lg shadow-purple-500/30"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <FaGithub /> View Source Code
+                </motion.a>
+              )}
+              {project.isLive && project.liveLink && (
+                <motion.a
+                  href={project.liveLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-violet-600 to-violet-700 hover:from-violet-700 hover:to-violet-800 text-white rounded-lg font-medium transition-all duration-300 shadow-lg shadow-violet-500/30"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <FaExternalLinkAlt /> Visit Live Site
+                </motion.a>
+              )}
+            </div>
         </div>
       </motion.div>
 
