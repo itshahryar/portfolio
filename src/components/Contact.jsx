@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 import { styles } from "../style";
+import { FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 const ContactPage = () => {
   const formRef = useRef();
@@ -68,7 +69,7 @@ const ContactPage = () => {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="mb-16 text-center"
+          className="mb-8 text-center"
         >
           <p className="text-secondary uppercase text-sm tracking-wider mb-2">
             Get in touch
@@ -76,17 +77,44 @@ const ContactPage = () => {
           <h2 className="text-white text-3xl font-bold">Contact Me</h2>
           <div className="w-16 h-1 bg-purple-500 mx-auto mt-3 rounded-full"></div>
           <p className="mt-4 text-secondary text-[17px] max-w-3xl mx-auto leading-[30px]">
-            Have a question or want to work together? Feel free to reach out!
+            Have a project in mind? I'd love to hear from you. Send me a message and I'll respond as soon as possible.
           </p>
         </motion.div>
       </div>
 
-      {/* Main Content - Contact Form Only */}
+      {/* Main Content */}
       <div className="px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 2xl:px-32">
-        <motion.div 
+        {/* Contact Badges - Matching the Image Style */}
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
+          className="mb-8 flex justify-center gap-4"
+        >
+          <a
+            href="mailto:shahryaramjadmos@gmail.com"
+            className="flex items-center gap-3 py-2 px-4 bg-tertiary rounded-lg border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300"
+          >
+            <FaEnvelope className="w-5 h-5 text-[#915EFF]" />
+            <span className="text-white text-sm">shahryaramjadmos@gmail.com</span>
+          </a>
+          
+          <a
+            href="https://www.linkedin.com/in/muhammad-shahryar-amjad-270185364/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-3 py-2 px-4 bg-tertiary rounded-lg border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300"
+          >
+            <FaLinkedin className="w-5 h-5 text-[#915EFF]" />
+            <span className="text-white text-sm">LinkedIn Profile</span>
+          </a>
+        </motion.div>
+
+        {/* Contact Form */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
           className="max-w-3xl mx-auto bg-black-100 p-6 sm:p-8 md:p-10 lg:p-12 rounded-2xl border border-purple-500/20 shadow-xl"
         >
           <form
@@ -95,37 +123,37 @@ const ContactPage = () => {
             className="flex flex-col gap-6 sm:gap-8"
           >
             <label className="flex flex-col">
-              <span className="text-white font-medium mb-3 sm:mb-4">Your Name</span>
+              <span className="text-white font-medium mb-3 sm:mb-4">Name</span>
               <input
                 type="text"
                 name="name"
                 value={form.name}
                 onChange={handleChange}
-                placeholder="What's your good name?"
+                placeholder="Your name"
                 className="bg-tertiary py-3 sm:py-4 px-4 sm:px-6 placeholder:text-secondary text-white rounded-lg outline-none border border-purple-500/20 focus:border-purple-500 font-medium text-sm sm:text-base w-full transition-all duration-300"
               />
             </label>
             
             <label className="flex flex-col">
-              <span className="text-white font-medium mb-3 sm:mb-4">Your Email</span>
+              <span className="text-white font-medium mb-3 sm:mb-4">Email</span>
               <input
                 type="email"
                 name="email"
                 value={form.email}
                 onChange={handleChange}
-                placeholder="What's your web address?"
+                placeholder="Your email"
                 className="bg-tertiary py-3 sm:py-4 px-4 sm:px-6 placeholder:text-secondary text-white rounded-lg outline-none border border-purple-500/20 focus:border-purple-500 font-medium text-sm sm:text-base w-full transition-all duration-300"
               />
             </label>
             
             <label className="flex flex-col">
-              <span className="text-white font-medium mb-3 sm:mb-4">Your Message</span>
+              <span className="text-white font-medium mb-3 sm:mb-4">Message</span>
               <textarea
                 rows={7}
                 name="message"
                 value={form.message}
                 onChange={handleChange}
-                placeholder="What you want to say?"
+                placeholder="Your message"
                 className="bg-tertiary py-3 sm:py-4 px-4 sm:px-6 placeholder:text-secondary text-white rounded-lg outline-none border border-purple-500/20 focus:border-purple-500 font-medium text-sm sm:text-base w-full transition-all duration-300 resize-none"
               />
             </label>
