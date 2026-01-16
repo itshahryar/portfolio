@@ -177,7 +177,7 @@ const technologies = [
     name: "Yolo",
     icon: yolo,
   },
-    {
+  {
     name: "CV",
     icon: compV,
   },
@@ -200,6 +200,37 @@ const technologies = [
   {
     name: "figma",
     icon: figma,
+  },
+  // New technologies without icons
+  {
+    name: "Ant Design",
+  },
+  {
+    name: "Python",
+  },
+  {
+    name: "FastAPI",
+  },
+  {
+    name: "MySQL",
+  },
+  {
+    name: "Firebase",
+  },
+  {
+    name: "Clerk",
+  },
+  {
+    name: "INNGEST",
+  },
+  {
+    name: "AWS",
+  },
+  {
+    name: "Google Colab",
+  },
+  {
+    name: "SQL Workbench",
   },
 ];
 

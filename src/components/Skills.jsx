@@ -16,6 +16,7 @@ const skillGroups = [
       "CSS 3",
       "Tailwind CSS",
       "Shadcn UI",
+      "Ant Design",
       "JavaScript",
       "TypeScript",
       "Redux Toolkit",
@@ -24,12 +25,22 @@ const skillGroups = [
   {
     title: "Backend & Databases",
     subtitle: "APIs, data modeling, and reliable infrastructure.",
-    techNames: ["Node JS", "MongoDB", "Prisma"],
+    techNames: [
+      "Node JS",
+      "MongoDB",
+      "Prisma",
+      "Python",
+      "FastAPI",
+      "Clerk",
+      "INNGEST",
+      "Firebase",
+      "MySQL",
+    ],
   },
   {
     title: "AI & Machine Learning",
     subtitle: "LLM‑powered assistants and data‑driven insights.",
-    techNames: ["Ai", "Gemini"],
+    techNames: ["Ai", "Gemini", "Google Colab"],
   },
   {
     title: "Computer Vision",
@@ -39,8 +50,8 @@ const skillGroups = [
   {
     title: "Tools & Workflow",
     subtitle: "Everything that keeps projects maintainable and shippable.",
-    techNames: ["git", "Postman", "figma"],
-    extraItems: ["VS Code", "Jupyter Notebook", "GitHub"],
+    techNames: ["git", "Postman", "figma", "AWS"],
+    extraItems: ["VS Code", "Jupyter Notebook", "GitHub", "SQL Workbench"],
   },
 ];
 
@@ -126,6 +137,3 @@ const SkillsPage = () => {
 };
 
 export default SectionWrapper(SkillsPage, "");
-
-
-
