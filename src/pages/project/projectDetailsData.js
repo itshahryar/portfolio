@@ -36,16 +36,15 @@ export const projectDetails = [
       { name: "Langchain", color: "orange-text-gradient" },
       { name: "AI Tools", color: "red-text-gradient" },
       { name: "Python", color: "yellow-text-gradient" },
-      { name: "Postman", color: "orange-text-gradient" },
       { name: "OpenCV", color: "green-text-gradient" },
       { name: "Yolo v8", color: "violet-text-gradient" },
-      { name: "GitHub", color: "black-text-gradient" },
       { name: "DuckDuckGo", color: "orange-text-gradient" },
     ],
     tools: [
       { name: "VS Code", color: "blue-text-gradient" },
-      { name: "Docker", color: "cyan-text-gradient" },
-      { name: "Jira", color: "blue-text-gradient" },
+      { name: "GitHub", color: "cyan-text-gradient" },
+      { name: "Postman", color: "orange-text-gradient" },
+      { name: "Google Colab", color: "green-text-gradient" },
       { name: "Figma", color: "pink-text-gradient" }
     ],
     source_code_link: "https://github.com/Zamin-Raza/SafeSitePlus",
@@ -94,8 +93,8 @@ export const projectDetails = [
     ],
     tools: [
       { name: "VS Code", color: "blue-text-gradient" },
-      { name: "Docker", color: "cyan-text-gradient" },
-      { name: "Git", color: "orange-text-gradient" }
+      { name: "Vercel", color: "cyan-text-gradient" },
+      { name: "GitHub", color: "orange-text-gradient" }
     ],
     source_code_link: "https://github.com/itshahryar/flood-risk-frontend/",
     images: [
@@ -137,16 +136,14 @@ export const projectDetails = [
       { name: "Shadcn UI", color: "red-text-gradient" },
       { name: "Prisma", color: "purple-text-gradient" },
       { name: "NeonDB", color: "green-text-gradient" },
-      { name: "Clerk", color: "orange-text-gradient" },
       { name: "Gemini AI", color: "cyan-text-gradient" },
-      { name: "Inngest", color: "yellow-text-gradient" },
-      { name: "vercel", color: "black-text-gradient" },
+      { name: "Inngest", color: "yellow-text-gradient" }
     ],
     tools: [
       { name: "VS Code", color: "blue-text-gradient" },
-      { name: "Figma", color: "pink-text-gradient" },
       { name: "Notion", color: "gray-text-gradient" },
-      { name: "Vercel", color: "black-text-gradient" }
+      { name: "Vercel", color: "black-text-gradient" },
+      { name: "Clerk", color: "orange-text-gradient" }
     ],
     source_code_link: "https://github.com/itshahryar/Mern-ai-career-coach",
     video: "/videos/careercoach-demo.mp4",
@@ -186,19 +183,18 @@ export const projectDetails = [
       "Secure data encryption and privacy protection"
     ],
     techs: [
-      { name: "next.js", color: "blue-text-gradient" },
-      { name: "tailwind css", color: "pink-text-gradient" },
-      { name: "prisma", color: "purple-text-gradient" },
-      { name: "gemini-ai", color: "orange-text-gradient" },
+      { name: "Next.js", color: "blue-text-gradient" },
+      { name: "Tailwind CSS", color: "pink-text-gradient" },
+      { name: "Prisma", color: "purple-text-gradient" },
+      { name: "Gemini AI", color: "orange-text-gradient" },
       { name: "Shadcn UI", color: "red-text-gradient" },
-      { name: "clerk", color: "red-text-gradient" },
-      { name: "vercel", color: "black-text-gradient" },
-      { name: "inngest", color: "green-text-gradient" },
+      { name: "Inngest", color: "green-text-gradient" }
     ],
+
     tools: [
       { name: "VS Code", color: "blue-text-gradient" },
       { name: "Postman", color: "orange-text-gradient" },
-      { name: "Figma", color: "pink-text-gradient" },
+      { name: "Clerk", color: "red-text-gradient" },
       { name: "Vercel", color: "black-text-gradient" }
     ],
     source_code_link: "https://github.com/itshahryar/next-ai-finance",
@@ -241,13 +237,12 @@ export const projectDetails = [
       { name: "mongodb", color: "green-text-gradient" },
       { name: "tailwind", color: "pink-text-gradient" },
       { name: "Node.js", color: "green-text-gradient" },
-      { name: "Firebase", color: "orange-text-gradient" },
     ],
     tools: [
       { name: "VS Code", color: "blue-text-gradient" },
       { name: "Postman", color: "orange-text-gradient" },
-      { name: "Git", color: "orange-text-gradient" },
-      { name: "Firebase Console", color: "orange-text-gradient" }
+      { name: "GitHub", color: "orange-text-gradient" },
+      { name: "Firebase", color: "orange-text-gradient" }
     ],
     source_code_link: "https://github.com/itshahryar/mern-realEstate",
     images: [
@@ -285,12 +280,11 @@ export const projectDetails = [
       "Integration with grocery delivery services"
     ],
     techs: [
-      { name: "Figma", color: "pink-text-gradient" },
+      // No items here if you only have design software
     ],
+
     tools: [
       { name: "Figma", color: "pink-text-gradient" },
-      { name: "Miro", color: "yellow-text-gradient" },
-      { name: "Notion", color: "gray-text-gradient" }
     ],
     source_code_link: "https://www.figma.com/design/QlqOhw2cJg8llLHrX7S4ib/MealMentor-HCI-Lab-Terminal?node-id=0-1&p=f&t=YSSEaiYXV8GAu70L-0",
     images: [
@@ -298,6 +292,182 @@ export const projectDetails = [
       "/images/mealmentor-recipes.jpg",
       "/images/mealmentor-grocery.jpg",
       "/images/mealmentor-planning.jpg"
+    ]
+  },
+  {
+    id: "doctor-portfolio",
+    name: "Medical Student Portfolio",
+    problemIntro: "Medical students often struggle to create a comprehensive digital presence that showcases their academic journey, research work, and career aspirations effectively.",
+    problemPoints: [
+      "Difficulty presenting academic achievements and clinical rotations",
+      "Challenges organizing research projects and publications",
+      "Limited platform to showcase extracurricular activities and leadership roles",
+      "Need for professional networking and residency application support"
+    ],
+    solutionIntro: "A modern, responsive portfolio website that helps medical students document their journey, showcase achievements, and build a professional network.",
+    solutionPoints: [
+      "Comprehensive academic profile with grades and achievements",
+      "Research projects and publications showcase",
+      "Clinical rotations and hands-on experience documentation",
+      "Extracurricular activities and leadership roles display",
+      "Professional networking and contact integration"
+    ],
+    scopeIntro: "A complete digital portfolio solution for medical students to track their progress, showcase achievements, and prepare for residency applications.",
+    scopePoints: [
+      "Academic profile with coursework and achievements",
+      "Research experience and publications showcase",
+      "Clinical rotations and practical experience documentation",
+      "Leadership roles and extracurricular activities",
+      "Skills and certifications presentation",
+      "Professional networking and career development tools"
+    ],
+    techs: [
+      { name: "React", color: "blue-text-gradient" },
+      { name: "Vite", color: "orange-text-gradient" },
+      { name: "Tailwind CSS", color: "cyan-text-gradient" }
+    ],
+    tools: [
+      { name: "VS Code", color: "blue-text-gradient" },
+      { name: "GitHub", color: "gray-text-gradient" }
+    ],
+    source_code_link: "https://github.com/itshahryar/doctor-portfolio",
+    images: [
+      "/images/doctor-portfolio-home.jpg",
+      "/images/doctor-portfolio-academics.jpg",
+      "/images/doctor-portfolio-research.jpg",
+      "/images/doctor-portfolio-activities.jpg"
+    ]
+  },
+  {
+    id: "artist-portfolio",
+    name: "Aria's Art Studio Portfolio",
+    problemIntro: "Artists and creative professionals need a visually striking platform to showcase their work, tell their story, and connect with potential clients and collaborators.",
+    problemPoints: [
+      "Difficulty creating an online presence that matches artistic vision",
+      "Challenges organizing and presenting diverse creative works",
+      "Limited platform for storytelling and artistic expression",
+      "Need for professional presentation to attract commissions and clients"
+    ],
+    solutionIntro: "A visually engaging portfolio website that showcases artistic work, tells the artist's story, and provides a platform for client connections.",
+    solutionPoints: [
+      "Visually striking gallery for artwork and illustrations",
+      "Storytelling sections for artistic journey and inspiration",
+      "Interactive portfolio with smooth navigation",
+      "Testimonials from collectors and collaborators",
+      "Contact and commission inquiry system"
+    ],
+    scopeIntro: "A comprehensive digital showcase for artists to present their work, share their story, and connect with the art community.",
+    scopePoints: [
+      "Dynamic gallery with categorized artwork display",
+      "Artist biography and creative journey section",
+      "Featured works and collections showcase",
+      "Testimonials and client feedback integration",
+      "Contact and commission inquiry system",
+      "Responsive design optimized for visual content"
+    ],
+    techs: [
+      { name: "React", color: "blue-text-gradient" },
+      { name: "Vite", color: "orange-text-gradient" },
+      { name: "Tailwind CSS", color: "cyan-text-gradient" }
+    ],
+    tools: [
+      { name: "VS Code", color: "blue-text-gradient" },
+      { name: "GitHub", color: "gray-text-gradient" }
+    ],
+    source_code_link: "https://github.com/itshahryar/Artist-portfolio",
+    images: [
+      "/images/artist-portfolio-home.jpg",
+      "/images/artist-portfolio-gallery.jpg",
+      "/images/artist-portfolio-about.jpg",
+      "/images/artist-portfolio-contact.jpg"
+    ]
+  },
+  {
+    id: "proteoaging-oocytes",
+    name: "ProteoAging-Oocytes - Bioinformatics Platform",
+    problemIntro: "Researchers and students in biology often struggle with analyzing complex gene expression data and visualizing differentially expressed genes in an intuitive way.",
+    problemPoints: [
+      "Difficulty interpreting raw gene/proteomics data",
+      "Challenges creating meaningful visualizations of biological data",
+      "Limited tools for non-programmers to analyze gene expression",
+      "Need for structured presentation of complex biological datasets"
+    ],
+    solutionIntro: "A user-friendly bioinformatics platform that transforms raw gene expression data into interactive visualizations and structured tables.",
+    solutionPoints: [
+      "Gene search functionality with detailed information retrieval",
+      "Interactive visualizations for differentially expressed genes",
+      "Structured data tables with filtering and analysis capabilities",
+      "Dark mode for comfortable extended research sessions",
+      "Responsive design for use on various devices"
+    ],
+    scopeIntro: "A comprehensive bioinformatics platform designed to make gene expression analysis accessible to students and researchers without programming knowledge.",
+    scopePoints: [
+      "Gene database with search and retrieval capabilities",
+      "Visualization tools for gene expression patterns",
+      "Data analysis and filtering options",
+      "Export functionality for research data",
+      "User-friendly interface optimized for research workflows",
+      "Dark mode support for extended use"
+    ],
+    techs: [
+      { name: "JavaScript", color: "yellow-text-gradient" },
+      { name: "Data Visualization", color: "green-text-gradient" },
+      { name: "Bioinformatics", color: "purple-text-gradient" }
+    ],
+    tools: [
+      { name: "VS Code", color: "blue-text-gradient" },
+      { name: "GitHub", color: "gray-text-gradient" }
+    ],
+    source_code_link: "https://github.com/itshahryar/ProteoAging-Oocytes",
+    images: [
+      "/images/proteoaging-home.jpg",
+      "/images/proteoaging-search.jpg",
+      "/images/proteoaging-visualization.jpg",
+      "/images/proteoaging-data.jpg"
+    ]
+  },
+  {
+    id: "graphic-designer-portfolio",
+    name: "Hamna Fatima - Graphic Designer Portfolio",
+    problemIntro: "Graphic designers need a visually compelling portfolio to showcase their creative work, attract clients, and demonstrate their design capabilities effectively.",
+    problemPoints: [
+      "Difficulty creating a portfolio that reflects design skills",
+      "Challenges organizing diverse design projects cohesively",
+      "Limited platform to showcase creative process and results",
+      "Need for professional presentation to attract quality clients"
+    ],
+    solutionIntro: "A modern, responsive portfolio website that showcases graphic design work, skills, and experience in a visually compelling format.",
+    solutionPoints: [
+      "Clean, modern design that highlights creative work",
+      "Project showcase with detailed case studies",
+      "Skills and services presentation",
+      "Professional experience and education sections",
+      "Client testimonials and contact integration"
+    ],
+    scopeIntro: "A comprehensive digital portfolio for graphic designers to present their work, attract clients, and establish their professional brand.",
+    scopePoints: [
+      "Dynamic project gallery with categorized work",
+      "Skills and design tools showcase",
+      "Professional experience and education timeline",
+      "Services and capabilities presentation",
+      "Client testimonials and success stories",
+      "Contact and inquiry system"
+    ],
+    techs: [
+      { name: "Next.js", color: "gray-text-gradient" },
+      { name: "JavaScript", color: "yellow-text-gradient" },
+      { name: "Tailwind CSS", color: "cyan-text-gradient" }
+    ],
+    tools: [
+      { name: "VS Code", color: "blue-text-gradient" },
+      { name: "GitHub", color: "gray-text-gradient" }
+    ],
+    source_code_link: "https://github.com/itshahryar/client-portfolio",
+    images: [
+      "/images/graphic-designer-home.jpg",
+      "/images/graphic-designer-projects.jpg",
+      "/images/graphic-designer-skills.jpg",
+      "/images/graphic-designer-contact.jpg"
     ]
   }
 ];

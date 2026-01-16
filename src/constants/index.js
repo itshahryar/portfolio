@@ -54,7 +54,11 @@ import {
   Ai,
   gemini,
   prisma,
-  flood
+  flood,
+  doctorPortfolioImage,
+  artistPortfolioImage,
+  bio,
+  hamnaPortfolioImage,
 } from "../assets";
 
 // export const navLinks = [
@@ -553,8 +557,73 @@ const projects = [
     image: carrent,
     source_code_link: "https://github.com/itshahryar/mern-realEstate",
   },
-
   {
+    id: "proteoaging-oocytes",
+    name: "🧬 ProteoAging-Oocytes",
+    description:
+      "ProteoAging-Oocytes is a bioinformatics web platform developed for a client, designed for students and researchers to analyze gene expression, visualize Differentially Expressed Genes (DEGs), and explore structured biological data tables in an interactive, user-friendly way.",
+    tags: [
+      { name: "Bioinformatics", color: "green-text-gradient" },
+      { name: "Data Visualization", color: "blue-text-gradient" },
+      { name: "React", color: "cyan-text-gradient" },
+      { name: "Tailwind CSS", color: "pink-text-gradient" },
+      { name: "JavaScript", color: "yellow-text-gradient" },
+      { name: "GitHub", color: "black-text-gradient" },
+      { name: "Responsive UI", color: "orange-text-gradient" }
+    ],
+    image: bio,
+    source_code_link: "https://github.com/itshahryar/ProteoAging-Oocytes"
+  },
+  {
+    id: "doctor-portfolio",
+    name: "🩺 Portfolio Website",
+    description:
+      "A portfolio website developed for a client (a doctor), showcasing their professional journey, skills, achievements, and services. The website features a modern, responsive, and user-friendly design.",
+    tags: [
+      { name: "React", color: "cyan-text-gradient" },
+      { name: "Vite", color: "blue-text-gradient" },
+      { name: "Tailwind CSS", color: "pink-text-gradient" },
+      { name: "ESLint", color: "red-text-gradient" },
+      { name: "Responsive Design", color: "green-text-gradient" },
+      { name: "GitHub", color: "black-text-gradient" }
+    ],
+    image: doctorPortfolioImage,
+    source_code_link: "https://github.com/itshahryar/doctor-portfolio"
+  },
+  {
+    id: "artist-portfolio",
+    name: "🎨 Portfolio Website",
+    description:
+      "A portfolio website developed for a client (Aria, a digital artist), showcasing her illustrations, storytelling, and artistic work. The website features a modern, responsive, and visually engaging design that highlights her creative portfolio.",
+    tags: [
+      { name: "Responsive Design", color: "green-text-gradient" },
+      { name: "React", color: "cyan-text-gradient" },
+      { name: "Vite", color: "blue-text-gradient" },
+      { name: "Tailwind CSS", color: "pink-text-gradient" },
+      { name: "ESLint", color: "red-text-gradient" },
+      { name: "GitHub", color: "black-text-gradient" }
+    ],
+    image: artistPortfolioImage,
+    source_code_link: "https://github.com/itshahryar/Artist-portfolio"
+  },
+  {
+    id: "graphic-designer-portfolio",
+    name: "🖌️ Portfolio Website",
+    description:
+      "A modern, responsive portfolio website developed for a client (Hamna Fatima, a graphic designer), showcasing her work, skills, and professional experience. The website features a clean, visually engaging design optimized for desktop, tablet, and mobile devices.",
+    tags: [
+      { name: "Next.js", color: "blue-text-gradient" },
+      { name: "JavaScript", color: "yellow-text-gradient" },
+      { name: "Tailwind CSS", color: "pink-text-gradient" },
+      { name: "Responsive Design", color: "green-text-gradient" },
+      { name: "UI/UX", color: "orange-text-gradient" },
+      { name: "Portfolio", color: "cyan-text-gradient" },
+      { name: "GitHub", color: "black-text-gradient" }
+    ],
+    image: hamnaPortfolioImage,
+    source_code_link: "https://github.com/itshahryar/client-portfolio"
+  },
+   {
     id: "mealmentor-ui",
     name: "MealMentor - UI",
     description:
@@ -569,6 +638,7 @@ const projects = [
     source_code_link:
       "https://www.figma.com/design/QlqOhw2cJg8llLHrX7S4ib/MealMentor-HCI-Lab-Terminal?node-id=0-1&p=f&t=YSSEaiYXV8GAu70L-0",
   },
+
 ];
 
 export {

@@ -48,6 +48,10 @@ import event from "./event.jpeg";
 import careerCoach from "./careerCoach.png";
 import finance from "./finance.png";
 import flood from "./flood.png";
+import doctorPortfolioImage from "./projects/doctorPortfolioImage.png";
+import artistPortfolioImage from "./projects/artistPortfolioImage.png";
+import bio from "./projects/bio.png";
+import hamnaPortfolioImage from "./projects/hamnaPortfolioImage.png";
 
 import v3_letter from "./certifications/v3_letter.jpeg";
 import gender from "./certifications/gender.jpeg";
@@ -128,4 +132,8 @@ export {
 chineseCourse,
 hpResume,
 hpCybersecurity,
+doctorPortfolioImage,
+artistPortfolioImage,
+bio,
+hamnaPortfolioImage,
 };
