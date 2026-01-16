@@ -52,7 +52,22 @@ const CompanyLogosSlider = () => {
   );
 };
 
+const Tooltip = ({ title, isVisible }) => {
+  return (
+    <motion.div className="absolute bottom-full right-0 mb-2 bg-black/80 backdrop-blur-sm text-white px-3 py-1.5 rounded shadow-lg z-10 pointer-events-none" initial={{ opacity: 0, y: 10 }} animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 10 }} transition={{ duration: 0.2 }} >
+      <div className="flex items-center gap-2 whitespace-nowrap">
+        <div className="text-sm font-medium">Download</div>
+        <div className="w-1 h-1 bg-white/60 rounded-full"></div>
+        <div className="text-sm text-white/90 max-w-[150px] truncate">{title}</div>
+      </div>
+      <div className="absolute top-full right-4 -mt-1 w-2 h-2 bg-black/80 transform rotate-45"></div>
+    </motion.div>
+  );
+};
+
 const CertificationCard = ({ title, date, issuedBy, image, downloadTo }) => {
+  const [isHovering, setIsHovering] = useState(false);
+  
   const handleDownload = () => {
     // Create a temporary anchor element
     const link = document.createElement('a');
@@ -75,29 +90,39 @@ const CertificationCard = ({ title, date, issuedBy, image, downloadTo }) => {
           className="w-full h-full object-cover rounded-2xl"
         />
         {/* Positioned download button overlay on the image */}
-        <motion.button
-          onClick={handleDownload}
-          className="absolute bottom-4 right-4 w-12 h-12 md:w-10 md:h-10 lg:w-9 lg:h-9 bg-gradient-to-r from-purple-600 to-purple-700 rounded-full flex items-center justify-center shadow-lg shadow-purple-500/30"
-          whileHover={{ 
-            scale: 1.1,
-            boxShadow: "0 10px 25px -5px rgba(147, 51, 234, 0.5)"
-          }}
-          whileTap={{ scale: 0.95 }}
-          aria-label="Download document"
+        <div 
+          className="absolute bottom-4 right-4"
+          onMouseEnter={() => setIsHovering(true)}
+          onMouseLeave={() => setIsHovering(false)}
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6 md:h-5 md:w-5 lg:h-4 lg:w-4 text-white"
-            viewBox="0 0 20 20"
-            fill="currentColor"
+          <Tooltip 
+            title={title} 
+            isVisible={isHovering} 
+          />
+          <motion.button
+            onClick={handleDownload}
+            className="w-12 h-12 md:w-10 md:h-10 lg:w-9 lg:h-9 bg-gradient-to-r from-purple-600 to-purple-700 rounded-full flex items-center justify-center shadow-lg shadow-purple-500/30"
+            whileHover={{ 
+              scale: 1.1,
+              boxShadow: "0 10px 25px -5px rgba(147, 51, 234, 0.5)"
+            }}
+            whileTap={{ scale: 0.95 }}
+            aria-label="Download document"
           >
-            <path
-              fillRule="evenodd"
-              d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
-              clipRule="evenodd"
-            />
-          </svg>
-        </motion.button>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6 md:h-5 md:w-5 lg:h-4 lg:w-4 text-white"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fillRule="evenodd"
+                d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
+                clipRule="evenodd"
+              />
+            </svg>
+          </motion.button>
+        </div>
       </div>
 
       <div className="mt-5 flex-1 flex flex-col">
@@ -268,4 +293,3 @@ const Certifications = () => {
 };
 
 export default Certifications;
-
