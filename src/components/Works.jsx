@@ -6,7 +6,7 @@ import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 
 const ProjectCard = ({
-  id, // Add id prop
+  id,
   index,
   name,
   description,
@@ -22,7 +22,7 @@ const ProjectCard = ({
   };
 
   const handleGithubClick = (e) => {
-    e.stopPropagation(); // Prevent card navigation
+    e.stopPropagation();
     window.open(source_code_link, "_blank");
   };
 
@@ -39,7 +39,6 @@ const ProjectCard = ({
         <div className='absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl' />
       </div>
 
-      {/* Buttons Section */}
       <div className='mt-4 flex gap-3'>
         <button
           onClick={handleViewDetails}
@@ -86,13 +85,29 @@ const Works = () => {
 
   // Categorize projects
   const getProjectCategory = (project) => {
+    // Check if project is FYP (Final Year Project)
+    if (project.name.includes('FYP') || project.id === 'safesiteplus') {
+      return 'Academic Projects';
+    }
+    
     // Check if project is UI-only (Figma projects)
     const isUI = project.tags.some(tag => 
       tag.name.toLowerCase() === 'figma'
     );
+    if (isUI) return 'UI/UX Design';
     
-    if (isUI) return 'UI';
-    return 'Web';
+    // Check if project is a portfolio
+    if (project.name.includes('Portfolio') || project.id.includes('portfolio')) {
+      return 'Client Portfolios';
+    }
+    
+    // Check if project is for a client (like ProteoAging-Oocytes)
+    if (project.id === 'proteoaging-oocytes') {
+      return 'Client Projects';
+    }
+    
+    // Otherwise, it's a solo project
+    return 'Solo Projects';
   };
 
   const filteredProjects = activeFilter === 'All'
@@ -101,7 +116,7 @@ const Works = () => {
 
   const totalProjects = projects.length;
   const filteredCount = filteredProjects.length;
-  const categories = ['All', 'Web', 'UI'];
+  const categories = ['All', 'Academic Projects', 'Solo Projects', 'Client Projects', 'Client Portfolios', 'UI/UX Design'];
 
   return (
     <>
@@ -146,12 +161,40 @@ const Works = () => {
         .
       </div>
 
-      {/* Extra context for Web projects */}
-      {activeFilter === 'Web' && (
+      {/* Extra context for different categories */}
+      {activeFilter === 'Academic Projects' && (
         <p className="mt-2 text-secondary text-xs md:text-sm max-w-3xl">
-          Many of these web experiences also weave in supporting stacks like AI assistants,
-          computer‑vision (YOLO / CV), FastAPI services, and robust DevTools — so each project
-          is more than just a UI.
+          Academic projects showcase my ability to apply theoretical knowledge to practical
+          problems, often involving research, innovation, and complex problem-solving.
+        </p>
+      )}
+      
+      {activeFilter === 'Solo Projects' && (
+        <p className="mt-2 text-secondary text-xs md:text-sm max-w-3xl">
+          Solo projects demonstrate my initiative to explore new technologies and build
+          solutions for problems I'm passionate about, often incorporating AI, web development,
+          and innovative features.
+        </p>
+      )}
+      
+      {activeFilter === 'Client Projects' && (
+        <p className="mt-2 text-secondary text-xs md:text-sm max-w-3xl">
+          Client projects highlight my ability to understand requirements, deliver professional
+          solutions, and collaborate effectively to meet specific business needs.
+        </p>
+      )}
+      
+      {activeFilter === 'Client Portfolios' && (
+        <p className="mt-2 text-secondary text-xs md:text-sm max-w-3xl">
+          Portfolio websites showcase my ability to create professional, visually appealing
+          online presences that effectively represent individuals and their work.
+        </p>
+      )}
+      
+      {activeFilter === 'UI/UX Design' && (
+        <p className="mt-2 text-secondary text-xs md:text-sm max-w-3xl">
+          UI/UX design projects demonstrate my ability to create intuitive, user-centered
+          interfaces and experiences through thoughtful design principles.
         </p>
       )}
 
@@ -182,4 +225,3 @@ const Works = () => {
 };
 
 export default SectionWrapper(Works, "");
-
