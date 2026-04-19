@@ -27,7 +27,7 @@ const App = () => {
               <Contact />
               {/* <StarsCanvas /> */}
               <Footer />
-              <Chatbot />
+              {/* <Chatbot /> */}
             </div>
           }
         />
@@ -42,7 +42,7 @@ const App = () => {
               </div>
               <Experience />
               <Footer />
-              <Chatbot />
+              {/* <Chatbot /> */}
             </div>
           }
         />
@@ -57,7 +57,7 @@ const App = () => {
               </div>
               <Works />
               <Footer />
-              <Chatbot />
+              {/* <Chatbot /> */}
             </div>
           }
         />
@@ -72,7 +72,7 @@ const App = () => {
               </div>
               <Services />
               <Footer />
-              <Chatbot />
+              {/* <Chatbot /> */}
             </div>
           }
         />
@@ -87,7 +87,7 @@ const App = () => {
               </div>
               <Skills />
               <Footer />
-              <Chatbot />
+              {/* <Chatbot /> */}
             </div>
           }
         />
@@ -101,7 +101,7 @@ const App = () => {
               </div>
               <ProjectDetails />
               <Footer />
-              <Chatbot />
+              {/* <Chatbot /> */}
             </div>
           }
         />
@@ -116,7 +116,7 @@ const App = () => {
               </div>
               <Certifications />
               <Footer />
-              <Chatbot />
+              {/* <Chatbot /> */}
             </div>
           }
         />

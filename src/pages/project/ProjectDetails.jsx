@@ -1,14 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { FaArrowLeft, FaGithub, FaChevronLeft, FaChevronRight, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaArrowLeft, FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import { projectDetails } from './projectDetailsData';
 
 const ProjectDetails = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const project = projectDetails.find(p => p.id === id);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   if (!project) {
     return (
@@ -26,18 +25,7 @@ const ProjectDetails = () => {
     );
   }
 
-  const nextImage = () => {
-    setCurrentImageIndex((prevIndex) => 
-      prevIndex === project.images.length - 1 ? 0 : prevIndex + 1
-    );
-  };
-
-  const prevImage = () => {
-    setCurrentImageIndex((prevIndex) => 
-      prevIndex === 0 ? project.images.length - 1 : prevIndex - 1
-    );
-  };
-
+  
   return (
     <section id="project-details" className="pt-32 px-6 md:px-12 max-w-7xl mx-auto pb-20">
       {/* Project Header with Back Button */}
@@ -65,7 +53,7 @@ const ProjectDetails = () => {
               Project Showcase
             </motion.p>
             <motion.h2 
-              className="text-white text-3xl md:text-5xl font-bold bg-gradient-to-r from-white to-purple-300 bg-clip-text text-transparent"
+              className="text-white text-2xl md:text-3xl font-bold bg-gradient-to-r from-white to-purple-300 bg-clip-text text-transparent"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.3 }}
@@ -117,30 +105,7 @@ const ProjectDetails = () => {
         </div>
       </motion.div>
 
-      {/* Video Section */}
-      {project.video && (
-        <motion.div 
-          className="bg-tertiary p-6 rounded-xl shadow-lg border border-purple-500/20 mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6 }}
-        >
-          <h2 className="text-white text-xl font-semibold mb-4 flex items-center">
-            <span className="mr-2">🎬</span> Demo Video
-          </h2>
-          <div className="aspect-video bg-black rounded-xl overflow-hidden shadow-2xl">
-            <video 
-              controls 
-              className="w-full h-full"
-              poster={project.videoPoster}
-            >
-              <source src={project.video} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
-        </motion.div>
-      )}
-
+      
       {/* Problem and Solution Cards in a Row */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
         {/* Problem Section */}
@@ -250,76 +215,7 @@ const ProjectDetails = () => {
         )}
       </motion.div>
 
-      {/* UI Screenshots Slider Section */}
-      <motion.div 
-        className="bg-tertiary p-6 rounded-xl shadow-lg border border-purple-500/20"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1.3 }}
-      >
-        <h2 className="text-white text-xl font-semibold mb-6 flex items-center">
-          <span className="mr-2 text-2xl">🖼️</span> UI Screenshots
-        </h2>
-        
-        <div className="relative group">
-          {/* Main Image Display */}
-          <motion.div 
-            className="bg-black rounded-xl overflow-hidden mb-4 shadow-2xl"
-            key={currentImageIndex}
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.3 }}
-          >
-            <img 
-              src={project.images[currentImageIndex]} 
-              alt={`Project screenshot ${currentImageIndex + 1}`}
-              className="w-full h-auto object-cover"
-            />
-          </motion.div>
-          
-          {/* Navigation Arrows */}
-          {project.images.length > 1 && (
-            <>
-              <motion.button 
-                onClick={prevImage}
-                className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/70 hover:bg-black/90 text-white p-3 rounded-full transition-all duration-300 shadow-lg backdrop-blur-sm"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-              >
-                <FaChevronLeft />
-              </motion.button>
-              <motion.button 
-                onClick={nextImage}
-                className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/70 hover:bg-black/90 text-white p-3 rounded-full transition-all duration-300 shadow-lg backdrop-blur-sm"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-              >
-                <FaChevronRight />
-              </motion.button>
-            </>
-          )}
-          
-          {/* Image Indicators */}
-          {project.images.length > 1 && (
-            <div className="flex justify-center gap-2 mt-6">
-              {project.images.map((_, index) => (
-                <motion.button
-                  key={index}
-                  onClick={() => setCurrentImageIndex(index)}
-                  className={`h-2 rounded-full transition-all duration-300 ${
-                    index === currentImageIndex 
-                      ? 'bg-purple-500 w-8 shadow-lg shadow-purple-500/50' 
-                      : 'bg-gray-600 w-2 hover:bg-gray-500'
-                  }`}
-                  whileHover={{ scale: 1.2 }}
-                  whileTap={{ scale: 0.9 }}
-                />
-              ))}
-            </div>
-          )}
-        </div>
-      </motion.div>
-    </section>
+          </section>
   );
 };
 

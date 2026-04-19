@@ -35,11 +35,11 @@ const About = () => {
 
           <div className="w-full bg-black-100 rounded-xl px-4 py-3 flex flex-col gap-1">
             <p className="text-white text-sm font-semibold">
-              Full-stack engineer & visual problem-solver
+              Full-stack engineer & AI solution architect
             </p>
             <p className="text-secondary text-xs leading-relaxed">
-              Crafting human-centric web experiences, AI-powered workflows, and
-              reliable systems — one project at a time.
+              Building scalable MERN applications with AI integration, 
+              optimizing performance, and delivering measurable business impact.
             </p>
           </div>
         </motion.div>
@@ -65,15 +65,13 @@ const About = () => {
 
           <div className="mt-4 space-y-3 text-secondary text-[14px] md:text-[15px] leading-[24px] max-w-2xl">
             <p>
-              I&apos;m Shahryar, an Associate Software Engineer and BS Computer Science
-              graduate from COMSATS University Islamabad. I build full-stack
-              products using MERN, Next.js & FastAPI, often enhanced with AI and
-              computer-vision.
+              I am an <strong>𝐀𝐬𝐬𝐨𝐜𝐢𝐚𝐭𝐞 𝐒𝐨𝐟𝐭𝐰𝐚𝐫𝐞 𝐄𝐧𝐠𝐢𝐧𝐞𝐞𝐫</strong>, a <strong>𝐁𝐒𝐂𝐒 𝐠𝐫𝐚𝐝𝐮𝐚𝐭𝐞</strong> from COMSATS Islamabad, and a <strong>𝐅𝐮𝐥𝐥-𝐒𝐭𝐚𝐜𝐤 𝐃𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐫</strong> specializing in MERN, Next.js, and FastAPI.
             </p>
             <p>
-              From dashboards to real-time systems and research-driven AI tools,
-              my focus stays on clean architecture, clear UX, and solutions that
-              deliver measurable impact.
+              I build scalable <strong>𝐰𝐞𝐛 𝐚𝐧𝐝 𝐦𝐨𝐛𝐢𝐥𝐞 applications</strong>, focusing on performance optimization, responsiveness, and reliability.
+            </p>
+            <p>
+              Focus on <strong>𝐀𝐈-𝐝𝐫𝐢𝐯𝐞𝐧 problem solving</strong>, build efficient solutions, and contribute to impactful tech initiatives.
             </p>
           </div>
 

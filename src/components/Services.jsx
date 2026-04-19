@@ -2,76 +2,75 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { SectionWrapper } from "../hoc";
-import { FaGlobe, FaShoppingCart, FaBrain, FaMobileAlt, FaPaintBrush, FaCloud } from "react-icons/fa";
+import { 
+  FaGlobe, 
+  FaShoppingCart, 
+  FaBrain, 
+  FaCloud, 
+  FaCode, 
+  FaServer, 
+  FaBriefcase, 
+  FaChartBar, 
+  FaRobot, 
+  FaProjectDiagram 
+} from "react-icons/fa";
 
 const serviceGroups = [
   {
-    icon: FaGlobe,
-    title: "Web Experiences",
-    subtitle: "Portfolios, landing pages, and content sites.",
-    items: [
-      "Personal & team portfolios",
-      "Product landing pages",
-      "Blog / content platforms",
-      "Marketing & launch sites",
-    ],
+    icon: FaCode,
+    title: "MERN Applications",
+    subtitle: "Full-stack web applications with MongoDB, Express, React, and Node.js.",
+    category: "web",
+  },
+  {
+    icon: FaServer,
+    title: "Next.js Applications",
+    subtitle: "Server-side rendered applications with Next.js framework.",
+    category: "web",
   },
   {
     icon: FaShoppingCart,
-    title: "E‑commerce",
-    subtitle: "Selling products and services online.",
-    items: [
-      "Storefronts & catalog pages",
-      "Checkout & payments integration",
-      "Admin dashboards & inventory",
-      "Analytics & conversion tracking",
-    ],
+    title: "E-Commerce Platforms",
+    subtitle: "Online stores with payment integration and inventory management.",
+    category: "web",
   },
   {
+    icon: FaBriefcase,
+    title: "Business Applications",
+    subtitle: "Custom solutions for business processes and workflows.",
+    category: "web",
+  },
+  {
+    icon: FaGlobe,
+    title: "Portfolio Websites",
+    subtitle: "Personal and professional portfolio sites with modern design.",
+    category: "web",
+  },
+  {
+    icon: FaChartBar,
+    title: "Dashboard Solutions",
+    subtitle: "Data visualization and analytics dashboards.",
+    category: "web",
+  },
+  {
+    icon: FaRobot,
+    title: "AI Chatbots",
+    subtitle: "Intelligent conversational assistants with LLM integration.",
+    category: "ai",
+  },
+    {
     icon: FaBrain,
-    title: "AI Dashboards & Tools",
-    subtitle: "AI‑assisted workflows and analytics.",
-    items: [
-      "AI copilots & chatbots (Gemini, LLMs)",
-      "Risk / insights dashboards",
-      "Document & data assistants",
-      "Automation workflows",
-    ],
+    title: "AI Analytics",
+    subtitle: "Predictive analytics and data-driven insights.",
+    category: "ai",
   },
   {
-    icon: FaMobileAlt,
-    title: "Product UIs & Apps",
-    subtitle: "Interfaces that feel fast, clean, and intuitive.",
-    items: [
-      "React & React Native frontends",
-      "Design systems & component libraries",
-      "Responsive, mobile‑first layouts",
-      "Micro‑interactions & motion",
-    ],
+    icon: FaProjectDiagram,
+    title: "AI Integration",
+    subtitle: "Embedding AI models into existing applications.",
+    category: "ai",
   },
-  {
-    icon: FaPaintBrush,
-    title: "Design & Prototyping",
-    subtitle: "Before we code, we design clearly.",
-    items: [
-      "Wireframes & user flows",
-      "High‑fidelity UI in Figma",
-      "Clickable prototypes",
-      "Design handoff for dev teams",
-    ],
-  },
-  {
-    icon: FaCloud,
-    title: "Back‑end & Platforms",
-    subtitle: "The foundations that keep products reliable.",
-    items: [
-      "APIs with Node.js / FastAPI",
-      "Auth, roles & permissions",
-      "Databases & ORM integration",
-      "Deployments & observability",
-    ],
-  },
-];
+  ];
 
 const ServicesPage = () => {
   const navigate = useNavigate();
@@ -82,55 +81,127 @@ const ServicesPage = () => {
 
   return (
     <section className="pt-8 md:pt-8 pb-20">
-      {/* Header - small and left aligned like Achievements */}
+      {/* Header */}
       <div className="mb-8 md:mb-10">
         <p className="text-secondary uppercase text-xs md:text-sm tracking-[0.25em] mb-2">
           Services
         </p>
         <h1 className="text-white text-2xl md:text-3xl font-bold tracking-tight">
-          Professional, end‑to‑end digital solutions.
+          Specialized Web & AI Development Services
         </h1>
         <p className="mt-3 text-secondary text-[14px] md:text-[15px] max-w-3xl leading-relaxed">
-          From portfolio sites and e‑commerce to AI dashboards and full products,
-          I help you design, build, and ship experiences that feel polished and
-          practical — not over‑engineered.
+          I focus on two core areas: building modern web applications and integrating 
+          intelligent AI solutions. Each service is tailored to deliver scalable, 
+          performant, and user-friendly experiences.
         </p>
       </div>
 
-      {/* Services Grid with categories */}
-      <div className="grid gap-6 md:gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
-        {serviceGroups.map((group, index) => {
-          const Icon = group.icon;
-          return (
-            <motion.div
-              key={group.title}
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.35, delay: index * 0.06 }}
-              className="bg-tertiary rounded-2xl p-5 md:p-6 border border-purple-500/15 hover:border-purple-500/35 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col gap-3"
-            >
-              <div className="flex items-center gap-3 mb-1">
-                <div className="w-10 h-10 rounded-xl bg-black-100 flex items-center justify-center text-purple-300">
-                  <Icon className="text-lg" />
-                </div>
-                <div>
-                  <h3 className="text-white text-base md:text-lg font-semibold">
-                    {group.title}
-                  </h3>
-                  <p className="text-secondary text-xs md:text-[13px]">
-                    {group.subtitle}
-                  </p>
-                </div>
-              </div>
+      {/* Web Development Section */}
+      <div className="mb-12">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="mb-6"
+        >
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-2 flex items-center gap-3">
+            <FaGlobe className="text-purple-400" />
+            Web Development
+          </h2>
+          <p className="text-secondary text-base">
+            Creating responsive, scalable web applications with modern frameworks and best practices.
+          </p>
+        </motion.div>
 
-              <ul className="mt-2 space-y-1.5 text-secondary text-xs md:text-[13px] leading-relaxed list-disc list-inside">
-                {group.items.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            </motion.div>
-          );
-        })}
+        <div className="grid gap-4 md:gap-6 grid-cols-1 md:grid-cols-3">
+          {serviceGroups.filter(group => group.category === 'web').map((group, index) => {
+            const Icon = group.icon;
+            return (
+              <motion.div
+                key={group.title}
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.35, delay: index * 0.1 }}
+                className="bg-gradient-to-br from-tertiary to-black/50 rounded-xl p-4 border border-blue-500/20 hover:border-blue-500/40 shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col items-center text-center h-[180px] w-full hover:scale-105 backdrop-blur-sm"
+              >
+                <div className="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center text-blue-300 mb-3 flex-shrink-0">
+                  <Icon className="text-xl" />
+                </div>
+                <h3 className="text-white text-sm md:text-base font-semibold mb-2 text-center">
+                  {group.title}
+                </h3>
+                <p className="text-secondary text-xs leading-relaxed text-center flex-grow">
+                  {group.subtitle}
+                </p>
+              </motion.div>
+            );
+          })}
+        </div>
+
+        {/* AI Integration in Web Platforms */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="mt-6 p-4 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-xl border border-purple-500/20"
+        >
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 flex items-center justify-center">
+              <span className="text-white text-lg font-bold">+</span>
+            </div>
+            <div className="flex-1">
+              <h3 className="text-white text-base font-semibold">
+                AI Integration in Web Platforms
+              </h3>
+              <p className="text-secondary text-xs leading-relaxed">
+                Smart search, personalization, and automated content generation for next-gen web apps.
+              </p>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+
+      {/* AI Services Section */}
+      <div className="mb-12">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="mb-6"
+        >
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-2 flex items-center gap-3">
+            <FaBrain className="text-purple-400" />
+            AI Solutions
+          </h2>
+          <p className="text-secondary text-base">
+            Integrating artificial intelligence to create intelligent, automated, and data-driven applications.
+          </p>
+        </motion.div>
+
+        <div className="grid gap-4 md:gap-6 grid-cols-1 md:grid-cols-3">
+          {serviceGroups.filter(group => group.category === 'ai').map((group, index) => {
+            const Icon = group.icon;
+            return (
+              <motion.div
+                key={group.title}
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.35, delay: (index + 5) * 0.1 }}
+                className="bg-gradient-to-br from-tertiary to-black/50 rounded-xl p-4 border border-purple-500/20 hover:border-purple-500/40 shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col items-center text-center h-[180px] w-full hover:scale-105 backdrop-blur-sm"
+              >
+                <div className="w-12 h-12 rounded-xl bg-purple-500/20 flex items-center justify-center text-purple-300 mb-3 flex-shrink-0">
+                  <Icon className="text-xl" />
+                </div>
+                <h3 className="text-white text-sm md:text-base font-semibold mb-2 text-center">
+                  {group.title}
+                </h3>
+                <p className="text-secondary text-xs leading-relaxed text-center flex-grow">
+                  {group.subtitle}
+                </p>
+              </motion.div>
+            );
+          })}
+        </div>
       </div>
 
       {/* CTA */}

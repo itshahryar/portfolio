@@ -106,7 +106,7 @@ const Works = () => {
     'academic': 'Academic Projects',
     'solo': 'Solo Projects',
     'client-project': 'Client Projects',
-    'client-portfolio': 'Client Portfolios',
+    'client-portfolio': 'Client Projects',
     'ui-ux': 'UI/UX Design',
   };
 
@@ -115,20 +115,22 @@ const Works = () => {
     'Academic Projects': 'academic',
     'Solo Projects': 'solo',
     'Client Projects': 'client-project',
-    'Client Portfolios': 'client-portfolio',
     'UI/UX Design': 'ui-ux',
   };
 
   const filteredProjects = activeFilter === 'All'
     ? projects
     : projects.filter(project => {
+        if (activeFilter === 'Client Projects') {
+          return project.type === 'client-project' || project.type === 'client-portfolio';
+        }
         const projectType = displayNameToType[activeFilter];
         return project.type === projectType;
       });
 
   const totalProjects = projects.length;
   const filteredCount = filteredProjects.length;
-  const categories = ['All', 'Academic Projects', 'Solo Projects', 'Client Projects', 'Client Portfolios', 'UI/UX Design'];
+  const categories = ['All', 'Academic Projects', 'Solo Projects', 'Client Projects', 'UI/UX Design'];
 
   return (
     <>
@@ -192,16 +194,11 @@ const Works = () => {
       {activeFilter === 'Client Projects' && (
         <p className="mt-2 text-secondary text-xs md:text-sm max-w-3xl">
           Client projects highlight my ability to understand requirements, deliver professional
-          solutions, and collaborate effectively to meet specific business needs.
+          solutions, and collaborate effectively to meet specific business needs, including
+          portfolio websites and custom applications.
         </p>
       )}
       
-      {activeFilter === 'Client Portfolios' && (
-        <p className="mt-2 text-secondary text-xs md:text-sm max-w-3xl">
-          Portfolio websites showcase my ability to create professional, visually appealing
-          online presences that effectively represent individuals and their work.
-        </p>
-      )}
       
       {activeFilter === 'UI/UX Design' && (
         <p className="mt-2 text-secondary text-xs md:text-sm max-w-3xl">
