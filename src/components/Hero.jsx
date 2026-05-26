@@ -16,11 +16,11 @@ const Hero = () => {
           </h1>
 
           <p className="mt-2 text-white text-[14px] sm:text-[10px] lg:text-lg italic mb-4">
-            "Building scalable full-stack applications with clean architecture and AI integration."
+            "Building scalable full-stack products with clean architecture and practical AI."
           </p>
 
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            Associate Software Engineer | Full-Stack (MERN, Next.js & FastAPI) | AI Enthusiast | CUI '25
+            Associate Software Engineer | Full-Stack Developer (MERN, Next.js, FastAPI) | CUI '25
           </p>
 
           {/* Download CV Button with shine effect */}

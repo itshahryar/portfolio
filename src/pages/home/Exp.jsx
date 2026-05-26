@@ -6,9 +6,9 @@ import { motion } from "framer-motion";
 const ExperiencePreviewCard = ({ experience }) => {
   return (
     <motion.div
-      whileHover={{ scale: 1.03 }}
+      whileHover={{ y: -4 }}
       transition={{ duration: 0.2 }}
-      className="flex flex-col justify-between p-6 rounded-2xl shadow-lg bg-[#1d1836] w-full md:w-[30%] min-h-[340px] hover:shadow-purple-800/30 transition-shadow duration-300"
+      className="flex flex-col justify-between p-6 rounded-2xl shadow-lg bg-[#1d1836] w-full h-full min-h-[340px] hover:shadow-purple-800/30 transition-all duration-300 border border-purple-500/15"
     >
       {/* Header */}
       <div>
@@ -25,7 +25,7 @@ const ExperiencePreviewCard = ({ experience }) => {
           </div>
 
           <div className="ml-4 text-left">
-            <h3 className="text-white text-lg font-bold leading-tight">{experience.title}</h3>
+            <h3 className="text-white text-base md:text-lg font-bold leading-tight">{experience.title}</h3>
             <p className="text-secondary text-sm font-medium">{experience.company_name}</p>
             <p className="text-gray-400 text-xs mt-1">{experience.date}</p>
           </div>
@@ -36,7 +36,7 @@ const ExperiencePreviewCard = ({ experience }) => {
           {experience.points.slice(0, 2).map((point, index) => (
             <li
               key={`experience-preview-point-${index}`}
-              className="text-white text-sm leading-relaxed tracking-wide"
+              className="text-white/90 text-sm leading-relaxed"
             >
               {point}
             </li>
@@ -62,7 +62,7 @@ const Exp = () => {
       </div>
 
       {/* Cards + View All in Same Row */}
-      <div className="flex flex-col md:flex-row justify-center items-stretch gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
         {/* Show first 2 experiences */}
         {experiences.slice(0, 2).map((experience, index) => (
           <ExperiencePreviewCard key={index} experience={experience} />
@@ -74,7 +74,7 @@ const Exp = () => {
           whileTap={{ scale: 0.98 }}
           transition={{ duration: 0.2 }}
           onClick={() => navigate("/experience")}
-          className="flex flex-col justify-center items-center p-6 rounded-2xl shadow-lg bg-gradient-to-r from-purple-700 to-purple-500 text-white font-semibold w-full md:w-[30%] min-h-[340px] hover:shadow-purple-800/40 transition-all duration-300 cursor-pointer relative overflow-hidden"
+          className="flex flex-col justify-center items-center p-6 rounded-2xl shadow-lg bg-gradient-to-r from-purple-700 to-purple-500 text-white font-semibold w-full min-h-[340px] hover:shadow-purple-800/40 transition-all duration-300 cursor-pointer relative overflow-hidden border border-purple-300/20"
         >
           {/* Subtle pattern overlay */}
           <div className="absolute inset-0 opacity-10">

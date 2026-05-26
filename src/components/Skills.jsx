@@ -40,17 +40,17 @@ const skillGroups = [
   {
     title: "AI & Machine Learning",
     subtitle: "LLM‑powered assistants and data‑driven insights.",
-    techNames: ["Ai", "Gemini", "Google Colab"],
+    techNames: ["AI", "Gemini", "Google Colab"],
   },
   {
     title: "Computer Vision",
     subtitle: "Visual understanding with YOLO and OpenCV.",
-    techNames: ["Yolo", "CV"],
+    techNames: ["YOLO", "CV"],
   },
   {
     title: "Tools & Workflow",
     subtitle: "Everything that keeps projects maintainable and shippable.",
-    techNames: ["git", "Postman", "figma", "AWS"],
+    techNames: ["Git", "Postman", "Figma", "AWS"],
     extraItems: ["VS Code", "Jupyter Notebook", "GitHub", "SQL Workbench"],
   },
 ];
@@ -84,7 +84,7 @@ const SkillsPage = () => {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.35, delay: index * 0.08 }}
-              className="bg-tertiary rounded-2xl p-5 md:p-6 border border-purple-500/15 hover:border-purple-500/35 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col gap-4"
+              className="bg-tertiary rounded-2xl p-5 md:p-6 border border-purple-500/15 hover:border-purple-500/35 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col gap-4 min-h-[230px]"
             >
               <div>
                 <h3 className="text-white text-base md:text-lg font-semibold">
@@ -101,11 +101,17 @@ const SkillsPage = () => {
                     key={tech.name}
                     className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-black-100 border border-purple-500/20"
                   >
-                    <img
-                      src={tech.icon}
-                      alt={tech.name}
-                      className="w-5 h-5 object-contain"
-                    />
+                    {tech.icon ? (
+                      <img
+                        src={tech.icon}
+                        alt={tech.name}
+                        className="w-5 h-5 object-contain"
+                      />
+                    ) : (
+                      <span className="w-5 h-5 flex items-center justify-center rounded-full bg-purple-500/20 text-[10px] text-purple-200 font-semibold uppercase">
+                        {tech.name[0]}
+                      </span>
+                    )}
                     <span className="text-xs md:text-[13px] text-white">
                       {tech.name}
                     </span>

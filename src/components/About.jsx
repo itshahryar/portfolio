@@ -65,13 +65,13 @@ const About = () => {
 
           <div className="mt-4 space-y-3 text-secondary text-[14px] md:text-[15px] leading-[24px] max-w-2xl">
             <p>
-              I am an <strong>𝐀𝐬𝐬𝐨𝐜𝐢𝐚𝐭𝐞 𝐒𝐨𝐟𝐭𝐰𝐚𝐫𝐞 𝐄𝐧𝐠𝐢𝐧𝐞𝐞𝐫</strong>, a <strong>𝐁𝐒𝐂𝐒 𝐠𝐫𝐚𝐝𝐮𝐚𝐭𝐞</strong> from COMSATS Islamabad, and a <strong>𝐅𝐮𝐥𝐥-𝐒𝐭𝐚𝐜𝐤 𝐃𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐫</strong> specializing in MERN, Next.js, and FastAPI.
+              I am an <strong>Associate Software Engineer</strong> and <strong>BSCS graduate</strong> from COMSATS Islamabad, specializing as a <strong>full-stack developer</strong> in MERN, Next.js, and FastAPI.
             </p>
             <p>
-              I build scalable <strong>𝐰𝐞𝐛 𝐚𝐧𝐝 𝐦𝐨𝐛𝐢𝐥𝐞 applications</strong>, focusing on performance optimization, responsiveness, and reliability.
+              I build scalable <strong>web and mobile applications</strong> with a strong focus on performance, responsiveness, and reliability.
             </p>
             <p>
-              Focus on <strong>𝐀𝐈-𝐝𝐫𝐢𝐯𝐞𝐧 problem solving</strong>, build efficient solutions, and contribute to impactful tech initiatives.
+              I enjoy <strong>AI-driven problem solving</strong> and turn ideas into efficient, user-centered products with measurable impact.
             </p>
           </div>
 

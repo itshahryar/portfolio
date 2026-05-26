@@ -39,39 +39,40 @@ const QuickLinks = () => {
         <p className="text-secondary uppercase text-sm tracking-wider mb-2">
           Explore More
         </p>
-        <h2 className="text-white text-3xl md:text-4xl font-bold">Explore More</h2>
+        <h2 className="text-white text-3xl md:text-4xl font-bold">Explore Further</h2>
         <div className="w-16 h-1 bg-purple-500 mx-auto mt-3 rounded-full"></div>
         <p className="mt-4 text-secondary text-[17px] max-w-3xl mx-auto leading-[30px]">
-          Navigate through my credentials, technical skills, and professional services.
+          Move through the key sections of my portfolio with quick, focused paths.
         </p>
       </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {quickLinks.map((link, index) => {
           const Icon = link.icon;
+
           return (
             <motion.div
               key={link.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
               onClick={() => navigate(link.path)}
-              className="bg-tertiary p-6 rounded-2xl border border-purple-500/20 hover:border-purple-500/40 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer group flex flex-col h-full"
+              className="cursor-pointer group h-full"
             >
-              <div className="w-14 h-14 rounded-xl bg-gradient-to-r from-purple-600 to-purple-700 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-md shadow-purple-500/30">
-                <Icon className="text-white text-xl" />
+              <div className="bg-gradient-to-br from-tertiary to-black/50 rounded-2xl p-5 border border-purple-500/20 hover:border-purple-500/40 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 backdrop-blur-sm h-full flex flex-col">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-purple-600 to-purple-700 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-md shadow-purple-500/30">
+                  <Icon className="text-white text-lg" />
+                </div>
+                <h3 className="text-white text-base font-semibold leading-tight">{link.title}</h3>
+                <p className="text-secondary text-sm mt-2 leading-relaxed flex-1">
+                  {link.description}
+                </p>
+                <div className="mt-4 inline-flex items-center gap-2 text-sm text-purple-300 group-hover:text-purple-200 transition-colors">
+                  Explore
+                  <FaArrowRight className="text-xs" />
+                </div>
               </div>
-              
-              <h3 className="text-white text-xl font-bold mb-3">{link.title}</h3>
-              <p className="text-secondary text-[14px] leading-relaxed mb-auto flex-grow">
-                {link.description}
-              </p>
-              
-              <button className="mt-6 w-full py-2.5 px-4 bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white rounded-lg text-sm font-medium transition-all duration-300 shadow-md shadow-purple-500/20 flex items-center justify-center gap-2 group-hover:shadow-lg group-hover:shadow-purple-500/30">
-                <span>Explore</span>
-                <FaArrowRight className="text-sm group-hover:translate-x-1 transition-transform" />
-              </button>
             </motion.div>
           );
         })}

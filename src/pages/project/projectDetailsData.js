@@ -28,16 +28,16 @@ export const projectDetails = [
     ],
     techs: [
       { name: "Material UI", color: "purple-text-gradient" },
-      { name: "tailwind css", color: "pink-text-gradient" },
+      { name: "Tailwind CSS", color: "pink-text-gradient" },
       { name: "MongoDB", color: "green-text-gradient" },
       { name: "React", color: "cyan-text-gradient" },
       { name: "Node.js", color: "green-text-gradient" },
       { name: "Express.js", color: "blue-text-gradient" },
-      { name: "Langchain", color: "orange-text-gradient" },
+      { name: "LangChain", color: "orange-text-gradient" },
       { name: "AI Tools", color: "red-text-gradient" },
       { name: "Python", color: "yellow-text-gradient" },
       { name: "OpenCV", color: "green-text-gradient" },
-      { name: "Yolo v8", color: "violet-text-gradient" },
+      { name: "YOLO v8", color: "violet-text-gradient" },
       { name: "DuckDuckGo", color: "orange-text-gradient" },
     ],
     tools: [
@@ -241,9 +241,9 @@ export const projectDetails = [
       "Document management for transactions"
     ],
     techs: [
-      { name: "react", color: "blue-text-gradient" },
-      { name: "mongodb", color: "green-text-gradient" },
-      { name: "tailwind", color: "pink-text-gradient" },
+      { name: "React", color: "blue-text-gradient" },
+      { name: "MongoDB", color: "green-text-gradient" },
+      { name: "Tailwind CSS", color: "pink-text-gradient" },
       { name: "Node.js", color: "green-text-gradient" },
     ],
     tools: [

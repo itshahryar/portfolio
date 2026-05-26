@@ -167,7 +167,7 @@ const technologies = [
     icon: next,
   },
   {
-    name: "Ai",
+    name: "AI",
     icon: Ai,
   },
   {
@@ -175,7 +175,7 @@ const technologies = [
     icon: gemini,
   },
   {
-    name: "Yolo",
+    name: "YOLO",
     icon: yolo,
   },
   {
@@ -191,7 +191,7 @@ const technologies = [
     icon: prisma,
   },
   {
-    name: "git",
+    name: "Git",
     icon: git,
   },
   {
@@ -199,7 +199,7 @@ const technologies = [
     icon: postman,
   },
   {
-    name: "figma",
+    name: "Figma",
     icon: figma,
   },
   // New technologies without icons
@@ -276,15 +276,15 @@ const certifications = [
   {
     title: "React Native Internship Completion Letter",
     date: "July 2023 - 01 September 2023",
-    issuedBy: "V3 Solution (Private Limited)",
+    issuedBy: "V3 Solutions (Private Limited)",
     image: v3_letter,
     type: "experience",
     downloadTo: "/certificates/react-native-internship.pdf"
   },
   {
-    title: "Mern Stack Developer Experiece Letter",
+    title: "MERN Stack Developer Experience Letter",
     date: "20 July 2024 - 20 September 2024",
-    issuedBy: "Portusx",
+    issuedBy: "Portus X",
     image: portusx2,
     type: "experience",
     downloadTo: "/certificates/mern-stack-experience.pdf"
@@ -427,7 +427,7 @@ const projects = [
     id: "safesiteplus",
     name: "👷‍♂️ FYP - SafeSitePlus",
     description:
-      "SafeSitePlus is an AI-powered platform for construction site management with robust user administration and supervisor oversight. It enhances safety through incident detection (fire, falls, missing PPE) and prioritized alerts with screenshots. Key features include a policy-based chatbot, digital notepad, automated reporting, and forecasting for risk anticipation and planning.",
+      "SafeSitePlus is an AI-driven construction safety platform that helps supervisors detect incidents early, monitor PPE compliance, and respond faster through prioritized alerts. It combines computer vision, guided reporting, and policy-aware assistance to improve on-site safety operations.",
     tags: [
       {
         name: "Material UI",
@@ -495,7 +495,7 @@ const projects = [
     id: "floodaware",
     name: "🌊 FloodAware",
     description:
-      "AI-powered flood detection system that helps communities prepare for and respond to flood emergencies. Users can upload images or enter coordinates to analyze flood risk levels and plan safety measures through intelligent AI algorithms. Currently in prototype stage with continuous improvements to prediction accuracy and capabilities.",
+      "FloodAware is a prototype AI system for early flood-risk assessment. Users can upload images or provide coordinates to receive risk insights and preparedness guidance, making flood intelligence more accessible for communities and response teams.",
     tags: [
       {
         name: "Next.js",
@@ -527,7 +527,7 @@ const projects = [
     id: "aicareercoach",
     name: "🚀 AI Career Coach",
     description:
-      "AI Career Coach is an AI-powered job preparation platform that helps users build professional resumes, generate personalized cover letters, and practice for interviews with real-time AI feedback. It also provides career insights, industry trends, and job recommendations.",
+      "AI Career Coach is a job-readiness platform that supports resume building, personalized cover letter generation, and interview practice with AI feedback. It also offers practical career insights to help users make better next-step decisions.",
     tags: [
       {
         name: "Next.js",
@@ -575,7 +575,7 @@ const projects = [
     id: "aifinanceplatform",
     name: "📈 AI Finance Platform",
     description:
-      "A full-stack AI-powered finance platform offering real-time financial insights, analytics, and secure user management. Integrated with intelligent automation features to deliver a seamless user experience.",
+      "A full-stack finance platform that combines secure account management with AI-assisted insights, analytics, and automation. It is built to make financial tracking and decision-making clearer, faster, and more reliable.",
     tags: [
       {
         name: "next.js",
@@ -619,7 +619,7 @@ const projects = [
     id: "mernreal-estate",
     name: "🏘️ MERN Real-Estate",
     description:
-      "Welcome to SherryEstate, a comprehensive real estate application that simplifies the process of buying, selling, and renting properties. With an intuitive interface, powerful search functionality, and seamless integration with Firebase and MongoDB.",
+      "SherryEstate is a full-stack real estate application for buying, selling, and renting properties. It focuses on intuitive property discovery, clean listing management, and reliable backend workflows with Firebase and MongoDB integration.",
     tags: [
       {
         name: "react",
@@ -651,7 +651,7 @@ const projects = [
     id: "proteoaging-oocytes",
     name: "🧬 ProteoAging-Oocytes",
     description:
-      "ProteoAging-Oocytes is a bioinformatics web platform developed for a client, designed for students and researchers to analyze gene expression, visualize Differentially Expressed Genes (DEGs), and explore structured biological data tables in an interactive, user-friendly way.",
+      "A client-focused bioinformatics platform that helps students and researchers analyze gene expression and interpret DEGs through interactive visualizations and structured data exploration. The UI is designed to make complex biological analysis more approachable.",
     tags: [
       { name: "Bioinformatics", color: "green-text-gradient" },
       { name: "Data Visualization", color: "blue-text-gradient" },
@@ -670,7 +670,7 @@ const projects = [
     id: "doctor-portfolio",
     name: "🩺 Portfolio Website",
     description:
-      "A portfolio website developed for a client (a doctor), showcasing their professional journey, skills, achievements, and services. The website features a modern, responsive, and user-friendly design.",
+      "A professional portfolio website for a medical client, designed to present credentials, services, and achievements with trust-focused content flow and responsive UI.",
     tags: [
       { name: "React", color: "cyan-text-gradient" },
       { name: "Vite", color: "blue-text-gradient" },
@@ -689,7 +689,7 @@ const projects = [
     id: "artist-portfolio",
     name: "🎨 Portfolio Website",
     description:
-      "A portfolio website developed for a client (Aria, a digital artist), showcasing her illustrations, storytelling, and artistic work. The website features a modern, responsive, and visually engaging design that highlights her creative portfolio.",
+      "A visual-first portfolio for a digital artist, crafted to spotlight illustration work, personal storytelling, and commission-ready presentation through a clean, responsive interface.",
     tags: [
       { name: "Responsive Design", color: "green-text-gradient" },
       { name: "React", color: "cyan-text-gradient" },
@@ -708,7 +708,7 @@ const projects = [
     id: "graphic-designer-portfolio",
     name: "🖌️ Portfolio Website",
     description:
-      "A modern, responsive portfolio website developed for a client (Hamna Fatima, a graphic designer), showcasing her work, skills, and professional experience. The website features a clean, visually engaging design optimized for desktop, tablet, and mobile devices.",
+      "A modern portfolio website for a graphic designer, structured to showcase projects, skills, and experience with a consistent visual hierarchy across desktop, tablet, and mobile.",
     tags: [
       { name: "Next.js", color: "blue-text-gradient" },
       { name: "JavaScript", color: "yellow-text-gradient" },
@@ -728,7 +728,7 @@ const projects = [
     id: "mealmentor-ui",
     name: "MealMentor - UI",
     description:
-      "MealMentor is an app that simplifies meal planning for busy parents by offering personalized recipes based on available ingredients, dietary needs, and health conditions. It features grocery management tools, meal reminders, and visual guides to make cooking easier and healthier.",
+      "MealMentor is a UI/UX concept focused on reducing meal-planning friction for busy parents through personalized recipes, dietary-aware recommendations, grocery planning, and guided cooking flows.",
     tags: [
       {
         name: "Figma",

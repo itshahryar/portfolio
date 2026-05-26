@@ -39,7 +39,7 @@ const Footer = () => {
             <div>
               <p className="text-sm font-bold">Email</p>
               <a
-                href="mailto:shahryaramjadmos2@gmail.com"
+                href="mailto:shahryaramjadmos@gmail.com"
                 className="text-sm text-white hover:text-[#915EFF]"
               >
                 shahryaramjadmos@gmail.com
@@ -103,7 +103,7 @@ const Footer = () => {
         <div className="mt-8 text-center text-sm">
           <p className="font-bold text-[#915EFF]/80">Shahryar’s Digital Portfolio</p>
           <p className="mt-2">
-            Where every pixel has a purpose and every line of code speaks volumes!
+            Where every pixel has purpose and every line of code solves real problems.
           </p>
         </div>
       </div>

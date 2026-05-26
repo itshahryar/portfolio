@@ -33,15 +33,18 @@ const ProjectCard = ({
     window.open(liveLink, "_blank");
   };
 
+  const shortDescription =
+    description.length > 220 ? `${description.slice(0, 220).trim()}...` : description;
+
   return (
-    <div 
-      className='bg-tertiary p-5 rounded-2xl w-full sm:w-[360px] lg:h-[720px] hover:scale-[1.02] transition-all duration-300 border border-purple-500/20 hover:border-purple-500/40 shadow-lg hover:shadow-xl'
-    >  
-      <div className='relative w-full h-[230px] overflow-hidden rounded-2xl group'>
+    <div
+      className="bg-tertiary p-5 rounded-2xl w-full h-full hover:scale-[1.015] transition-all duration-300 border border-purple-500/20 hover:border-purple-500/40 shadow-lg hover:shadow-xl flex flex-col"
+    >
+      <div className="relative w-full h-[230px] overflow-hidden rounded-2xl group">
         <img
           src={image}
-          alt='project_image'
-          className='w-full h-full object-cover rounded-2xl transition-transform duration-500 group-hover:scale-110'
+          alt="project_image"
+          className="w-full h-full object-cover rounded-2xl transition-transform duration-500 group-hover:scale-110"
         />
         <div className='absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl' />
       </div>
@@ -74,15 +77,15 @@ const ProjectCard = ({
         )}
       </div>
 
-      <div className='mt-5'>
-        <h3 className='text-white font-bold text-[24px]'>{name}</h3>
-        <p className='mt-2 text-secondary text-[14px]'>{description}</p>
+      <div className="mt-5 flex-1">
+        <h3 className="text-white font-bold text-[20px] leading-tight">{name}</h3>
+        <p className="mt-2 text-secondary text-[14px] leading-relaxed">{shortDescription}</p>
       </div>
 
-      <div className='mt-4 flex flex-wrap gap-2'>
+      <div className="mt-4 flex flex-wrap gap-2">
         {tags.slice(0, 4).map((tag) => (
-          <span 
-            key={`${name}-${tag.name}`} 
+          <span
+            key={`${name}-${tag.name}`}
             className={`text-[12px] px-2 py-1 rounded-md bg-black-100 border border-purple-500/20 ${tag.color}`}
           >
             #{tag.name}
@@ -100,15 +103,6 @@ const ProjectCard = ({
 
 const Works = () => {
   const [activeFilter, setActiveFilter] = useState('All');
-
-  // Map project types to display names
-  const typeToDisplayName = {
-    'academic': 'Academic Projects',
-    'solo': 'Solo Projects',
-    'client-project': 'Client Projects',
-    'client-portfolio': 'Client Projects',
-    'ui-ux': 'UI/UX Design',
-  };
 
   // Map display names to project types
   const displayNameToType = {
@@ -138,9 +132,9 @@ const Works = () => {
         <p className="text-secondary uppercase text-sm tracking-wider">My work</p>
         <h2 className="text-white text-3xl font-bold">Projects.</h2>
         <p className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]">
-          Following projects showcases my skills and experience through
-          real-world examples of my work. Each project is briefly described with
-          links to code repositories.
+          These projects show how I solve real product problems across web, AI,
+          and client-focused builds. Each card includes a short overview plus
+          quick access to code, details, and live demos when available.
         </p>
       </div>
 
@@ -207,7 +201,7 @@ const Works = () => {
         </p>
       )}
 
-      <div className='mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7'>
+      <div className="mt-12 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 items-stretch">
         {filteredProjects.length > 0 ? (
           filteredProjects.map((project, index) => (
             <motion.div

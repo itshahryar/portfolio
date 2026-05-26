@@ -82,7 +82,7 @@ const CertificationCard = ({ title, date, issuedBy, image, downloadTo }) => {
   };
 
   return (
-    <div className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full lg:h-[420px] h-auto flex flex-col">
+    <div className="bg-tertiary p-5 rounded-2xl w-full h-full flex flex-col border border-purple-500/20">
       <div className="relative w-full h-[230px]">
         <img
           src={image}
@@ -127,9 +127,9 @@ const CertificationCard = ({ title, date, issuedBy, image, downloadTo }) => {
 
       <div className="mt-5 flex-1 flex flex-col">
         <div>
-          <h3 className="text-white font-bold text-[24px]">{title}</h3>
-          <p className="mt-2 text-secondary text-[14px]">Issued By: {issuedBy}</p>
-          <p className="mt-2 text-secondary text-[14px]">{date}</p>
+          <h3 className="text-white font-bold text-[19px] leading-tight">{title}</h3>
+          <p className="mt-2 text-secondary text-[13px]">Issued by: {issuedBy}</p>
+          <p className="mt-1 text-secondary text-[13px]">{date}</p>
         </div>
       </div>
     </div>
@@ -216,7 +216,8 @@ const Certifications = () => {
           <p className="text-secondary uppercase text-sm tracking-wider">Documents & Credentials</p>
           <h2 className="text-white text-3xl md:text-4xl font-bold">Credentials & Certifications</h2>
           <p className="text-secondary text-[17px] max-w-3xl leading-[30px] mt-4">
-            A comprehensive collection of credentials, certifications, experience letters, workshops, and recommendation letters. Ideal for university admissions, scholarship applications, and professional opportunities.
+            A curated collection of experience letters, certifications, workshops,
+            and recommendations to support academic and professional applications.
           </p>
         </div>
 
@@ -268,7 +269,7 @@ const Certifications = () => {
           </>
         ) : (
           <div className="mt-12">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
               {filteredCertifications.map((cert, index) => (
                 <CertificationCard
                   key={`filtered-${index}`}

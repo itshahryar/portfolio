@@ -6,6 +6,10 @@ import { FaGithub, FaEye, FaExternalLinkAlt } from "react-icons/fa";
 
 const ProjectPreviewCard = ({ project }) => {
   const navigate = useNavigate();
+  const shortDescription =
+    project.description.length > 170
+      ? `${project.description.slice(0, 170).trim()}...`
+      : project.description;
 
   const handleGithubClick = (e) => {
     e.stopPropagation();
@@ -26,13 +30,13 @@ const ProjectPreviewCard = ({ project }) => {
     <motion.div
       whileHover={{ scale: 1.03 }}
       transition={{ duration: 0.2 }}
-      className="bg-tertiary p-5 rounded-2xl w-full sm:w-[360px] h-[720px] text-left shadow-lg hover:shadow-purple-800/30 transition-shadow duration-300"
+      className="bg-tertiary p-5 rounded-2xl w-full sm:w-[360px] text-left shadow-lg hover:shadow-purple-800/30 transition-shadow duration-300 flex flex-col"
     >
-      <div className='relative w-full h-[230px]'>
+      <div className="relative w-full h-[230px]">
         <img
           src={project.image}
-          alt='project_image'
-          className='w-full h-full object-cover rounded-2xl'
+          alt="project_image"
+          className="w-full h-full object-cover rounded-2xl"
         />
       </div>
 
@@ -65,17 +69,20 @@ const ProjectPreviewCard = ({ project }) => {
         )}
       </div>
 
-      <div className='mt-5'>
-        <h3 className='text-white font-bold text-[24px]'>{project.name}</h3>
-        <p className='mt-2 text-secondary text-[14px]'>{project.description}</p>
+      <div className="mt-5 flex-1">
+        <h3 className="text-white font-bold text-[20px] leading-tight">{project.name}</h3>
+        <p className="mt-2 text-secondary text-[14px] leading-relaxed">{shortDescription}</p>
       </div>
 
-      <div className='mt-4 flex flex-wrap gap-2'>
-        {project.tags.map((tag) => (
-          <p key={`${project.name}-${tag.name}`} className={`text-[14px] ${tag.color}`}>
+      <div className="mt-4 flex flex-wrap gap-2">
+        {project.tags.slice(0, 4).map((tag) => (
+          <p key={`${project.name}-${tag.name}`} className={`text-[12px] ${tag.color}`}>
             #{tag.name}
           </p>
         ))}
+        {project.tags.length > 4 && (
+          <p className="text-[12px] text-secondary">+{project.tags.length - 4} more</p>
+        )}
       </div>
     </motion.div>
   );
@@ -96,7 +103,7 @@ const Wrk = () => {
       </div>
 
       {/* Cards + View All in Same Row */}
-      <div className="flex flex-col md:flex-row justify-center items-stretch gap-8">
+      <div className="flex flex-col md:flex-row justify-center items-stretch gap-6">
         {/* Show only first 2 projects */}
         {projects.slice(0, 2).map((project, index) => (
           <ProjectPreviewCard key={index} project={project} />
@@ -108,7 +115,7 @@ const Wrk = () => {
           whileTap={{ scale: 0.98 }}
           transition={{ duration: 0.2 }}
           onClick={() => navigate("/projects")}
-          className="flex flex-col justify-center items-center p-6 rounded-2xl shadow-lg bg-gradient-to-r from-purple-700 to-purple-500 text-white font-semibold w-full sm:w-[360px] h-[720px] hover:shadow-purple-800/30 transition-shadow duration-300 cursor-pointer relative overflow-hidden"
+          className="flex flex-col justify-center items-center p-6 rounded-2xl shadow-lg bg-gradient-to-r from-purple-700 to-purple-500 text-white font-semibold w-full sm:w-[360px] hover:shadow-purple-800/30 transition-shadow duration-300 cursor-pointer relative overflow-hidden min-h-[460px]"
         >
           {/* Subtle pattern overlay */}
           <div className="absolute inset-0 opacity-10">
