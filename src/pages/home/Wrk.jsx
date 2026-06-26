@@ -75,7 +75,7 @@ const ProjectPreviewCard = ({ project }) => {
             className="flex-1 py-2 px-3 bg-purple-600/80 hover:bg-purple-600 text-white rounded-lg text-xs font-medium transition-colors duration-200 flex items-center justify-center gap-1.5"
           >
             <FaEye className="text-[11px]" />
-            Details
+            View Full Details
           </button>
           <button
             onClick={handleGithubClick}
