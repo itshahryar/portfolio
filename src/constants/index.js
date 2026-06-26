@@ -269,7 +269,7 @@ const experiences = [
     date: "Jul 2023 – Aug 2023",
     points: [
       "Built **mobile applications** using **React Native** with API integrations.",
-      "Resolved **UI and performance issues** to improve app stability.",
+      "Resolved **UI** and **performance issues** to improve app stability.",
     ],
   },
 ];
