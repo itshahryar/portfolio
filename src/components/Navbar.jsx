@@ -232,16 +232,9 @@ const Navbar = () => {
           </ul>
 
           <div className="sm:hidden flex flex-1 justify-end items-center relative">
-            <img
-              src={toggle ? close : menu}
-              alt="menu"
-              className={`w-[28px] h-[28px] object-contain ${!toggle ? 'menu-animation' : ''}`}
-              onClick={() => setToggle(!toggle)}
-            />
-
-            {/* Mobile Guide Card */}
-            {showGuide && toggle && (
-              <div className="absolute top-12 right-0 w-64 bg-gradient-to-br from-purple-600/95 to-purple-800/95 backdrop-blur-sm rounded-xl shadow-2xl border border-purple-400/30 p-4 z-20 animate-fade-in">
+            {/* Mobile Guide Card - appears near menu button */}
+            {showGuide && (
+              <div className="absolute top-16 right-0 w-64 bg-gradient-to-br from-purple-600/95 to-purple-800/95 backdrop-blur-sm rounded-xl shadow-2xl border border-purple-400/30 p-4 z-20 animate-fade-in">
                 <div className="flex items-start justify-between mb-3">
                   <div className="flex items-center gap-2">
                     <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
@@ -261,7 +254,7 @@ const Navbar = () => {
                   </button>
                 </div>
                 <p className="text-white/90 text-xs leading-relaxed mb-3">
-                  Tap the menu items below to navigate through the portfolio. Explore projects, experience, skills, and more!
+                  Tap the menu button to navigate through the portfolio. Explore projects, experience, skills, and more!
                 </p>
                 <div className="flex items-center gap-2 text-white/70 text-xs">
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -269,8 +262,17 @@ const Navbar = () => {
                   </svg>
                   <span>Scroll down to explore</span>
                 </div>
+                {/* Arrow pointing to menu button */}
+                <div className="absolute -top-2 right-6 w-4 h-4 bg-purple-700 transform rotate-45 border-l border-t border-purple-400/30"></div>
               </div>
             )}
+
+            <img
+              src={toggle ? close : menu}
+              alt="menu"
+              className={`w-[28px] h-[28px] object-contain ${!toggle ? 'menu-animation' : ''}`}
+              onClick={() => setToggle(!toggle)}
+            />
 
             <div
               className={`${
