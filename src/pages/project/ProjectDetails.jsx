@@ -18,6 +18,19 @@ const fadeUp = {
   animate: { opacity: 1, y: 0 },
 };
 
+// Parse description to convert **word** to bold purple spans
+const parseDescription = (text) => {
+  if (!text) return text;
+  const parts = text.split(/\*\*(.*?)\*\*/g);
+  return parts.map((part, index) => {
+    if (index % 2 === 1) {
+      // Odd indices are the bolded parts
+      return <span key={index} className="text-[#915EFF] font-semibold">{part}</span>;
+    }
+    return part;
+  });
+};
+
 const SectionLabel = ({ icon: Icon, label, accent }) => (
   <div className="flex items-center gap-3 mb-4">
     <span
@@ -93,7 +106,7 @@ const ProjectDetails = () => {
             {project.name}
           </h1>
           <p className="text-secondary text-xs md:text-sm mt-3 leading-relaxed line-clamp-4">
-            {overviewText}
+            {parseDescription(overviewText)}
           </p>
 
           <div className="flex flex-wrap gap-2 mt-4">
@@ -184,7 +197,7 @@ const ProjectDetails = () => {
               accent="border-red-500/30 text-red-300 bg-red-500/10"
             />
             <p className="text-secondary text-sm leading-relaxed mb-4">
-              {project.details?.problemIntro}
+              {parseDescription(project.details?.problemIntro)}
             </p>
             <ul className="space-y-2.5">
               {project.details?.problemPoints?.map((point, index) => (
@@ -192,7 +205,7 @@ const ProjectDetails = () => {
                   key={index}
                   className="text-white/80 text-sm leading-relaxed pl-3 border-l-2 border-red-500/40"
                 >
-                  {point}
+                  {parseDescription(point)}
                 </li>
               ))}
             </ul>
@@ -211,7 +224,7 @@ const ProjectDetails = () => {
               accent="border-emerald-500/30 text-emerald-300 bg-emerald-500/10"
             />
             <p className="text-secondary text-sm leading-relaxed mb-4">
-              {project.details?.solutionIntro}
+              {parseDescription(project.details?.solutionIntro)}
             </p>
             <ul className="space-y-2.5">
               {project.details?.solutionPoints?.map((point, index) => (
@@ -219,7 +232,7 @@ const ProjectDetails = () => {
                   key={index}
                   className="text-white/80 text-sm leading-relaxed pl-3 border-l-2 border-emerald-500/40"
                 >
-                  {point}
+                  {parseDescription(point)}
                 </li>
               ))}
             </ul>

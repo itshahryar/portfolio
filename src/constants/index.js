@@ -500,22 +500,22 @@ const projects = [
     isLive: false,
     type: "academic",
     details: {
-      problemIntro: "Construction sites face numerous safety challenges that require innovative solutions.",
+      problemIntro: "Construction sites face numerous safety challenges that require **innovative solutions**.",
       problemPoints: [
-        "Incident detection is often manual and delayed",
-        "Compliance monitoring is inefficient and inconsistent",
-        "Communication gaps exist between supervisors and workers",
-        "Traditional monitoring methods are reactive rather than proactive"
+        "**Incident detection** is often manual and delayed",
+        "**Compliance monitoring** is inefficient and inconsistent",
+        "**Communication gaps** exist between supervisors and workers",
+        "**Traditional monitoring methods** are reactive rather than proactive"
       ],
-      solutionIntro: "SafeSitePlus provides an AI-powered platform that enhances construction site safety through intelligent monitoring and communication.",
+      solutionIntro: "SafeSitePlus provides an **AI-driven** platform that enhances construction site safety through **intelligent monitoring** and communication.",
       solutionPoints: [
-        "Computer vision for real-time incident detection (fire, falls, missing PPE)",
-        "Policy-based chatbot for instant safety guidance",
-        "Automated reporting with screenshots for documentation",
-        "Forecasting capabilities for risk anticipation and planning",
-        "Prioritized alerts and comprehensive oversight tools"
+        "**Computer vision** for real-time incident detection (fire, falls, missing PPE)",
+        "**Policy-based chatbot** for instant safety guidance",
+        "**Automated reporting** with screenshots for documentation",
+        "**Forecasting capabilities** for risk anticipation and planning",
+        "**Prioritized alerts** and comprehensive oversight tools"
       ],
-      scopeIntro: "SafeSite Plus is designed to provide construction site supervisors and admins with a robust, user-friendly platform to manage safety efficiently.",
+      scopeIntro: "SafeSite Plus is designed to provide construction site supervisors and admins with a robust platform to manage safety efficiently.",
       scopePoints: [
         "Multi-device accessible interface",
         "Incident reporting and notifications",
@@ -573,20 +573,20 @@ const projects = [
     isLive: false,
     type: "solo",
     details: {
-      problemIntro: "Communities often lack timely information about flood risks, leading to inadequate preparation.",
+      problemIntro: "Communities often lack **timely information** about flood risks, leading to inadequate preparation.",
       problemPoints: [
-        "Delayed flood risk information reaches communities",
-        "Inadequate preparation for flood emergencies",
-        "Traditional monitoring systems are expensive",
-        "Limited accessibility to flood risk data for all communities"
+        "**Delayed flood risk information** reaches communities",
+        "**Inadequate preparation** for flood emergencies",
+        "**Traditional monitoring systems** are expensive",
+        "**Limited accessibility** to flood risk data for all communities"
       ],
-      solutionIntro: "FloodAware provides an AI-powered system that helps communities assess and prepare for flood risks.",
+      solutionIntro: "FloodAware provides an **AI-powered system** that helps communities assess and prepare for flood risks.",
       solutionPoints: [
-        "Image upload functionality for flood risk analysis",
-        "Coordinate-based risk assessment system",
-        "Intelligent AI algorithms for risk evaluation",
-        "Safety recommendations based on risk levels",
-        "Accessible platform for all communities"
+        "**Image upload functionality** for flood risk analysis",
+        "**Coordinate-based risk assessment** system",
+        "**Intelligent AI algorithms** for risk evaluation",
+        "**Safety recommendations** based on risk levels",
+        "**Accessible platform** for all communities"
       ],
       scopeIntro: "FloodAware is designed to provide communities and emergency responders with accessible flood risk assessment tools.",
       scopePoints: [
@@ -642,20 +642,20 @@ const projects = [
     liveLink: "https://legal-semantic-search-kappa.vercel.app/",
     type: "llm-rag",
     details: {
-      problemIntro: "Legal professionals and researchers often struggle to efficiently search through vast amounts of legal documents and case law to find relevant information.",
+      problemIntro: "Legal professionals and researchers often struggle to efficiently search through **vast amounts of legal documents** and case law to find relevant information.",
       problemPoints: [
-        "Time-consuming manual search through legal databases",
-        "Difficulty finding relevant case law for specific legal queries",
-        "Inefficient keyword-based search that misses semantic meaning",
-        "Lack of natural language interface for legal research"
+        "**Time-consuming manual search** through legal databases",
+        "**Difficulty finding relevant case law** for specific legal queries",
+        "**Inefficient keyword-based search** that misses semantic meaning",
+        "**Lack of natural language interface** for legal research"
       ],
-      solutionIntro: "A full-stack Legal LLM chatbot that enables semantic search of legal cases using natural language queries, powered by RAG architecture.",
+      solutionIntro: "A full-stack Legal LLM chatbot that enables **semantic search** of legal cases using natural language queries, powered by **RAG architecture**.",
       solutionPoints: [
-        "Natural language interface for querying legal documents",
-        "RAG pipeline for semantic search and retrieval",
-        "Vector embeddings for meaning-based matching",
-        "Instant retrieval of most relevant case law",
-        "Scalable document processing and storage"
+        "**Natural language interface** for querying legal documents",
+        "**RAG pipeline** for semantic search and retrieval",
+        "**Vector embeddings** for meaning-based matching",
+        "**Instant retrieval** of most relevant case law",
+        "**Scalable document processing** and storage"
       ],
       scopeIntro: "The Legal Chatbot is designed to provide legal professionals, researchers, and students with an intelligent tool for efficient legal research.",
       scopePoints: [
@@ -727,20 +727,20 @@ const projects = [
     isLive: false,
     type: "solo",
     details: {
-      problemIntro: "Job seekers often struggle with creating professional application materials and preparing for interviews.",
+      problemIntro: "Job seekers often struggle with creating **professional application materials** and preparing for interviews.",
       problemPoints: [
-        "Difficulty creating professional resumes",
-        "Challenges writing tailored cover letters",
-        "Limited access to interview preparation resources",
-        "Lack of personalized career guidance and feedback"
+        "**Difficulty creating professional resumes**",
+        "**Challenges writing tailored cover letters**",
+        "**Limited access to interview preparation resources**",
+        "**Lack of personalized career guidance** and feedback"
       ],
-      solutionIntro: "AI Career Coach is an AI-powered platform that helps users build professional application materials and prepare for interviews.",
+      solutionIntro: "AI Career Coach is an **AI-powered platform** that helps users build professional application materials and prepare for interviews.",
       solutionPoints: [
-        "Professional resume building tools",
-        "Personalized cover letter generation",
-        "Interview practice with real-time AI feedback",
-        "Career insights and industry trends",
-        "Job recommendations based on user profile"
+        "**Professional resume building tools**",
+        "**Personalized cover letter generation**",
+        "**Interview practice** with real-time AI feedback",
+        "**Career insights** and industry trends",
+        "**Job recommendations** based on user profile"
       ],
       scopeIntro: "AI Career Coach is designed to provide comprehensive career development tools for job seekers at all levels.",
       scopePoints: [
@@ -811,20 +811,20 @@ const projects = [
     isLive: false,
     type: "solo",
     details: {
-      problemIntro: "Managing personal finances can be overwhelming with multiple accounts and investments to track.",
+      problemIntro: "Managing personal finances can be overwhelming with **multiple accounts** and investments to track.",
       problemPoints: [
-        "Difficulty tracking multiple financial accounts",
-        "Complex investment portfolio management",
-        "Lack of real-time financial insights",
-        "Limited tools for informed financial decision-making"
+        "**Difficulty tracking multiple financial accounts**",
+        "**Complex investment portfolio management**",
+        "**Lack of real-time financial insights**",
+        "**Limited tools** for informed financial decision-making"
       ],
-      solutionIntro: "The AI Finance Platform is a full-stack solution offering real-time financial insights and analytics.",
+      solutionIntro: "The AI Finance Platform is a **full-stack solution** offering real-time financial insights and analytics.",
       solutionPoints: [
-        "Real-time financial insights and analytics",
-        "Secure user management and data protection",
-        "Intelligent automation for routine tasks",
-        "Expense tracking and categorization",
-        "Investment analysis and recommendations"
+        "**Real-time financial insights** and analytics",
+        "**Secure user management** and data protection",
+        "**Intelligent automation** for routine tasks",
+        "**Expense tracking** and categorization",
+        "**Investment analysis** and recommendations"
       ],
       scopeIntro: "The AI Finance Platform is designed to provide individuals with comprehensive financial management tools.",
       scopePoints: [
@@ -881,20 +881,20 @@ const projects = [
     isLive: false,
     type: "solo",
     details: {
-      problemIntro: "The real estate market often lacks transparency and efficiency in property transactions.",
+      problemIntro: "The real estate market often lacks **transparency and efficiency** in property transactions.",
       problemPoints: [
-        "Limited transparency in property transactions",
-        "Inefficient processes for buyers and sellers",
-        "Difficulty finding suitable properties",
-        "Complex navigation of real estate procedures"
+        "**Limited transparency** in property transactions",
+        "**Inefficient processes** for buyers and sellers",
+        "**Difficulty finding suitable properties**",
+        "**Complex navigation** of real estate procedures"
       ],
-      solutionIntro: "SherryEstate is a comprehensive real estate application that simplifies property transactions.",
+      solutionIntro: "SherryEstate is a **comprehensive real estate application** that simplifies property transactions.",
       solutionPoints: [
-        "Intuitive property search interface",
-        "Streamlined buying, selling, and renting processes",
-        "Powerful filtering and search functionality",
-        "Seamless integration with Firebase and MongoDB",
-        "User-friendly dashboard for property management"
+        "**Intuitive property search interface**",
+        "**Streamlined buying**, selling, and renting processes",
+        "**Powerful filtering** and search functionality",
+        "**Seamless integration** with Firebase and MongoDB",
+        "**User-friendly dashboard** for property management"
       ],
       scopeIntro: "SherryEstate is designed to provide a complete property management solution for buyers, sellers, and agents.",
       scopePoints: [
@@ -938,20 +938,20 @@ const projects = [
     isLive: false,
     type: "client-project",
     details: {
-      problemIntro: "Researchers and students in biology often struggle with analyzing complex gene expression data and visualizing differentially expressed genes in an intuitive way.",
+      problemIntro: "Researchers and students in biology often struggle with analyzing **complex gene expression data** and visualizing differentially expressed genes in an intuitive way.",
       problemPoints: [
-        "Difficulty interpreting raw gene/proteomics data",
-        "Challenges creating meaningful visualizations of biological data",
-        "Limited tools for non-programmers to analyze gene expression",
-        "Need for structured presentation of complex biological datasets"
+        "**Difficulty interpreting raw gene/proteomics data**",
+        "**Challenges creating meaningful visualizations** of biological data",
+        "**Limited tools for non-programmers** to analyze gene expression",
+        "**Need for structured presentation** of complex biological datasets"
       ],
-      solutionIntro: "A user-friendly bioinformatics platform that transforms raw gene expression data into interactive visualizations and structured tables.",
+      solutionIntro: "A user-friendly bioinformatics platform that transforms raw gene expression data into **interactive visualizations** and structured tables.",
       solutionPoints: [
-        "Gene search functionality with detailed information retrieval",
-        "Interactive visualizations for differentially expressed genes",
-        "Structured data tables with filtering and analysis capabilities",
-        "Dark mode for comfortable extended research sessions",
-        "Responsive design for use on various devices"
+        "**Gene search functionality** with detailed information retrieval",
+        "**Interactive visualizations** for differentially expressed genes",
+        "**Structured data tables** with filtering and analysis capabilities",
+        "**Dark mode** for comfortable extended research sessions",
+        "**Responsive design** for use on various devices"
       ],
       scopeIntro: "A comprehensive bioinformatics platform designed to make gene expression analysis accessible to students and researchers without programming knowledge.",
       scopePoints: [
@@ -993,20 +993,20 @@ const projects = [
     liveLink: "https://dr-ibtisam.vercel.app/",
     type: "client-portfolio",
     details: {
-      problemIntro: "Medical students often struggle to create a comprehensive digital presence that showcases their academic journey, research work, and career aspirations effectively.",
+      problemIntro: "Medical students often struggle to create a **comprehensive digital presence** that showcases their academic journey, research work, and career aspirations effectively.",
       problemPoints: [
-        "Difficulty presenting academic achievements and clinical rotations",
-        "Challenges organizing research projects and publications",
-        "Limited platform to showcase extracurricular activities and leadership roles",
-        "Need for professional networking and residency application support"
+        "**Difficulty presenting academic achievements** and clinical rotations",
+        "**Challenges organizing research projects** and publications",
+        "**Limited platform to showcase extracurricular activities** and leadership roles",
+        "**Need for professional networking** and residency application support"
       ],
-      solutionIntro: "A modern, responsive portfolio website that helps medical students document their journey, showcase achievements, and build a professional network.",
+      solutionIntro: "A modern, responsive portfolio website that helps medical students document their journey, showcase achievements, and build a **professional network**.",
       solutionPoints: [
-        "Comprehensive academic profile with grades and achievements",
-        "Research projects and publications showcase",
-        "Clinical rotations and hands-on experience documentation",
-        "Extracurricular activities and leadership roles display",
-        "Professional networking and contact integration"
+        "**Comprehensive academic profile** with grades and achievements",
+        "**Research projects and publications showcase**",
+        "**Clinical rotations** and hands-on experience documentation",
+        "**Extracurricular activities** and leadership roles display",
+        "**Professional networking** and contact integration"
       ],
       scopeIntro: "A complete digital portfolio solution for medical students to track their progress, showcase achievements, and prepare for residency applications.",
       scopePoints: [
@@ -1048,20 +1048,20 @@ const projects = [
     liveLink: "https://artist-portfolio-azure.vercel.app/",
     type: "client-portfolio",
     details: {
-      problemIntro: "Artists and creative professionals need a visually striking platform to showcase their work, tell their story, and connect with potential clients and collaborators.",
+      problemIntro: "Artists and creative professionals need a **visually striking platform** to showcase their work, tell their story, and connect with potential clients and collaborators.",
       problemPoints: [
-        "Difficulty creating an online presence that matches artistic vision",
-        "Challenges organizing and presenting diverse creative works",
-        "Limited platform for storytelling and artistic expression",
-        "Need for professional presentation to attract commissions and clients"
+        "**Difficulty creating an online presence** that matches artistic vision",
+        "**Challenges organizing and presenting** diverse creative works",
+        "**Limited platform for storytelling** and artistic expression",
+        "**Need for professional presentation** to attract commissions and clients"
       ],
-      solutionIntro: "A visually engaging portfolio website that showcases artistic work, tells the artist's story, and provides a platform for client connections.",
+      solutionIntro: "A visually engaging portfolio website that showcases artistic work, tells the artist's story, and provides a platform for **client connections**.",
       solutionPoints: [
-        "Visually striking gallery for artwork and illustrations",
-        "Storytelling sections for artistic journey and inspiration",
-        "Interactive portfolio with smooth navigation",
-        "Testimonials from collectors and collaborators",
-        "Contact and commission inquiry system"
+        "**Visually striking gallery** for artwork and illustrations",
+        "**Storytelling sections** for artistic journey and inspiration",
+        "**Interactive portfolio** with smooth navigation",
+        "**Testimonials** from collectors and collaborators",
+        "**Contact and commission inquiry system**"
       ],
       scopeIntro: "A comprehensive digital showcase for artists to present their work, share their story, and connect with the art community.",
       scopePoints: [
@@ -1104,20 +1104,20 @@ const projects = [
     liveLink: "https://hamnas-portfolio.vercel.app/",
     type: "client-portfolio",
     details: {
-      problemIntro: "Graphic designers need a visually compelling portfolio to showcase their creative work, attract clients, and demonstrate their design capabilities effectively.",
+      problemIntro: "Graphic designers need a **visually compelling portfolio** to showcase their creative work, attract clients, and demonstrate their design capabilities effectively.",
       problemPoints: [
-        "Difficulty creating a portfolio that reflects design skills",
-        "Challenges organizing diverse design projects cohesively",
-        "Limited platform to showcase creative process and results",
-        "Need for professional presentation to attract quality clients"
+        "**Difficulty creating a portfolio** that reflects design skills",
+        "**Challenges organizing diverse design projects** cohesively",
+        "**Limited platform to showcase creative process** and results",
+        "**Need for professional presentation** to attract quality clients"
       ],
-      solutionIntro: "A modern, responsive portfolio website that showcases graphic design work, skills, and experience in a visually compelling format.",
+      solutionIntro: "A modern, responsive portfolio website that showcases graphic design work, skills, and experience in a **visually compelling format**.",
       solutionPoints: [
-        "Clean, modern design that highlights creative work",
-        "Project showcase with detailed case studies",
-        "Skills and services presentation",
-        "Professional experience and education sections",
-        "Client testimonials and contact integration"
+        "**Clean, modern design** that highlights creative work",
+        "**Project showcase** with detailed case studies",
+        "**Skills and services presentation**",
+        "**Professional experience and education sections**",
+        "**Client testimonials** and contact integration"
       ],
       scopeIntro: "A comprehensive digital portfolio for graphic designers to present their work, attract clients, and establish their professional brand.",
       scopePoints: [
@@ -1157,20 +1157,20 @@ const projects = [
     isLive: false,
     type: "ui-ux",
     details: {
-      problemIntro: "Busy parents often struggle with meal planning and finding recipes that match their dietary needs.",
+      problemIntro: "Busy parents often struggle with **meal planning** and finding recipes that match their dietary needs.",
       problemPoints: [
-        "Difficulty planning meals for busy schedules",
-        "Challenges finding recipes for specific dietary needs",
-        "Inefficient grocery list management",
-        "Lack of personalized meal recommendations"
+        "**Difficulty planning meals** for busy schedules",
+        "**Challenges finding recipes** for specific dietary needs",
+        "**Inefficient grocery list management**",
+        "**Lack of personalized meal recommendations**"
       ],
-      solutionIntro: "MealMentor simplifies meal planning by offering personalized recipes and grocery management tools.",
+      solutionIntro: "MealMentor simplifies meal planning by offering **personalized recipes** and grocery management tools.",
       solutionPoints: [
-        "Personalized recipe recommendations based on ingredients",
-        "Dietary-specific meal planning options",
-        "Integrated grocery list management",
-        "Meal reminders and planning calendar",
-        "Visual cooking guides and instructions"
+        "**Personalized recipe recommendations** based on ingredients",
+        "**Dietary-specific meal planning options**",
+        "**Integrated grocery list management**",
+        "**Meal reminders** and planning calendar",
+        "**Visual cooking guides** and instructions"
       ],
       scopeIntro: "MealMentor is designed to provide a complete meal planning solution for busy individuals and families.",
       scopePoints: [
