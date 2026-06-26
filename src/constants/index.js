@@ -524,20 +524,6 @@ const projects = [
         "Weather forecasting integration",
         "AI assistant chatbot for safety guidance"
       ],
-      techs: [
-        { name: "Material UI", color: "purple-text-gradient" },
-        { name: "Tailwind CSS", color: "pink-text-gradient" },
-        { name: "MongoDB", color: "green-text-gradient" },
-        { name: "React", color: "cyan-text-gradient" },
-        { name: "Node.js", color: "green-text-gradient" },
-        { name: "Express.js", color: "blue-text-gradient" },
-        { name: "LangChain", color: "orange-text-gradient" },
-        { name: "AI Tools", color: "red-text-gradient" },
-        { name: "Python", color: "yellow-text-gradient" },
-        { name: "OpenCV", color: "green-text-gradient" },
-        { name: "YOLO v8", color: "violet-text-gradient" },
-        { name: "DuckDuckGo", color: "orange-text-gradient" },
-      ],
       tools: [
         { name: "VS Code", color: "blue-text-gradient" },
         { name: "GitHub", color: "cyan-text-gradient" },
@@ -611,13 +597,6 @@ const projects = [
         "Mobile accessibility for field use",
         "Data visualization for risk communication"
       ],
-      techs: [
-        { name: "Next.js", color: "blue-text-gradient" },
-        { name: "Tailwind", color: "pink-text-gradient" },
-        { name: "FastAPI", color: "green-text-gradient" },
-        { name: "Python", color: "yellow-text-gradient" },
-        { name: "Gemini", color: "cyan-text-gradient" },
-      ],
       tools: [
         { name: "VS Code", color: "blue-text-gradient" },
         { name: "Vercel", color: "cyan-text-gradient" },
@@ -686,13 +665,6 @@ const projects = [
         "User-friendly chatbot interface",
         "Real-time query processing and response",
         "Scalable architecture for large document collections"
-      ],
-      techs: [
-        { name: "Next.js", color: "blue-text-gradient" },
-        { name: "LangChain", color: "orange-text-gradient" },
-        { name: "Pinecone", color: "green-text-gradient" },
-        { name: "Voyage Embeddings", color: "purple-text-gradient" },
-        { name: "Tailwind CSS", color: "pink-text-gradient" },
       ],
       tools: [
         { name: "VS Code", color: "blue-text-gradient" },
@@ -779,15 +751,6 @@ const projects = [
         "Career path recommendations",
         "Integration with job boards and LinkedIn"
       ],
-      techs: [
-        { name: "Next.js", color: "blue-text-gradient" },
-        { name: "Tailwind CSS", color: "pink-text-gradient" },
-        { name: "Shadcn UI", color: "red-text-gradient" },
-        { name: "Prisma", color: "purple-text-gradient" },
-        { name: "NeonDB", color: "green-text-gradient" },
-        { name: "Gemini AI", color: "cyan-text-gradient" },
-        { name: "Inngest", color: "yellow-text-gradient" }
-      ],
       tools: [
         { name: "VS Code", color: "blue-text-gradient" },
         { name: "Notion", color: "gray-text-gradient" },
@@ -872,14 +835,6 @@ const projects = [
         "AI-powered financial insights and recommendations",
         "Secure data encryption and privacy protection"
       ],
-      techs: [
-        { name: "Next.js", color: "blue-text-gradient" },
-        { name: "Tailwind CSS", color: "pink-text-gradient" },
-        { name: "Prisma", color: "purple-text-gradient" },
-        { name: "Gemini AI", color: "orange-text-gradient" },
-        { name: "Shadcn UI", color: "red-text-gradient" },
-        { name: "Inngest", color: "green-text-gradient" }
-      ],
       tools: [
         { name: "VS Code", color: "blue-text-gradient" },
         { name: "Postman", color: "orange-text-gradient" },
@@ -950,12 +905,6 @@ const projects = [
         "Messaging system for buyer-seller communication",
         "Document management for transactions"
       ],
-      techs: [
-        { name: "React", color: "blue-text-gradient" },
-        { name: "MongoDB", color: "green-text-gradient" },
-        { name: "Tailwind CSS", color: "pink-text-gradient" },
-        { name: "Node.js", color: "green-text-gradient" },
-      ],
       tools: [
         { name: "VS Code", color: "blue-text-gradient" },
         { name: "Postman", color: "orange-text-gradient" },
@@ -1013,11 +962,6 @@ const projects = [
         "User-friendly interface optimized for research workflows",
         "Dark mode support for extended use"
       ],
-      techs: [
-        { name: "JavaScript", color: "yellow-text-gradient" },
-        { name: "Data Visualization", color: "green-text-gradient" },
-        { name: "Bioinformatics", color: "purple-text-gradient" }
-      ],
       tools: [
         { name: "VS Code", color: "blue-text-gradient" },
         { name: "GitHub", color: "gray-text-gradient" }
@@ -1073,11 +1017,6 @@ const projects = [
         "Skills and certifications presentation",
         "Professional networking and career development tools"
       ],
-      techs: [
-        { name: "React", color: "blue-text-gradient" },
-        { name: "Vite", color: "orange-text-gradient" },
-        { name: "Tailwind CSS", color: "cyan-text-gradient" }
-      ],
       tools: [
         { name: "VS Code", color: "blue-text-gradient" },
         { name: "GitHub", color: "gray-text-gradient" }
@@ -1132,11 +1071,6 @@ const projects = [
         "Testimonials and client feedback integration",
         "Contact and commission inquiry system",
         "Responsive design optimized for visual content"
-      ],
-      techs: [
-        { name: "React", color: "blue-text-gradient" },
-        { name: "Vite", color: "orange-text-gradient" },
-        { name: "Tailwind CSS", color: "cyan-text-gradient" }
       ],
       tools: [
         { name: "VS Code", color: "blue-text-gradient" },
@@ -1194,11 +1128,6 @@ const projects = [
         "Client testimonials and success stories",
         "Contact and inquiry system"
       ],
-      techs: [
-        { name: "Next.js", color: "gray-text-gradient" },
-        { name: "JavaScript", color: "yellow-text-gradient" },
-        { name: "Tailwind CSS", color: "cyan-text-gradient" }
-      ],
       tools: [
         { name: "VS Code", color: "blue-text-gradient" },
         { name: "GitHub", color: "gray-text-gradient" }
@@ -1252,7 +1181,6 @@ const projects = [
         "Nutritional information tracking",
         "Integration with grocery delivery services"
       ],
-      techs: [],
       tools: [
         { name: "Figma", color: "pink-text-gradient" },
       ],

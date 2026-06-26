@@ -274,12 +274,12 @@ const ProjectDetails = () => {
           <div className="mb-6">
             <h3 className="text-white text-sm font-semibold mb-3">Technologies</h3>
             <div className="flex flex-wrap gap-2">
-              {project.details?.techs?.map((tech, index) => (
+              {project.tags.map((tag, index) => (
                 <span
                   key={index}
-                  className={`px-3 py-1 rounded-md text-xs font-medium bg-black-100 border border-purple-500/25 ${tech.color}`}
+                  className={`px-3 py-1 rounded-md text-xs font-medium bg-black-100 border border-purple-500/25 ${tag.color}`}
                 >
-                  {tech.name}
+                  {tag.name}
                 </span>
               ))}
             </div>
