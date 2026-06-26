@@ -398,32 +398,6 @@ const certifications = [
   },
 ];
 
-const testimonials = [
-  {
-    testimonial:
-      "The website developed by this team has completely transformed our online presence. It’s visually stunning and incredibly functional. Truly exceeded our expectations!",
-    name: "Sara",
-    // designation: "CFO",
-    // company: "Acme Co",
-    image:
-      "https://cdn.pixabay.com/photo/2023/09/16/21/31/girl-8257551_1280.jpg",
-  },
-  {
-    testimonial:
-      "The logo and flyers created for our brand were beyond amazing. They captured our vision perfectly, and our clients loved the new designs!",
-    name: "Seikh Saud",
-    image:
-      "https://img.freepik.com/premium-photo/stylized-character-collection-3d-neon-monochrome-designs_984027-170112.jpg?w=740",
-  },
-  {
-    testimonial:
-      "The UI/UX design work for our meal-mentor platform was exceptional. The user experience is smooth and intuitive.",
-    name: "Ayesha",
-    image:
-      "https://img.freepik.com/free-photo/3d-rendering-beautiful-girl-superhero-costume-city_1142-54915.jpg?t=st=1737515243~exp=1737518843~hmac=87caeea4cde94d2f4011cf6c00584290157c7d71ae2763b6d54509e28ff7f92b&w=740",
-  },
-];
-
 const projects = [
   {
     id: "safesiteplus",
@@ -1199,7 +1173,6 @@ export {
   services,
   technologies,
   experiences,
-  testimonials,
   projects,
   certifications,
 };
