@@ -19,7 +19,6 @@ const Navbar = () => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 640);
     };
-
     // Check on mount
     checkMobile();
 
@@ -234,7 +233,7 @@ const Navbar = () => {
           <div className="sm:hidden flex flex-1 justify-end items-center relative">
             {/* Mobile Guide Card - appears near menu button */}
             {showGuide && (
-              <div className="absolute top-16 right-0 w-64 bg-gradient-to-br from-purple-600/95 to-purple-800/95 backdrop-blur-sm rounded-xl shadow-2xl border border-purple-400/30 p-4 z-20 animate-fade-in">
+              <div className="absolute top-16 right-0 w-64 bg-gradient-to-br from-purple-600/95 to-purple-800/95 backdrop-blur-sm rounded-xl shadow-2xl border border-purple-400/30 p-4 z-20 animate-fade-in select-none">
                 <div className="flex items-start justify-between mb-3">
                   <div className="flex items-center gap-2">
                     <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
