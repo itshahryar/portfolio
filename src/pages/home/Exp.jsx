@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { experiences } from "../../constants";
 import { motion } from "framer-motion";
+import parseDescription from "../../utils/parseDescription.jsx";
 
 const ExperiencePreviewCard = ({ experience }) => {
   return (
@@ -49,7 +50,7 @@ const ExperiencePreviewCard = ({ experience }) => {
             className="text-gray-400 text-sm leading-relaxed flex items-start gap-3"
           >
             <span className="flex-shrink-0 w-1 h-1 bg-purple-500 rounded-full mt-2" />
-            <span className="flex-1">{point}</span>
+            <span className="flex-1">{parseDescription(point)}</span>
           </li>
         ))}
       </ul>

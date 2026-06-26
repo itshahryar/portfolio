@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { projects } from "../../constants";
 import { motion } from "framer-motion";
 import { FaGithub, FaEye, FaExternalLinkAlt } from "react-icons/fa";
+import parseDescription from "../../utils/parseDescription.jsx";
 
 const ProjectPreviewCard = ({ project }) => {
   const navigate = useNavigate();
@@ -48,7 +49,7 @@ const ProjectPreviewCard = ({ project }) => {
           {project.name}
         </h3>
         <p className="mt-2 text-gray-400 text-sm leading-relaxed flex-1">
-          {shortDescription}
+          {parseDescription(shortDescription)}
         </p>
 
         <div className="mt-4 flex flex-wrap gap-1.5">

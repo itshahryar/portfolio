@@ -3,6 +3,7 @@ import React from "react";
 import { styles } from "../style";
 import { experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
+import parseDescription from "../utils/parseDescription.jsx";
 
 const ExperienceCard = ({ experience }) => {
   return (
@@ -54,7 +55,7 @@ const ExperienceCard = ({ experience }) => {
             className="text-gray-400 text-sm leading-relaxed flex items-start gap-3"
           >
             <span className="flex-shrink-0 w-1 h-1 bg-purple-500 rounded-full mt-2" />
-            <span className="flex-1">{point}</span>
+            <span className="flex-1">{parseDescription(point)}</span>
           </li>
         ))}
       </ul>

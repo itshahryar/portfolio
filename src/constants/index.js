@@ -245,8 +245,8 @@ const experiences = [
     iconBg: "#E6DEDD",
     date: "Aug 2025 – Present",
     points: [
-      "Developing scalable web applications using the MERN stack and Next.js with API and cloud integrations.",
-      "Collaborating on feature development, code reviews, and deployments to deliver reliable, user-focused software.",
+      "Developing scalable **web applications** using the **MERN stack** and **Next.js** with API and **cloud integrations**.",
+      "Collaborating on **feature development**, **code reviews**, and **deployments** to deliver reliable, user-focused software.",
     ],
   },
 
@@ -257,8 +257,8 @@ const experiences = [
     iconBg: "#E6DEDD",
     date: "Jul 2024 – Sep 2024",
     points: [
-      "Built MERN stack web applications with REST APIs and interactive user interfaces.",
-      "Designed efficient database schemas and optimized queries for performance and reliability.",
+      "Built **MERN stack web applications** with **REST APIs** and interactive user interfaces.",
+      "Designed efficient **database schemas** and optimized **queries** for performance and reliability.",
     ],
   },
   {
@@ -268,8 +268,8 @@ const experiences = [
     iconBg: "#E6DEDD",
     date: "Jul 2023 – Aug 2023",
     points: [
-      "Built mobile applications using React Native with API integrations.",
-      "Resolved UI and performance issues to improve app stability.",
+      "Built **mobile applications** using **React Native** with API integrations.",
+      "Resolved **UI and performance issues** to improve app stability.",
     ],
   },
 ];

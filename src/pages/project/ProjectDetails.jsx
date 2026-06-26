@@ -12,23 +12,11 @@ import {
   FaCode,
 } from "react-icons/fa";
 import { projects } from "../../constants";
+import parseDescription from "../../utils/parseDescription.jsx";
 
 const fadeUp = {
   initial: { opacity: 0, y: 16 },
   animate: { opacity: 1, y: 0 },
-};
-
-// Parse description to convert **word** to bold purple spans
-const parseDescription = (text) => {
-  if (!text) return text;
-  const parts = text.split(/\*\*(.*?)\*\*/g);
-  return parts.map((part, index) => {
-    if (index % 2 === 1) {
-      // Odd indices are the bolded parts
-      return <span key={index} className="text-[#915EFF] font-semibold">{part}</span>;
-    }
-    return part;
-  });
 };
 
 const SectionLabel = ({ icon: Icon, label, accent }) => (
