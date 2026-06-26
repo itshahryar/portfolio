@@ -92,7 +92,7 @@ const ProjectCard = ({
             className="flex-1 py-2 px-3 bg-white/5 hover:bg-white/10 text-gray-300 hover:text-white rounded-lg text-xs font-medium transition-colors duration-200 border border-white/5 hover:border-white/10 flex items-center justify-center gap-1.5"
           >
             <FaGithub className="text-[11px]" />
-            Code
+            Source Code
           </button>
           {isLive && liveLink && (
             <button
