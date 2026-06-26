@@ -88,11 +88,10 @@ const SkillsPage = () => {
           Skills
         </p>
         <h1 className="text-white text-2xl md:text-3xl font-bold tracking-tight">
-          A practical, product‑focused skillset.
+          A practical, product‑focused <span className="text-[#915EFF]">skillset</span>.
         </h1>
         <p className="mt-3 text-gray-400 text-[14px] md:text-[15px] max-w-3xl leading-relaxed">
-          From UI polish to API design and AI integrations, I use this stack to
-          ship real products — not just demos.
+          From <span className="text-[#915EFF]">responsive interfaces</span> and <span className="text-[#915EFF]">scalable APIs</span> to <span className="text-[#915EFF]">AI</span> and <span className="text-[#915EFF]">LLM integrations</span>, I use this stack to build <span className="text-[#915EFF]">production-ready applications</span>.
         </p>
       </div>
 
