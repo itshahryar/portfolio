@@ -108,6 +108,56 @@ export const projectDetails = [
     ]
   },
   {
+    id: "legal-chatbot",
+    name: "𝐋𝐋𝐌-𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐋𝐞𝐠𝐚𝐥 𝐂𝐡𝐚𝐭𝐛𝐨𝐭",
+    problemIntro: "Legal professionals and researchers often struggle to efficiently search through vast amounts of legal documents and case law to find relevant information.",
+    problemPoints: [
+      "Time-consuming manual search through legal databases",
+      "Difficulty finding relevant case law for specific legal queries",
+      "Inefficient keyword-based search that misses semantic meaning",
+      "Lack of natural language interface for legal research"
+    ],
+    solutionIntro: "A full-stack Legal LLM chatbot that enables semantic search of legal cases using natural language queries, powered by RAG architecture.",
+    solutionPoints: [
+      "Natural language interface for querying legal documents",
+      "RAG pipeline for semantic search and retrieval",
+      "Vector embeddings for meaning-based matching",
+      "Instant retrieval of most relevant case law",
+      "Scalable document processing and storage"
+    ],
+    scopeIntro: "The Legal Chatbot is designed to provide legal professionals, researchers, and students with an intelligent tool for efficient legal research.",
+    scopePoints: [
+      "Document chunking and embedding pipeline",
+      "Vector database storage with Pinecone",
+      "Semantic search with Voyage Embeddings",
+      "User-friendly chatbot interface",
+      "Real-time query processing and response",
+      "Scalable architecture for large document collections"
+    ],
+    techs: [
+      { name: "Next.js", color: "blue-text-gradient" },
+      { name: "LangChain", color: "orange-text-gradient" },
+      { name: "Pinecone", color: "green-text-gradient" },
+      { name: "Voyage Embeddings", color: "purple-text-gradient" },
+      { name: "Tailwind CSS", color: "pink-text-gradient" },
+    ],
+    tools: [
+      { name: "VS Code", color: "blue-text-gradient" },
+      { name: "GitHub", color: "gray-text-gradient" },
+      { name: "Vercel", color: "black-text-gradient" }
+    ],
+    source_code_link: "https://github.com/itshahryar/legal-semantic-webapp",
+    isLive: true,
+    liveLink: "https://legal-semantic-search-kappa.vercel.app/",
+    type: "llm-rag",
+    images: [
+      "/images/legal-chatbot-home.jpg",
+      "/images/legal-chatbot-search.jpg",
+      "/images/legal-chatbot-results.jpg",
+      "/images/legal-chatbot-architecture.jpg"
+    ]
+  },
+  {
     id: "aicareercoach",
     name: "🚀 AI Career Coach",
     problemIntro: "Job seekers often struggle with creating professional application materials and preparing for interviews.",
