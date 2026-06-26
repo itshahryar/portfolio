@@ -38,7 +38,7 @@ const CompanyLogosSlider = () => {
       >
         {companyLogos.concat(companyLogos).map((company, index) => (
           <SwiperSlide key={index}>
-            <div className="flex justify-center items-center h-24 w-24">
+            <div className="flex justify-center items-center h-24 w-24 opacity-40 hover:opacity-80 transition-opacity duration-300">
               <img
                 src={company.logo}
                 alt={company.name}
@@ -54,13 +54,18 @@ const CompanyLogosSlider = () => {
 
 const Tooltip = ({ title, isVisible }) => {
   return (
-    <motion.div className="absolute bottom-full right-0 mb-2 bg-black/80 backdrop-blur-sm text-white px-3 py-1.5 rounded shadow-lg z-10 pointer-events-none" initial={{ opacity: 0, y: 10 }} animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 10 }} transition={{ duration: 0.2 }} >
+    <motion.div 
+      className="absolute bottom-full right-0 mb-2 bg-[#1d1836]/95 backdrop-blur-sm text-white px-3 py-1.5 rounded-lg shadow-lg z-10 pointer-events-none border border-white/[0.08]"
+      initial={{ opacity: 0, y: 10 }} 
+      animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 10 }} 
+      transition={{ duration: 0.2 }} 
+    >
       <div className="flex items-center gap-2 whitespace-nowrap">
         <div className="text-sm font-medium">Download</div>
         <div className="w-1 h-1 bg-white/60 rounded-full"></div>
         <div className="text-sm text-white/90 max-w-[150px] truncate">{title}</div>
       </div>
-      <div className="absolute top-full right-4 -mt-1 w-2 h-2 bg-black/80 transform rotate-45"></div>
+      <div className="absolute top-full right-4 -mt-1 w-2 h-2 bg-[#1d1836]/95 border-r border-b border-white/[0.08] transform rotate-45"></div>
     </motion.div>
   );
 };
@@ -69,49 +74,43 @@ const CertificationCard = ({ title, date, issuedBy, image, downloadTo }) => {
   const [isHovering, setIsHovering] = useState(false);
   
   const handleDownload = () => {
-    // Create a temporary anchor element
     const link = document.createElement('a');
     link.href = downloadTo;
     link.target = '_blank';
     link.download = title.replace(/[^a-z0-9]/gi, '_').toLowerCase() + '.pdf';
-    
-    // Append to the body, click, and remove
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
   };
 
   return (
-    <div className="bg-tertiary p-5 rounded-2xl w-full h-full flex flex-col border border-purple-500/20">
-      <div className="relative w-full h-[230px]">
+    <div className="group bg-gradient-to-br from-[#1d1836] to-black/40 rounded-2xl w-full h-full text-left shadow-lg transition-all duration-500 backdrop-blur-sm border border-white/[0.06] hover:ring-1 hover:ring-purple-500/25 overflow-hidden flex flex-col">
+      {/* Image */}
+      <div className="relative w-full h-[230px] bg-[#12101f] overflow-hidden flex items-center justify-center p-3">
         <img
           src={image}
           alt={title}
-          className="w-full h-full object-cover rounded-2xl"
+          className="max-w-full max-h-full object-contain transition-transform duration-700 ease-out group-hover:scale-[1.02]"
         />
-        {/* Positioned download button overlay on the image */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#1d1836] via-transparent to-transparent pointer-events-none" />
+        
+        {/* Download Button */}
         <div 
-          className="absolute bottom-4 right-4"
+          className="absolute bottom-3 right-3 z-10"
           onMouseEnter={() => setIsHovering(true)}
           onMouseLeave={() => setIsHovering(false)}
         >
-          <Tooltip 
-            title={title} 
-            isVisible={isHovering} 
-          />
+          <Tooltip title={title} isVisible={isHovering} />
           <motion.button
             onClick={handleDownload}
-            className="w-12 h-12 md:w-10 md:h-10 lg:w-9 lg:h-9 bg-gradient-to-r from-purple-600 to-purple-700 rounded-full flex items-center justify-center shadow-lg shadow-purple-500/30"
-            whileHover={{ 
-              scale: 1.1,
-              boxShadow: "0 10px 25px -5px rgba(147, 51, 234, 0.5)"
-            }}
+            className="w-9 h-9 bg-purple-600/80 hover:bg-purple-600 rounded-lg flex items-center justify-center shadow-lg shadow-purple-500/20 transition-colors duration-200"
+            whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             aria-label="Download document"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6 md:h-5 md:w-5 lg:h-4 lg:w-4 text-white"
+              className="h-3.5 w-3.5 text-white"
               viewBox="0 0 20 20"
               fill="currentColor"
             >
@@ -125,11 +124,29 @@ const CertificationCard = ({ title, date, issuedBy, image, downloadTo }) => {
         </div>
       </div>
 
-      <div className="mt-5 flex-1 flex flex-col">
-        <div>
-          <h3 className="text-white font-bold text-[19px] leading-tight">{title}</h3>
-          <p className="mt-2 text-secondary text-[13px]">Issued by: {issuedBy}</p>
-          <p className="mt-1 text-secondary text-[13px]">{date}</p>
+      {/* Content */}
+      <div className="p-4 flex flex-col flex-1">
+        <h3 className="text-white text-[16px] font-semibold leading-tight flex-1">
+          {title}
+        </h3>
+
+        {/* Divider */}
+        <div className="border-t border-white/5 mt-3 mb-2.5" />
+
+        {/* Meta Info */}
+        <div className="space-y-1">
+          <p className="text-[12px] flex items-center gap-2 text-gray-400">
+            <svg className="w-3 h-3 text-purple-600 flex-shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+              <path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+            </svg>
+            {issuedBy}
+          </p>
+          <p className="text-[12px] flex items-center gap-2 text-gray-400">
+            <svg className="w-3 h-3 text-purple-600 flex-shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+              <rect x="3" y="4" width="18" height="18" rx="2" /><path d="M16 2v4M8 2v4M3 10h18" />
+            </svg>
+            {date}
+          </p>
         </div>
       </div>
     </div>
@@ -139,17 +156,6 @@ const CertificationCard = ({ title, date, issuedBy, image, downloadTo }) => {
 const Certifications = () => {
   const [activeFilter, setActiveFilter] = useState('All');
 
-  // Map certification types to display names
-  const typeToDisplayName = {
-    'experience': 'Experience Letters',
-    'workshop': 'Workshops & Bootcamps',
-    'credential': 'Credentials',
-    'social-impact': 'Social Impact & Awareness',
-    'language': 'Language Learning',
-    'recommendation': 'Letters of Recommendation',
-  };
-
-  // Map display names to certification types
   const displayNameToType = {
     'Experience Letters': 'experience',
     'Workshops & Bootcamps': 'workshop',
@@ -159,7 +165,6 @@ const Certifications = () => {
     'Letters of Recommendation': 'recommendation',
   };
 
-  // Group certifications by type
   const groupedCertifications = {
     all: certifications,
     experience: certifications.filter(cert => cert.type === "experience"),
@@ -188,12 +193,12 @@ const Certifications = () => {
     return (
       <div className="mt-20">
         <div className="flex items-center mb-10">
-          <div className="flex-grow border-t border-gray-700"></div>
-          <h3 className="mx-4 text-white text-2xl font-semibold">{title}</h3>
-          <div className="flex-grow border-t border-gray-700"></div>
+          <div className="flex-grow border-t border-white/10"></div>
+          <h3 className="mx-4 text-white text-2xl font-semibold whitespace-nowrap">{title}</h3>
+          <div className="flex-grow border-t border-white/10"></div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {items.map((cert, index) => (
             <CertificationCard
               key={`${keyPrefix}-${index}`}
@@ -213,9 +218,9 @@ const Certifications = () => {
     <section className="bg-transparent pt-[120px] pb-20">
       <div className="px-6 sm:px-16 max-w-7xl mx-auto">
         <div className="mt-5">
-          <p className="text-secondary uppercase text-sm tracking-wider">Documents & Credentials</p>
-          <h2 className="text-white text-3xl md:text-4xl font-bold">Credentials & Certifications</h2>
-          <p className="text-secondary text-[17px] max-w-3xl leading-[30px] mt-4">
+          <p className="text-gray-400 uppercase text-sm tracking-wider">Documents & Credentials</p>
+          <h2 className="text-white text-3xl md:text-4xl font-bold mt-2">Credentials & Certifications</h2>
+          <p className="text-gray-400 text-[17px] max-w-3xl leading-[30px] mt-4">
             A curated collection of experience letters, certifications, workshops,
             and recommendations to support academic and professional applications.
           </p>
@@ -227,18 +232,18 @@ const Certifications = () => {
         </div>
 
         {/* Filter Buttons */}
-        <div className="mt-12 flex flex-wrap gap-4">
+        <div className="mt-12 flex flex-wrap gap-3">
           {categories.map((category) => (
             <motion.button
               key={category}
               onClick={() => setActiveFilter(category)}
-              className={`px-6 py-2.5 rounded-lg font-medium text-sm transition-all duration-300 ${
+              className={`px-5 py-2 rounded-lg font-medium text-sm transition-colors duration-200 ${
                 activeFilter === category
-                  ? 'bg-gradient-to-r from-purple-600 to-purple-700 text-white shadow-lg shadow-purple-500/30'
-                  : 'bg-tertiary text-secondary hover:text-white hover:bg-black-100 border border-purple-500/20'
+                  ? 'bg-purple-600/80 hover:bg-purple-600 text-white shadow-lg shadow-purple-500/20'
+                  : 'bg-white/5 text-gray-400 hover:text-white hover:bg-white/10 border border-white/[0.06] hover:border-white/10'
               }`}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.97 }}
             >
               {category}
             </motion.button>
@@ -246,13 +251,13 @@ const Certifications = () => {
         </div>
 
         {/* Certification Count */}
-        <div className="mt-4 text-secondary text-sm">
+        <div className="mt-4 text-gray-400 text-sm">
           Showing{" "}
           <span className="text-white font-semibold">{filteredCount}</span> of{" "}
           <span className="text-white font-semibold">{totalCertifications}</span>{" "}
           documents
           {activeFilter !== 'All' && (
-            <> in <span className="capitalize">{activeFilter}</span></>
+            <> in <span className="capitalize text-white/80">{activeFilter}</span></>
           )}
           .
         </div>
@@ -282,8 +287,8 @@ const Certifications = () => {
               ))}
             </div>
             {filteredCertifications.length === 0 && (
-              <div className="text-center py-12">
-                <p className="text-secondary text-lg">No documents found in this category.</p>
+              <div className="text-center py-20">
+                <p className="text-gray-400 text-lg">No documents found in this category.</p>
               </div>
             )}
           </div>
