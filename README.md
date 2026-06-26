@@ -34,14 +34,14 @@ With projects in **web development, YOLO, computer vision, AI, and machine learn
 ## 💼 Work Experience  
 
 ### 🏢 Nitensclue  
-**Associate Software Engineer (Employed)**  
+**Associate Software Engineer**  
 *Aug 2025 – Present*  
-- Developing **scalable web and mobile applications** using MERN, Next.js, and React Native.  
+- Developing **scalable web applications** using MERN, Next.js, and React Native.  
 - Integrating **APIs & cloud services** for end-to-end functionality.  
 - Collaborating with cross-functional teams on **feature planning, code reviews, and deployments**.  
 
 ### 🚀 Portus X  
-**MERN Stack Developer (Employed)**  
+**MERN Stack Developer**  
 *Jul 2024 – Sep 2024*  
 - Built web apps using **MongoDB, Express.js, React.js, Node.js**.  
 - Implemented **REST APIs** and interactive UI components.  

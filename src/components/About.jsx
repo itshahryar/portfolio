@@ -38,8 +38,7 @@ const About = () => {
               Full-stack engineer & AI solution architect
             </p>
             <p className="text-secondary text-xs leading-relaxed">
-              Building scalable MERN applications with AI integration, 
-              optimizing performance, and delivering measurable business impact.
+              Building scalable <span className="text-[#915EFF]">web applications</span> with <span className="text-[#915EFF]">AI</span> integration, <span className="text-[#915EFF]">LLMs</span>, and <span className="text-[#915EFF]">RAG systems</span>, focused on performance, efficiency, and measurable impact.
             </p>
           </div>
         </motion.div>
@@ -58,20 +57,19 @@ const About = () => {
             ABOUT THE ENGINEER
           </p>
 
-          <h2 className="text-white text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight mt-2">
-            Thoughtful products,{" "}
-            <span className="text-[#915EFF]">practical engineering</span>.
+          <h2 className="text-white text-xl md:text-2xl lg:text-3xl font-bold tracking-tight mt-2">
+            <span className="text-[#915EFF]">Web</span>, <span className="text-[#915EFF]">AI</span>-powered products, <span className="text-[#915EFF]">LLMs</span> & <span className="text-[#915EFF]">RAG</span> systems.
           </h2>
 
           <div className="mt-4 space-y-3 text-secondary text-[14px] md:text-[15px] leading-[24px] max-w-2xl">
             <p>
-              I am an <strong>Associate Software Engineer</strong> and <strong>BSCS graduate</strong> from COMSATS Islamabad, specializing as a <strong>full-stack developer</strong> in MERN, Next.js, and FastAPI.
+              Work as an <span className="text-[#915EFF]">Associate Software Engineer</span> specializing in <span className="text-[#915EFF]">Full-Stack Development</span> (MERN, Next.js, FastAPI) and <span className="text-[#915EFF]">AI</span>, building scalable, high-performance <span className="text-[#915EFF]">web applications</span>.
             </p>
             <p>
-              I build scalable <strong>web and mobile applications</strong> with a strong focus on performance, responsiveness, and reliability.
+              Enjoy <span className="text-[#915EFF]">AI-driven problem solving</span> with <span className="text-[#915EFF]">LLMs</span> and <span className="text-[#915EFF]">RAG systems</span>, building efficient, user-centered products with measurable impact.
             </p>
             <p>
-              I enjoy <strong>AI-driven problem solving</strong> and turn ideas into efficient, user-centered products with measurable impact.
+              Earned a <span className="text-[#915EFF]">BSCS degree</span> from <span className="text-[#915EFF]">COMSATS Islamabad, Pakistan</span>, in 2025.
             </p>
           </div>
 

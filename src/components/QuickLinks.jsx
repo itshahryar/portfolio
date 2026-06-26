@@ -19,12 +19,12 @@ const QuickLinks = () => {
       description: "Technical expertise across frontend, backend, AI/ML, computer vision, and development tools.",
       path: "/skills",
     },
-    {
-      icon: FaBriefcase,
-      title: "Services & Solutions",
-      description: "Professional services including web development, e-commerce, AI dashboards, mobile apps, and backend solutions.",
-      path: "/services",
-    },
+    // {
+    //   icon: FaBriefcase,
+    //   title: "Services & Solutions",
+    //   description: "Professional services including web development, e-commerce, AI dashboards, mobile apps, and backend solutions.",
+    //   path: "/services",
+    // },
   ];
 
   return (
@@ -46,7 +46,7 @@ const QuickLinks = () => {
         </p>
       </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
         {quickLinks.map((link, index) => {
           const Icon = link.icon;
 
