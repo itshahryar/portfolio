@@ -110,7 +110,7 @@ const Navbar = () => {
             </li>
 
             {/* Services link */}
-            <li
+            {/* <li
               className={`${
                 active === "Services" ? "text-white" : "text-secondary"
               } hover:text-white text-[18px] font-medium cursor-pointer`}
@@ -122,7 +122,7 @@ const Navbar = () => {
               >
                 Services
               </Link>
-            </li>
+            </li> */}
 
             {/* Skills link */}
             <li
@@ -226,7 +226,7 @@ const Navbar = () => {
                 </li>
 
                 {/* Services link */}
-                <li
+                {/* <li
                   className={`font-poppins font-medium cursor-pointer text-[16px] ${
                     active === "Services" ? "text-white" : "text-secondary"
                   }`}
@@ -236,7 +236,7 @@ const Navbar = () => {
                   }}
                 >
                   <Link to="/services">Services</Link>
-                </li>
+                </li> */}
                 
                 {/* Skills link */}
                 <li

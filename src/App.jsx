@@ -63,7 +63,7 @@ const App = () => {
         />
 
         {/* Services Page */}
-        <Route
+        {/* <Route
           path="/services"
           element={
             <div className="relative z-0 bg-primary">
@@ -72,10 +72,9 @@ const App = () => {
               </div>
               <Services />
               <Footer />
-              {/* <Chatbot /> */}
             </div>
           }
-        />
+        /> */}
 
         {/* Skills Page */}
         <Route
