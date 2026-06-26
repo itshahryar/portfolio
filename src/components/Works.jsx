@@ -143,10 +143,13 @@ const Works = () => {
         <p className="text-secondary uppercase text-sm tracking-wider">My work</p>
         <h2 className="text-white text-3xl font-bold">Projects.</h2>
         <p className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]">
-          These projects show how I solve real product problems across web, AI,
-          and client-focused builds. Each card includes a short overview plus
-          quick access to code, details, and live demos when available.
+          These projects showcase how I solve <span className="text-[#915EFF]">real product problems</span> across <span className="text-[#915EFF]">web</span>, <span className="text-[#915EFF]">AI</span>, <span className="text-[#915EFF]">LLMs</span> & <span className="text-[#915EFF]">RAGs</span>, and <span className="text-[#915EFF]">client-focused</span> builds.
         </p>
+      </div>
+
+      {/* Category Filter Buttons */}
+      <div className="mt-2 text-secondary text-[15px] max-w-3xl">
+        Each card includes a short overview plus quick access to code, details, and live demos when available.
       </div>
 
       {/* Category Filter Buttons */}
