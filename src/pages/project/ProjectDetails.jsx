@@ -11,7 +11,6 @@ import {
   FaLayerGroup,
   FaCode,
 } from "react-icons/fa";
-import { projectDetails } from "./projectDetailsData";
 import { projects } from "../../constants";
 
 const fadeUp = {
@@ -36,8 +35,7 @@ const ProjectDetails = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const breakdownRef = useRef(null);
-  const project = projectDetails.find((p) => p.id === id);
-  const projectPreview = projects.find((p) => p.id === id);
+  const project = projects.find((p) => p.id === id);
 
   const scrollToBreakdown = () => {
     breakdownRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -60,7 +58,7 @@ const ProjectDetails = () => {
   }
 
   const overviewText =
-    projectPreview?.description || project.solutionIntro;
+    project.description || project.details?.solutionIntro;
 
   return (
     <section
@@ -128,9 +126,9 @@ const ProjectDetails = () => {
           className="bg-tertiary/90 backdrop-blur-sm rounded-xl border border-purple-500/25 overflow-hidden shadow-lg shadow-black/20"
         >
           <div className="relative w-full h-[230px] overflow-hidden rounded-xl">
-            {projectPreview?.image ? (
+            {project.image ? (
               <img
-                src={projectPreview.image}
+                src={project.image}
                 alt={project.name}
                 className="w-full h-full object-cover rounded-xl"
               />
@@ -186,10 +184,10 @@ const ProjectDetails = () => {
               accent="border-red-500/30 text-red-300 bg-red-500/10"
             />
             <p className="text-secondary text-sm leading-relaxed mb-4">
-              {project.problemIntro}
+              {project.details?.problemIntro}
             </p>
             <ul className="space-y-2.5">
-              {project.problemPoints.map((point, index) => (
+              {project.details?.problemPoints?.map((point, index) => (
                 <li
                   key={index}
                   className="text-white/80 text-sm leading-relaxed pl-3 border-l-2 border-red-500/40"
@@ -213,10 +211,10 @@ const ProjectDetails = () => {
               accent="border-emerald-500/30 text-emerald-300 bg-emerald-500/10"
             />
             <p className="text-secondary text-sm leading-relaxed mb-4">
-              {project.solutionIntro}
+              {project.details?.solutionIntro}
             </p>
             <ul className="space-y-2.5">
-              {project.solutionPoints.map((point, index) => (
+              {project.details?.solutionPoints?.map((point, index) => (
                 <li
                   key={index}
                   className="text-white/80 text-sm leading-relaxed pl-3 border-l-2 border-emerald-500/40"
@@ -241,10 +239,10 @@ const ProjectDetails = () => {
             accent="border-purple-500/30 text-purple-300 bg-purple-500/10"
           />
           <p className="text-secondary text-sm leading-relaxed mb-5 max-w-3xl">
-            {project.scopeIntro}
+            {project.details?.scopeIntro}
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            {project.scopePoints?.map((point, index) => (
+            {project.details?.scopePoints?.map((point, index) => (
               <div
                 key={index}
                 className="flex items-start gap-2.5 rounded-lg bg-black-100/80 border border-purple-500/10 px-3 py-2.5"
@@ -276,7 +274,7 @@ const ProjectDetails = () => {
           <div className="mb-6">
             <h3 className="text-white text-sm font-semibold mb-3">Technologies</h3>
             <div className="flex flex-wrap gap-2">
-              {project.techs.map((tech, index) => (
+              {project.details?.techs?.map((tech, index) => (
                 <span
                   key={index}
                   className={`px-3 py-1 rounded-md text-xs font-medium bg-black-100 border border-purple-500/25 ${tech.color}`}
@@ -287,13 +285,13 @@ const ProjectDetails = () => {
             </div>
           </div>
 
-          {project.tools && project.tools.length > 0 && (
+          {project.details?.tools && project.details.tools.length > 0 && (
             <div>
               <h3 className="text-white text-sm font-semibold mb-3">
                 Development tools
               </h3>
               <div className="flex flex-wrap gap-2">
-                {project.tools.map((tool, index) => (
+                {project.details.tools.map((tool, index) => (
                   <span
                     key={index}
                     className={`px-3 py-1 rounded-md text-xs font-medium bg-black-100/60 border border-white/10 text-secondary ${tool.color}`}

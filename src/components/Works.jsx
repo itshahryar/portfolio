@@ -34,7 +34,19 @@ const ProjectCard = ({
   };
 
   const shortDescription =
-    description.length > 220 ? `${description.slice(0, 220).trim()}...` : description;
+    description.length > 320 ? `${description.slice(0, 320).trim()}...` : description;
+
+  // Parse description to convert **word** to bold purple spans
+  const parseDescription = (text) => {
+    const parts = text.split(/\*\*(.*?)\*\*/g);
+    return parts.map((part, index) => {
+      if (index % 2 === 1) {
+        // Odd indices are the bolded parts
+        return <span key={index} className="text-[#915EFF] font-semibold">{part}</span>;
+      }
+      return part;
+    });
+  };
 
   return (
     <div className="group bg-gradient-to-br from-[#1d1836] to-black/40 rounded-2xl w-full h-full text-left shadow-lg transition-all duration-500 backdrop-blur-sm border border-white/[0.06] hover:ring-1 hover:ring-purple-500/25 overflow-hidden flex flex-col">
@@ -55,7 +67,7 @@ const ProjectCard = ({
           {name}
         </h3>
         <p className="mt-2 text-gray-400 text-sm leading-relaxed flex-1">
-          {shortDescription}
+          {parseDescription(shortDescription)}
         </p>
 
         {/* Tags */}

@@ -429,20 +429,9 @@ const projects = [
     id: "safesiteplus",
     name: "👷‍♂️ FYP - SafeSitePlus",
     description:
-      "SafeSitePlus is an AI-driven construction safety platform that helps supervisors detect incidents early, monitor PPE compliance, and respond faster through prioritized alerts. It combines computer vision, guided reporting, and policy-aware assistance to improve on-site safety operations.",
+      "SafeSitePlus is an **AI-driven** construction safety platform that helps supervisors **detect incidents early**, monitor **PPE compliance**, and respond faster through **prioritized alerts**. It combines **computer vision**, guided reporting, and policy-aware assistance to improve on-site safety operations.",
     tags: [
-      {
-        name: "Material UI",
-        color: "purple-text-gradient",
-      },
-      {
-        name: "tailwind css",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "MongoDB",
-        color: "green-text-gradient",
-      },
+      // Core Languages & Frameworks
       {
         name: "React",
         color: "cyan-text-gradient",
@@ -456,19 +445,17 @@ const projects = [
         color: "blue-text-gradient",
       },
       {
-        name: "Langchain",
-        color: "orange-text-gradient",
-      },
-      {
-        name: "AI Tools",
-        color: "red-text-gradient", // Represents Gemini, Grok, etc. collectively
-      },
-      {
         name: "Python",
         color: "yellow-text-gradient",
       },
       {
-        name: "Postman",
+        name: "MongoDB",
+        color: "green-text-gradient",
+      },
+
+      // AI & ML
+      {
+        name: "LangChain",
         color: "orange-text-gradient",
       },
       {
@@ -476,8 +463,28 @@ const projects = [
         color: "green-text-gradient",
       },
       {
-        name: "Yolo v8",
+        name: "YOLOv8",
         color: "violet-text-gradient",
+      },
+      {
+        name: "AI Tools",
+        color: "red-text-gradient",
+      },
+
+      // UI & Styling
+      {
+        name: "Tailwind CSS",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Material UI",
+        color: "purple-text-gradient",
+      },
+
+      // Developer Tools
+      {
+        name: "Postman",
+        color: "orange-text-gradient",
       },
       {
         name: "GitHub",
@@ -492,12 +499,67 @@ const projects = [
     source_code_link: "https://github.com/Zamin-Raza/SafeSitePlus",
     isLive: false,
     type: "academic",
+    details: {
+      problemIntro: "Construction sites face numerous safety challenges that require innovative solutions.",
+      problemPoints: [
+        "Incident detection is often manual and delayed",
+        "Compliance monitoring is inefficient and inconsistent",
+        "Communication gaps exist between supervisors and workers",
+        "Traditional monitoring methods are reactive rather than proactive"
+      ],
+      solutionIntro: "SafeSitePlus provides an AI-powered platform that enhances construction site safety through intelligent monitoring and communication.",
+      solutionPoints: [
+        "Computer vision for real-time incident detection (fire, falls, missing PPE)",
+        "Policy-based chatbot for instant safety guidance",
+        "Automated reporting with screenshots for documentation",
+        "Forecasting capabilities for risk anticipation and planning",
+        "Prioritized alerts and comprehensive oversight tools"
+      ],
+      scopeIntro: "SafeSite Plus is designed to provide construction site supervisors and admins with a robust, user-friendly platform to manage safety efficiently.",
+      scopePoints: [
+        "Multi-device accessible interface",
+        "Incident reporting and notifications",
+        "User management with access control",
+        "Comprehensive reporting and analytics",
+        "Weather forecasting integration",
+        "AI assistant chatbot for safety guidance"
+      ],
+      techs: [
+        { name: "Material UI", color: "purple-text-gradient" },
+        { name: "Tailwind CSS", color: "pink-text-gradient" },
+        { name: "MongoDB", color: "green-text-gradient" },
+        { name: "React", color: "cyan-text-gradient" },
+        { name: "Node.js", color: "green-text-gradient" },
+        { name: "Express.js", color: "blue-text-gradient" },
+        { name: "LangChain", color: "orange-text-gradient" },
+        { name: "AI Tools", color: "red-text-gradient" },
+        { name: "Python", color: "yellow-text-gradient" },
+        { name: "OpenCV", color: "green-text-gradient" },
+        { name: "YOLO v8", color: "violet-text-gradient" },
+        { name: "DuckDuckGo", color: "orange-text-gradient" },
+      ],
+      tools: [
+        { name: "VS Code", color: "blue-text-gradient" },
+        { name: "GitHub", color: "cyan-text-gradient" },
+        { name: "Postman", color: "orange-text-gradient" },
+        { name: "Google Colab", color: "green-text-gradient" },
+        { name: "Figma", color: "pink-text-gradient" }
+      ],
+      video: "/videos/safesiteplus-demo.mp4",
+      videoPoster: "/images/safesiteplus-poster.jpg",
+      images: [
+        "/images/safesiteplus-dashboard.jpg",
+        "/images/safesiteplus-incident.jpg",
+        "/images/safesiteplus-chatbot.jpg",
+        "/images/safesiteplus-reporting.jpg"
+      ]
+    }
   },
   {
     id: "floodaware",
     name: "🌊 FloodAware",
     description:
-      "FloodAware is a prototype AI system for early flood-risk assessment. Users can upload images or provide coordinates to receive risk insights and preparedness guidance, making flood intelligence more accessible for communities and response teams.",
+      "FloodAware is a prototype **AI system** for early **flood-risk assessment**. Users can upload images or provide coordinates to receive **risk insights** and **preparedness guidance**, making flood intelligence more accessible for communities and response teams.",
     tags: [
       {
         name: "Next.js",
@@ -524,12 +586,55 @@ const projects = [
     source_code_link: "https://github.com/itshahryar/flood-risk-frontend/",
     isLive: false,
     type: "solo",
+    details: {
+      problemIntro: "Communities often lack timely information about flood risks, leading to inadequate preparation.",
+      problemPoints: [
+        "Delayed flood risk information reaches communities",
+        "Inadequate preparation for flood emergencies",
+        "Traditional monitoring systems are expensive",
+        "Limited accessibility to flood risk data for all communities"
+      ],
+      solutionIntro: "FloodAware provides an AI-powered system that helps communities assess and prepare for flood risks.",
+      solutionPoints: [
+        "Image upload functionality for flood risk analysis",
+        "Coordinate-based risk assessment system",
+        "Intelligent AI algorithms for risk evaluation",
+        "Safety recommendations based on risk levels",
+        "Accessible platform for all communities"
+      ],
+      scopeIntro: "FloodAware is designed to provide communities and emergency responders with accessible flood risk assessment tools.",
+      scopePoints: [
+        "User-friendly interface for non-technical users",
+        "Real-time flood risk analysis and reporting",
+        "Integration with weather forecasting services",
+        "Multi-language support for diverse communities",
+        "Mobile accessibility for field use",
+        "Data visualization for risk communication"
+      ],
+      techs: [
+        { name: "Next.js", color: "blue-text-gradient" },
+        { name: "Tailwind", color: "pink-text-gradient" },
+        { name: "FastAPI", color: "green-text-gradient" },
+        { name: "Python", color: "yellow-text-gradient" },
+        { name: "Gemini", color: "cyan-text-gradient" },
+      ],
+      tools: [
+        { name: "VS Code", color: "blue-text-gradient" },
+        { name: "Vercel", color: "cyan-text-gradient" },
+        { name: "GitHub", color: "orange-text-gradient" }
+      ],
+      images: [
+        "/images/floodaware-upload.jpg",
+        "/images/floodaware-analysis.jpg",
+        "/images/floodaware-dashboard.jpg"
+      ]
+    }
   },
   {
     id: "legal-chatbot",
     name: "𝐋𝐋𝐌-𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐋𝐞𝐠𝐚𝐥 𝐂𝐡𝐚𝐭𝐛𝐨𝐭",
     description:
-      "A full-stack Legal LLM chatbot that lets you search legal case using natural language and instantly find the most relevant case law. Built on a RAG pipeline — documents are chunked, embedded, and stored in Pinecone. At query time, your question is matched by meaning, not by exact words.",
+      "A **full-stack** Legal LLM chatbot that lets you **search legal case** using **natural language** and instantly find the most **relevant case law**. Built on a **RAG pipeline** — documents are **chunked**, **embedded**, and stored in **Pinecone**. At query time, your question is matched by **meaning**, not by exact words.",
     tags: [
       {
         name: "Next.js",
@@ -557,12 +662,56 @@ const projects = [
     isLive: true,
     liveLink: "https://legal-semantic-search-kappa.vercel.app/",
     type: "llm-rag",
+    details: {
+      problemIntro: "Legal professionals and researchers often struggle to efficiently search through vast amounts of legal documents and case law to find relevant information.",
+      problemPoints: [
+        "Time-consuming manual search through legal databases",
+        "Difficulty finding relevant case law for specific legal queries",
+        "Inefficient keyword-based search that misses semantic meaning",
+        "Lack of natural language interface for legal research"
+      ],
+      solutionIntro: "A full-stack Legal LLM chatbot that enables semantic search of legal cases using natural language queries, powered by RAG architecture.",
+      solutionPoints: [
+        "Natural language interface for querying legal documents",
+        "RAG pipeline for semantic search and retrieval",
+        "Vector embeddings for meaning-based matching",
+        "Instant retrieval of most relevant case law",
+        "Scalable document processing and storage"
+      ],
+      scopeIntro: "The Legal Chatbot is designed to provide legal professionals, researchers, and students with an intelligent tool for efficient legal research.",
+      scopePoints: [
+        "Document chunking and embedding pipeline",
+        "Vector database storage with Pinecone",
+        "Semantic search with Voyage Embeddings",
+        "User-friendly chatbot interface",
+        "Real-time query processing and response",
+        "Scalable architecture for large document collections"
+      ],
+      techs: [
+        { name: "Next.js", color: "blue-text-gradient" },
+        { name: "LangChain", color: "orange-text-gradient" },
+        { name: "Pinecone", color: "green-text-gradient" },
+        { name: "Voyage Embeddings", color: "purple-text-gradient" },
+        { name: "Tailwind CSS", color: "pink-text-gradient" },
+      ],
+      tools: [
+        { name: "VS Code", color: "blue-text-gradient" },
+        { name: "GitHub", color: "gray-text-gradient" },
+        { name: "Vercel", color: "black-text-gradient" }
+      ],
+      images: [
+        "/images/legal-chatbot-home.jpg",
+        "/images/legal-chatbot-search.jpg",
+        "/images/legal-chatbot-results.jpg",
+        "/images/legal-chatbot-architecture.jpg"
+      ]
+    }
   },
   {
     id: "aicareercoach",
     name: "🚀 AI Career Coach",
     description:
-      "AI Career Coach is a job-readiness platform that supports resume building, personalized cover letter generation, and interview practice with AI feedback. It also offers practical career insights to help users make better next-step decisions.",
+      "AI Career Coach is a **job-readiness platform** that supports **resume building**, **personalized cover letter generation**, and **interview practice** with **AI feedback**. It also offers practical career insights to help users make better next-step decisions.",
     tags: [
       {
         name: "Next.js",
@@ -605,12 +754,61 @@ const projects = [
     source_code_link: "https://github.com/itshahryar/Mern-ai-career-coach",
     isLive: false,
     type: "solo",
+    details: {
+      problemIntro: "Job seekers often struggle with creating professional application materials and preparing for interviews.",
+      problemPoints: [
+        "Difficulty creating professional resumes",
+        "Challenges writing tailored cover letters",
+        "Limited access to interview preparation resources",
+        "Lack of personalized career guidance and feedback"
+      ],
+      solutionIntro: "AI Career Coach is an AI-powered platform that helps users build professional application materials and prepare for interviews.",
+      solutionPoints: [
+        "Professional resume building tools",
+        "Personalized cover letter generation",
+        "Interview practice with real-time AI feedback",
+        "Career insights and industry trends",
+        "Job recommendations based on user profile"
+      ],
+      scopeIntro: "AI Career Coach is designed to provide comprehensive career development tools for job seekers at all levels.",
+      scopePoints: [
+        "User profile management with career history",
+        "Resume and cover letter templates",
+        "AI-powered content generation and optimization",
+        "Mock interview simulations with feedback",
+        "Career path recommendations",
+        "Integration with job boards and LinkedIn"
+      ],
+      techs: [
+        { name: "Next.js", color: "blue-text-gradient" },
+        { name: "Tailwind CSS", color: "pink-text-gradient" },
+        { name: "Shadcn UI", color: "red-text-gradient" },
+        { name: "Prisma", color: "purple-text-gradient" },
+        { name: "NeonDB", color: "green-text-gradient" },
+        { name: "Gemini AI", color: "cyan-text-gradient" },
+        { name: "Inngest", color: "yellow-text-gradient" }
+      ],
+      tools: [
+        { name: "VS Code", color: "blue-text-gradient" },
+        { name: "Notion", color: "gray-text-gradient" },
+        { name: "Vercel", color: "black-text-gradient" },
+        { name: "Clerk", color: "orange-text-gradient" }
+      ],
+      video: "/videos/careercoach-demo.mp4",
+      videoPoster: "/images/careercoach-poster.jpg",
+      images: [
+        "/images/careercoach-dashboard.jpg",
+        "/images/careercoach-resume.jpg",
+        "/images/careercoach-interview.jpg",
+        "/images/careercoach-insights.jpg"
+      ]
+    }
   },
   {
     id: "aifinanceplatform",
     name: "📈 AI Finance Platform",
     description:
-      "A full-stack finance platform that combines secure account management with AI-assisted insights, analytics, and automation. It is built to make financial tracking and decision-making clearer, faster, and more reliable.",
+      "A **full-stack** finance platform that combines **secure account management** with **AI-assisted insights**, **analytics**, and **automation**. It is built to make financial tracking and decision-making clearer, faster, and more reliable.",
     tags: [
       {
         name: "next.js",
@@ -649,12 +847,58 @@ const projects = [
     source_code_link: "https://github.com/itshahryar/next-ai-finance", // Replace with your actual link
     isLive: false,
     type: "solo",
+    details: {
+      problemIntro: "Managing personal finances can be overwhelming with multiple accounts and investments to track.",
+      problemPoints: [
+        "Difficulty tracking multiple financial accounts",
+        "Complex investment portfolio management",
+        "Lack of real-time financial insights",
+        "Limited tools for informed financial decision-making"
+      ],
+      solutionIntro: "The AI Finance Platform is a full-stack solution offering real-time financial insights and analytics.",
+      solutionPoints: [
+        "Real-time financial insights and analytics",
+        "Secure user management and data protection",
+        "Intelligent automation for routine tasks",
+        "Expense tracking and categorization",
+        "Investment analysis and recommendations"
+      ],
+      scopeIntro: "The AI Finance Platform is designed to provide individuals with comprehensive financial management tools.",
+      scopePoints: [
+        "Account aggregation from multiple financial institutions",
+        "Budget creation and expense tracking",
+        "Investment portfolio analysis",
+        "Financial goal setting and tracking",
+        "AI-powered financial insights and recommendations",
+        "Secure data encryption and privacy protection"
+      ],
+      techs: [
+        { name: "Next.js", color: "blue-text-gradient" },
+        { name: "Tailwind CSS", color: "pink-text-gradient" },
+        { name: "Prisma", color: "purple-text-gradient" },
+        { name: "Gemini AI", color: "orange-text-gradient" },
+        { name: "Shadcn UI", color: "red-text-gradient" },
+        { name: "Inngest", color: "green-text-gradient" }
+      ],
+      tools: [
+        { name: "VS Code", color: "blue-text-gradient" },
+        { name: "Postman", color: "orange-text-gradient" },
+        { name: "Clerk", color: "red-text-gradient" },
+        { name: "Vercel", color: "black-text-gradient" }
+      ],
+      images: [
+        "/images/finance-dashboard.jpg",
+        "/images/finance-analytics.jpg",
+        "/images/finance-investments.jpg",
+        "/images/finance-budget.jpg"
+      ]
+    }
   },
   {
     id: "mernreal-estate",
     name: "🏘️ MERN Real-Estate",
     description:
-      "SherryEstate is a full-stack real estate application for buying, selling, and renting properties. It focuses on intuitive property discovery, clean listing management, and reliable backend workflows with Firebase and MongoDB integration.",
+      "SherryEstate is a **full-stack real estate application** for buying, selling, and renting properties. It focuses on **intuitive property discovery**, clean listing management, and reliable backend workflows with **Firebase** and **MongoDB integration**.",
     tags: [
       {
         name: "react",
@@ -681,12 +925,56 @@ const projects = [
     source_code_link: "https://github.com/itshahryar/mern-realEstate",
     isLive: false,
     type: "solo",
+    details: {
+      problemIntro: "The real estate market often lacks transparency and efficiency in property transactions.",
+      problemPoints: [
+        "Limited transparency in property transactions",
+        "Inefficient processes for buyers and sellers",
+        "Difficulty finding suitable properties",
+        "Complex navigation of real estate procedures"
+      ],
+      solutionIntro: "SherryEstate is a comprehensive real estate application that simplifies property transactions.",
+      solutionPoints: [
+        "Intuitive property search interface",
+        "Streamlined buying, selling, and renting processes",
+        "Powerful filtering and search functionality",
+        "Seamless integration with Firebase and MongoDB",
+        "User-friendly dashboard for property management"
+      ],
+      scopeIntro: "SherryEstate is designed to provide a complete property management solution for buyers, sellers, and agents.",
+      scopePoints: [
+        "Property listing and search functionality",
+        "User authentication and profile management",
+        "Saved searches and favorites",
+        "Property comparison tools",
+        "Messaging system for buyer-seller communication",
+        "Document management for transactions"
+      ],
+      techs: [
+        { name: "React", color: "blue-text-gradient" },
+        { name: "MongoDB", color: "green-text-gradient" },
+        { name: "Tailwind CSS", color: "pink-text-gradient" },
+        { name: "Node.js", color: "green-text-gradient" },
+      ],
+      tools: [
+        { name: "VS Code", color: "blue-text-gradient" },
+        { name: "Postman", color: "orange-text-gradient" },
+        { name: "GitHub", color: "orange-text-gradient" },
+        { name: "Firebase", color: "orange-text-gradient" }
+      ],
+      images: [
+        "/images/realestate-home.jpg",
+        "/images/realestate-search.jpg",
+        "/images/realestate-property.jpg",
+        "/images/realestate-dashboard.jpg"
+      ]
+    }
   },
   {
     id: "proteoaging-oocytes",
     name: "🧬 ProteoAging-Oocytes",
     description:
-      "A client-focused bioinformatics platform that helps students and researchers analyze gene expression and interpret DEGs through interactive visualizations and structured data exploration. The UI is designed to make complex biological analysis more approachable.",
+      "A **client-focused bioinformatics platform** that helps students and researchers **analyze gene expression** and interpret **DEGs** through **interactive visualizations** and **structured data exploration**. The UI is designed to make complex biological analysis more approachable.",
     tags: [
       { name: "Bioinformatics", color: "green-text-gradient" },
       { name: "Data Visualization", color: "blue-text-gradient" },
@@ -700,12 +988,53 @@ const projects = [
     source_code_link: "https://github.com/itshahryar/ProteoAging-Oocytes",
     isLive: false,
     type: "client-project",
+    details: {
+      problemIntro: "Researchers and students in biology often struggle with analyzing complex gene expression data and visualizing differentially expressed genes in an intuitive way.",
+      problemPoints: [
+        "Difficulty interpreting raw gene/proteomics data",
+        "Challenges creating meaningful visualizations of biological data",
+        "Limited tools for non-programmers to analyze gene expression",
+        "Need for structured presentation of complex biological datasets"
+      ],
+      solutionIntro: "A user-friendly bioinformatics platform that transforms raw gene expression data into interactive visualizations and structured tables.",
+      solutionPoints: [
+        "Gene search functionality with detailed information retrieval",
+        "Interactive visualizations for differentially expressed genes",
+        "Structured data tables with filtering and analysis capabilities",
+        "Dark mode for comfortable extended research sessions",
+        "Responsive design for use on various devices"
+      ],
+      scopeIntro: "A comprehensive bioinformatics platform designed to make gene expression analysis accessible to students and researchers without programming knowledge.",
+      scopePoints: [
+        "Gene database with search and retrieval capabilities",
+        "Visualization tools for gene expression patterns",
+        "Data analysis and filtering options",
+        "Export functionality for research data",
+        "User-friendly interface optimized for research workflows",
+        "Dark mode support for extended use"
+      ],
+      techs: [
+        { name: "JavaScript", color: "yellow-text-gradient" },
+        { name: "Data Visualization", color: "green-text-gradient" },
+        { name: "Bioinformatics", color: "purple-text-gradient" }
+      ],
+      tools: [
+        { name: "VS Code", color: "blue-text-gradient" },
+        { name: "GitHub", color: "gray-text-gradient" }
+      ],
+      images: [
+        "/images/proteoaging-home.jpg",
+        "/images/proteoaging-search.jpg",
+        "/images/proteoaging-visualization.jpg",
+        "/images/proteoaging-data.jpg"
+      ]
+    }
   },
   {
     id: "doctor-portfolio",
     name: "🩺 Portfolio Website",
     description:
-      "A professional portfolio website for a medical client, designed to present credentials, services, and achievements with trust-focused content flow and responsive UI.",
+      "A professional portfolio website for a medical client, designed to present **credentials**, **services**, and **achievements** with **trust-focused content flow** and **responsive UI**.",
     tags: [
       { name: "React", color: "cyan-text-gradient" },
       { name: "Vite", color: "blue-text-gradient" },
@@ -719,12 +1048,53 @@ const projects = [
     isLive: true,
     liveLink: "https://dr-ibtisam.vercel.app/",
     type: "client-portfolio",
+    details: {
+      problemIntro: "Medical students often struggle to create a comprehensive digital presence that showcases their academic journey, research work, and career aspirations effectively.",
+      problemPoints: [
+        "Difficulty presenting academic achievements and clinical rotations",
+        "Challenges organizing research projects and publications",
+        "Limited platform to showcase extracurricular activities and leadership roles",
+        "Need for professional networking and residency application support"
+      ],
+      solutionIntro: "A modern, responsive portfolio website that helps medical students document their journey, showcase achievements, and build a professional network.",
+      solutionPoints: [
+        "Comprehensive academic profile with grades and achievements",
+        "Research projects and publications showcase",
+        "Clinical rotations and hands-on experience documentation",
+        "Extracurricular activities and leadership roles display",
+        "Professional networking and contact integration"
+      ],
+      scopeIntro: "A complete digital portfolio solution for medical students to track their progress, showcase achievements, and prepare for residency applications.",
+      scopePoints: [
+        "Academic profile with coursework and achievements",
+        "Research experience and publications showcase",
+        "Clinical rotations and practical experience documentation",
+        "Leadership roles and extracurricular activities",
+        "Skills and certifications presentation",
+        "Professional networking and career development tools"
+      ],
+      techs: [
+        { name: "React", color: "blue-text-gradient" },
+        { name: "Vite", color: "orange-text-gradient" },
+        { name: "Tailwind CSS", color: "cyan-text-gradient" }
+      ],
+      tools: [
+        { name: "VS Code", color: "blue-text-gradient" },
+        { name: "GitHub", color: "gray-text-gradient" }
+      ],
+      images: [
+        "/images/doctor-portfolio-home.jpg",
+        "/images/doctor-portfolio-academics.jpg",
+        "/images/doctor-portfolio-research.jpg",
+        "/images/doctor-portfolio-activities.jpg"
+      ]
+    }
   },
   {
     id: "artist-portfolio",
     name: "🎨 Portfolio Website",
     description:
-      "A visual-first portfolio for a digital artist, crafted to spotlight illustration work, personal storytelling, and commission-ready presentation through a clean, responsive interface.",
+      "A **visual-first portfolio** for a digital artist, crafted to spotlight **illustration work**, **personal storytelling**, and **commission-ready presentation** through a clean, responsive interface.",
     tags: [
       { name: "Responsive Design", color: "green-text-gradient" },
       { name: "React", color: "cyan-text-gradient" },
@@ -738,12 +1108,53 @@ const projects = [
     isLive: true,
     liveLink: "https://artist-portfolio-azure.vercel.app/",
     type: "client-portfolio",
+    details: {
+      problemIntro: "Artists and creative professionals need a visually striking platform to showcase their work, tell their story, and connect with potential clients and collaborators.",
+      problemPoints: [
+        "Difficulty creating an online presence that matches artistic vision",
+        "Challenges organizing and presenting diverse creative works",
+        "Limited platform for storytelling and artistic expression",
+        "Need for professional presentation to attract commissions and clients"
+      ],
+      solutionIntro: "A visually engaging portfolio website that showcases artistic work, tells the artist's story, and provides a platform for client connections.",
+      solutionPoints: [
+        "Visually striking gallery for artwork and illustrations",
+        "Storytelling sections for artistic journey and inspiration",
+        "Interactive portfolio with smooth navigation",
+        "Testimonials from collectors and collaborators",
+        "Contact and commission inquiry system"
+      ],
+      scopeIntro: "A comprehensive digital showcase for artists to present their work, share their story, and connect with the art community.",
+      scopePoints: [
+        "Dynamic gallery with categorized artwork display",
+        "Artist biography and creative journey section",
+        "Featured works and collections showcase",
+        "Testimonials and client feedback integration",
+        "Contact and commission inquiry system",
+        "Responsive design optimized for visual content"
+      ],
+      techs: [
+        { name: "React", color: "blue-text-gradient" },
+        { name: "Vite", color: "orange-text-gradient" },
+        { name: "Tailwind CSS", color: "cyan-text-gradient" }
+      ],
+      tools: [
+        { name: "VS Code", color: "blue-text-gradient" },
+        { name: "GitHub", color: "gray-text-gradient" }
+      ],
+      images: [
+        "/images/artist-portfolio-home.jpg",
+        "/images/artist-portfolio-gallery.jpg",
+        "/images/artist-portfolio-about.jpg",
+        "/images/artist-portfolio-contact.jpg"
+      ]
+    }
   },
   {
     id: "graphic-designer-portfolio",
     name: "🖌️ Portfolio Website",
     description:
-      "A modern portfolio website for a graphic designer, structured to showcase projects, skills, and experience with a consistent visual hierarchy across desktop, tablet, and mobile.",
+      "A modern portfolio website for a graphic designer, structured to showcase **projects**, **skills**, and **experience** with a consistent **visual hierarchy** across desktop, tablet, and mobile.",
     tags: [
       { name: "Next.js", color: "blue-text-gradient" },
       { name: "JavaScript", color: "yellow-text-gradient" },
@@ -758,12 +1169,53 @@ const projects = [
     isLive: true,
     liveLink: "https://hamnas-portfolio.vercel.app/",
     type: "client-portfolio",
+    details: {
+      problemIntro: "Graphic designers need a visually compelling portfolio to showcase their creative work, attract clients, and demonstrate their design capabilities effectively.",
+      problemPoints: [
+        "Difficulty creating a portfolio that reflects design skills",
+        "Challenges organizing diverse design projects cohesively",
+        "Limited platform to showcase creative process and results",
+        "Need for professional presentation to attract quality clients"
+      ],
+      solutionIntro: "A modern, responsive portfolio website that showcases graphic design work, skills, and experience in a visually compelling format.",
+      solutionPoints: [
+        "Clean, modern design that highlights creative work",
+        "Project showcase with detailed case studies",
+        "Skills and services presentation",
+        "Professional experience and education sections",
+        "Client testimonials and contact integration"
+      ],
+      scopeIntro: "A comprehensive digital portfolio for graphic designers to present their work, attract clients, and establish their professional brand.",
+      scopePoints: [
+        "Dynamic project gallery with categorized work",
+        "Skills and design tools showcase",
+        "Professional experience and education timeline",
+        "Services and capabilities presentation",
+        "Client testimonials and success stories",
+        "Contact and inquiry system"
+      ],
+      techs: [
+        { name: "Next.js", color: "gray-text-gradient" },
+        { name: "JavaScript", color: "yellow-text-gradient" },
+        { name: "Tailwind CSS", color: "cyan-text-gradient" }
+      ],
+      tools: [
+        { name: "VS Code", color: "blue-text-gradient" },
+        { name: "GitHub", color: "gray-text-gradient" }
+      ],
+      images: [
+        "/images/graphic-designer-home.jpg",
+        "/images/graphic-designer-projects.jpg",
+        "/images/graphic-designer-skills.jpg",
+        "/images/graphic-designer-contact.jpg"
+      ]
+    }
   },
    {
     id: "mealmentor-ui",
     name: "MealMentor - UI",
     description:
-      "MealMentor is a UI/UX concept focused on reducing meal-planning friction for busy parents through personalized recipes, dietary-aware recommendations, grocery planning, and guided cooking flows.",
+      "MealMentor is a **UI/UX concept** focused on reducing **meal-planning friction** for busy parents through **personalized recipes**, **dietary-aware recommendations**, **grocery planning**, and guided cooking flows.",
     tags: [
       {
         name: "Figma",
@@ -775,6 +1227,42 @@ const projects = [
       "https://www.figma.com/design/QlqOhw2cJg8llLHrX7S4ib/MealMentor-HCI-Lab-Terminal?node-id=0-1&p=f&t=YSSEaiYXV8GAu70L-0",
     isLive: false,
     type: "ui-ux",
+    details: {
+      problemIntro: "Busy parents often struggle with meal planning and finding recipes that match their dietary needs.",
+      problemPoints: [
+        "Difficulty planning meals for busy schedules",
+        "Challenges finding recipes for specific dietary needs",
+        "Inefficient grocery list management",
+        "Lack of personalized meal recommendations"
+      ],
+      solutionIntro: "MealMentor simplifies meal planning by offering personalized recipes and grocery management tools.",
+      solutionPoints: [
+        "Personalized recipe recommendations based on ingredients",
+        "Dietary-specific meal planning options",
+        "Integrated grocery list management",
+        "Meal reminders and planning calendar",
+        "Visual cooking guides and instructions"
+      ],
+      scopeIntro: "MealMentor is designed to provide a complete meal planning solution for busy individuals and families.",
+      scopePoints: [
+        "User profile with dietary preferences and restrictions",
+        "Recipe database with filtering options",
+        "Weekly meal planning calendar",
+        "Automated grocery list generation",
+        "Nutritional information tracking",
+        "Integration with grocery delivery services"
+      ],
+      techs: [],
+      tools: [
+        { name: "Figma", color: "pink-text-gradient" },
+      ],
+      images: [
+        "/images/mealmentor-home.jpg",
+        "/images/mealmentor-recipes.jpg",
+        "/images/mealmentor-grocery.jpg",
+        "/images/mealmentor-planning.jpg"
+      ]
+    }
   },
 
 ];
