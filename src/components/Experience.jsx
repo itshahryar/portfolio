@@ -6,43 +6,55 @@ import { SectionWrapper } from "../hoc";
 
 const ExperienceCard = ({ experience }) => {
   return (
-    <div className="bg-gradient-to-br from-tertiary to-black/50 rounded-2xl p-6 border border-purple-500/20 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 backdrop-blur-sm">
-      {/* Icon and Title Section */}
-      <div className="flex items-center mb-5">
+    <div className="group relative bg-gradient-to-br from-tertiary to-black/40 rounded-2xl p-6 border border-purple-500/10 hover:border-purple-500/25 shadow-lg hover:shadow-purple-500/5 transition-all duration-500 backdrop-blur-sm">
+
+      {/* ── Header ────────────────────────────────── */}
+      <div className="flex items-start gap-4 mb-5">
         {/* Icon */}
         <div
-          className="flex justify-center items-center w-14 h-14 rounded-xl shadow-lg"
+          className="flex-shrink-0 w-12 h-12 rounded-xl shadow-md flex items-center justify-center"
           style={{ background: experience.iconBg }}
         >
           <img
             src={experience.icon}
             alt={experience.company_name}
-            className="w-3/5 h-3/5 object-contain"
+            className="w-6 h-6 object-contain"
           />
         </div>
 
-        {/* Title and Company Info */}
-        <div className="ml-4 flex-1">
-          <div className="flex items-center justify-between mb-1">
-            <h3 className="text-white text-lg font-bold">{experience.title}</h3>
-            {experience.date.includes("Present") && (
-              <span className="bg-purple-500/20 text-purple-400 text-xs font-medium px-2 py-1 rounded-full border border-purple-500/30">Current</span>
-            )}
-          </div>
-          <p className="text-secondary text-sm font-medium">{experience.company_name}</p>
-          <p className="text-white text-xs opacity-80">{experience.date}</p>
+        {/* Title Block */}
+        <div className="flex-1 min-w-0">
+          <h3 className="text-white text-base font-semibold leading-tight truncate">
+            {experience.title}
+          </h3>
+          <p className="text-purple-400 text-sm font-medium mt-0.5">
+            {experience.company_name}
+          </p>
+          <p className="text-gray-500 text-xs mt-1 font-mono tracking-wide">
+            {experience.date}
+          </p>
         </div>
+
+        {/* Badge */}
+        {experience.date.includes("Present") && (
+          <span className="flex-shrink-0 bg-green-500/10 text-green-400 text-[10px] font-semibold uppercase tracking-widest px-2.5 py-1 rounded-full border border-green-500/20">
+            Current
+          </span>
+        )}
       </div>
 
-      {/* Points Section */}
-      <ul className="mt-4 space-y-3">
+      {/* ── Divider ───────────────────────────────── */}
+      <div className="border-t border-white/5 mb-4" />
+
+      {/* ── Bullet Points ─────────────────────────── */}
+      <ul className="space-y-2.5">
         {experience.points.map((point, index) => (
           <li
             key={`experience-point-${index}`}
-            className="text-secondary text-sm leading-relaxed flex items-start"
+            className="text-gray-400 text-sm leading-relaxed flex items-start gap-3"
           >
-            <span className="w-2 h-2 bg-purple-400 rounded-full mt-1.5 mr-3 flex-shrink-0"></span>
-            {point}
+            <span className="flex-shrink-0 w-1 h-1 bg-purple-500 rounded-full mt-2" />
+            <span className="flex-1">{point}</span>
           </li>
         ))}
       </ul>
