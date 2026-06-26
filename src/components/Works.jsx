@@ -37,65 +37,72 @@ const ProjectCard = ({
     description.length > 220 ? `${description.slice(0, 220).trim()}...` : description;
 
   return (
-    <div
-      className="bg-tertiary p-5 rounded-2xl w-full h-full hover:scale-[1.015] transition-all duration-300 border border-purple-500/20 hover:border-purple-500/40 shadow-lg hover:shadow-xl flex flex-col"
-    >
-      <div className="relative w-full h-[230px] overflow-hidden rounded-2xl group">
+    <div className="group bg-gradient-to-br from-[#1d1836] to-black/40 rounded-2xl w-full h-full text-left shadow-lg transition-all duration-500 backdrop-blur-sm border border-white/[0.06] hover:ring-1 hover:ring-purple-500/25 overflow-hidden flex flex-col">
+      {/* ── Image ─────────────────────────────────── */}
+      <div className="relative w-full h-[200px] overflow-hidden">
         <img
           src={image}
-          alt="project_image"
-          className="w-full h-full object-cover rounded-2xl transition-transform duration-500 group-hover:scale-110"
+          alt={name}
+          className="w-full h-full object-cover"
         />
-        <div className='absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl' />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#1d1836] via-transparent to-transparent pointer-events-none" />
       </div>
 
-      <div className="mt-4 flex flex-col gap-3">
-        <div className="flex gap-3">
+      {/* ── Content ───────────────────────────────── */}
+      <div className="p-5 flex flex-col flex-1">
+        {/* Title & Description */}
+        <h3 className="text-white text-lg font-semibold leading-tight">
+          {name}
+        </h3>
+        <p className="mt-2 text-gray-400 text-sm leading-relaxed flex-1">
+          {shortDescription}
+        </p>
+
+        {/* Tags */}
+        <div className="mt-4 flex flex-wrap gap-1.5">
+          {tags.slice(0, 4).map((tag) => (
+            <span
+              key={`${name}-${tag.name}`}
+              className={`text-[11px] font-medium px-2 py-0.5 rounded-full border border-white/5 bg-white/[0.03] ${tag.color}`}
+            >
+              {tag.name}
+            </span>
+          ))}
+          {tags.length > 4 && (
+            <span className="text-[11px] text-gray-500 px-2 py-0.5">
+              +{tags.length - 4}
+            </span>
+          )}
+        </div>
+
+        {/* ── Divider ─────────────────────────────── */}
+        <div className="border-t border-white/5 mt-4 mb-3" />
+
+        {/* ── Actions ─────────────────────────────── */}
+        <div className="flex gap-2">
           <button
             onClick={handleViewDetails}
-            className="flex-1 py-1.5 px-3 bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white rounded-lg text-xs font-medium transition-all duration-300 shadow-md shadow-purple-500/20 flex items-center justify-center gap-1"
+            className="flex-1 py-2 px-3 bg-purple-600/80 hover:bg-purple-600 text-white rounded-lg text-xs font-medium transition-colors duration-200 flex items-center justify-center gap-1.5"
           >
-            <FaEye className="text-white text-sm" />
-            View Details
+            <FaEye className="text-[11px]" />
+            Details
           </button>
           <button
             onClick={handleGithubClick}
-            className="flex-1 py-1.5 px-3 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white rounded-lg text-xs font-medium transition-all duration-300 shadow-md shadow-blue-500/20 flex items-center justify-center gap-1"
+            className="flex-1 py-2 px-3 bg-white/5 hover:bg-white/10 text-gray-300 hover:text-white rounded-lg text-xs font-medium transition-colors duration-200 border border-white/5 hover:border-white/10 flex items-center justify-center gap-1.5"
           >
-            <FaGithub className="text-white text-sm" />
-            View Code
+            <FaGithub className="text-[11px]" />
+            Code
           </button>
+          {isLive && liveLink && (
+            <button
+              onClick={handleLiveLinkClick}
+              className="py-2 px-3 bg-white/5 hover:bg-white/10 text-gray-300 hover:text-white rounded-lg text-xs font-medium transition-colors duration-200 border border-white/5 hover:border-white/10 flex items-center justify-center gap-1.5"
+            >
+              <FaExternalLinkAlt className="text-[10px]" />
+            </button>
+          )}
         </div>
-        {isLive && liveLink && (
-          <button
-            onClick={handleLiveLinkClick}
-            className="w-full py-1.5 px-3 bg-gradient-to-r from-violet-600 to-violet-700 hover:from-violet-700 hover:to-violet-800 text-white rounded-lg text-xs font-medium transition-all duration-300 shadow-md shadow-violet-500/20 flex items-center justify-center gap-1"
-          >
-            <FaExternalLinkAlt className="text-white text-sm" />
-            Visit Live Site
-          </button>
-        )}
-      </div>
-
-      <div className="mt-5 flex-1">
-        <h3 className="text-white font-bold text-[20px] leading-tight">{name}</h3>
-        <p className="mt-2 text-secondary text-[14px] leading-relaxed">{shortDescription}</p>
-      </div>
-
-      <div className="mt-4 flex flex-wrap gap-2">
-        {tags.slice(0, 4).map((tag) => (
-          <span
-            key={`${name}-${tag.name}`}
-            className={`text-[12px] px-2 py-1 rounded-md bg-black-100 border border-purple-500/20 ${tag.color}`}
-          >
-            #{tag.name}
-          </span>
-        ))}
-        {tags.length > 4 && (
-          <span className="text-[12px] px-2 py-1 rounded-md bg-black-100 border border-purple-500/20 text-secondary">
-            +{tags.length - 4} more
-          </span>
-        )}
       </div>
     </div>
   );

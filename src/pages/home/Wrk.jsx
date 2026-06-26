@@ -28,61 +28,71 @@ const ProjectPreviewCard = ({ project }) => {
 
   return (
     <motion.div
-      whileHover={{ scale: 1.03 }}
-      transition={{ duration: 0.2 }}
-      className="bg-tertiary p-5 rounded-2xl w-full sm:w-[360px] text-left shadow-lg hover:shadow-purple-800/30 transition-shadow duration-300 flex flex-col"
+      whileHover={{ y: -3 }}
+      transition={{ duration: 0.2, ease: "easeOut" }}
+      className="group bg-gradient-to-br from-[#1d1836] to-black/40 rounded-2xl w-full sm:w-[360px] text-left shadow-lg transition-all duration-500 backdrop-blur-sm border border-white/[0.06] hover:ring-1 hover:ring-purple-500/25 overflow-hidden flex flex-col"
     >
-      <div className="relative w-full h-[230px]">
+            {/* ── Image ─────────────────────────────────── */}
+      <div className="relative w-full h-[200px] overflow-hidden">
         <img
           src={project.image}
-          alt="project_image"
-          className="w-full h-full object-cover rounded-2xl"
+          alt={project.name}
+          className="w-full h-full object-cover"
         />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#1d1836] via-transparent to-transparent pointer-events-none" />
       </div>
 
-      {/* Buttons Section */}
-      <div className="mt-4 flex flex-col gap-3">
-        <div className="flex gap-3">
+      {/* ── Content ───────────────────────────────── */}
+      <div className="p-5 flex flex-col flex-1">
+        <h3 className="text-white text-lg font-semibold leading-tight">
+          {project.name}
+        </h3>
+        <p className="mt-2 text-gray-400 text-sm leading-relaxed flex-1">
+          {shortDescription}
+        </p>
+
+        <div className="mt-4 flex flex-wrap gap-1.5">
+          {project.tags.slice(0, 4).map((tag) => (
+            <span
+              key={`${project.name}-${tag.name}`}
+              className={`text-[11px] font-medium px-2 py-0.5 rounded-full border border-white/5 bg-white/[0.03] ${tag.color}`}
+            >
+              {tag.name}
+            </span>
+          ))}
+          {project.tags.length > 4 && (
+            <span className="text-[11px] text-gray-500 px-2 py-0.5">
+              +{project.tags.length - 4}
+            </span>
+          )}
+        </div>
+
+        <div className="border-t border-white/5 mt-4 mb-3" />
+
+        <div className="flex gap-2">
           <button
             onClick={handleViewDetails}
-            className="flex-1 py-1.5 px-3 bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white rounded-lg text-xs font-medium transition-all duration-300 shadow-md shadow-purple-500/20 flex items-center justify-center gap-1"
+            className="flex-1 py-2 px-3 bg-purple-600/80 hover:bg-purple-600 text-white rounded-lg text-xs font-medium transition-colors duration-200 flex items-center justify-center gap-1.5"
           >
-            <FaEye className="text-white text-sm" />
-            View Details
+            <FaEye className="text-[11px]" />
+            Details
           </button>
           <button
             onClick={handleGithubClick}
-            className="flex-1 py-1.5 px-3 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white rounded-lg text-xs font-medium transition-all duration-300 shadow-md shadow-blue-500/20 flex items-center justify-center gap-1"
+            className="flex-1 py-2 px-3 bg-white/5 hover:bg-white/10 text-gray-300 hover:text-white rounded-lg text-xs font-medium transition-colors duration-200 border border-white/5 hover:border-white/10 flex items-center justify-center gap-1.5"
           >
-            <FaGithub className="text-white text-sm" />
-            View Code
+            <FaGithub className="text-[11px]" />
+            Code
           </button>
+          {project.isLive && project.liveLink && (
+            <button
+              onClick={handleLiveLinkClick}
+              className="py-2 px-3 bg-white/5 hover:bg-white/10 text-gray-300 hover:text-white rounded-lg text-xs font-medium transition-colors duration-200 border border-white/5 hover:border-white/10 flex items-center justify-center gap-1.5"
+            >
+              <FaExternalLinkAlt className="text-[10px]" />
+            </button>
+          )}
         </div>
-        {project.isLive && project.liveLink && (
-          <button
-            onClick={handleLiveLinkClick}
-            className="w-full py-1.5 px-3 bg-gradient-to-r from-violet-600 to-violet-700 hover:from-violet-700 hover:to-violet-800 text-white rounded-lg text-xs font-medium transition-all duration-300 shadow-md shadow-violet-500/20 flex items-center justify-center gap-1"
-          >
-            <FaExternalLinkAlt className="text-white text-sm" />
-            Visit Live Site
-          </button>
-        )}
-      </div>
-
-      <div className="mt-5 flex-1">
-        <h3 className="text-white font-bold text-[20px] leading-tight">{project.name}</h3>
-        <p className="mt-2 text-secondary text-[14px] leading-relaxed">{shortDescription}</p>
-      </div>
-
-      <div className="mt-4 flex flex-wrap gap-2">
-        {project.tags.slice(0, 4).map((tag) => (
-          <p key={`${project.name}-${tag.name}`} className={`text-[12px] ${tag.color}`}>
-            #{tag.name}
-          </p>
-        ))}
-        {project.tags.length > 4 && (
-          <p className="text-[12px] text-secondary">+{project.tags.length - 4} more</p>
-        )}
       </div>
     </motion.div>
   );
