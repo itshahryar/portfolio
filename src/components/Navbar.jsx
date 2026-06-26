@@ -9,10 +9,33 @@ const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [showGuide, setShowGuide] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
 
   useEffect(() => {
+    // Check if mobile screen
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 640);
+    };
+
+    // Check on mount
+    checkMobile();
+
+    // Check on resize
+    const handleResize = () => {
+      checkMobile();
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Check if user has seen the guide before (only on mobile)
+    const hasSeenGuide = localStorage.getItem("hasSeenMobileGuide");
+    if (!hasSeenGuide && window.innerWidth < 640) {
+      setShowGuide(true);
+    }
+
     const handleScroll = () => {
       const scrollTop = window.scrollY;
       if (scrollTop > 100) {
@@ -24,8 +47,16 @@ const Navbar = () => {
 
     window.addEventListener("scroll", handleScroll);
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
+
+  const dismissGuide = () => {
+    setShowGuide(false);
+    localStorage.setItem("hasSeenMobileGuide", "true");
+  };
 
   const handleContactClick = (e) => {
     e.preventDefault();
@@ -57,6 +88,21 @@ const Navbar = () => {
           .menu-animation {
             animation: none;
           }
+        }
+
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+            transform: translateY(-10px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        .animate-fade-in {
+          animation: fadeIn 0.3s ease-out;
         }
       `}</style>
       
@@ -185,13 +231,46 @@ const Navbar = () => {
             </li>
           </ul>
 
-          <div className="sm:hidden flex flex-1 justify-end items-center">
+          <div className="sm:hidden flex flex-1 justify-end items-center relative">
             <img
               src={toggle ? close : menu}
               alt="menu"
               className={`w-[28px] h-[28px] object-contain ${!toggle ? 'menu-animation' : ''}`}
               onClick={() => setToggle(!toggle)}
             />
+
+            {/* Mobile Guide Card */}
+            {showGuide && toggle && (
+              <div className="absolute top-12 right-0 w-64 bg-gradient-to-br from-purple-600/95 to-purple-800/95 backdrop-blur-sm rounded-xl shadow-2xl border border-purple-400/30 p-4 z-20 animate-fade-in">
+                <div className="flex items-start justify-between mb-3">
+                  <div className="flex items-center gap-2">
+                    <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
+                      <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    </div>
+                    <h3 className="text-white font-semibold text-sm">Welcome!</h3>
+                  </div>
+                  <button
+                    onClick={dismissGuide}
+                    className="text-white/70 hover:text-white transition-colors"
+                  >
+                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                </div>
+                <p className="text-white/90 text-xs leading-relaxed mb-3">
+                  Tap the menu items below to navigate through the portfolio. Explore projects, experience, skills, and more!
+                </p>
+                <div className="flex items-center gap-2 text-white/70 text-xs">
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                  </svg>
+                  <span>Scroll down to explore</span>
+                </div>
+              </div>
+            )}
 
             <div
               className={`${
