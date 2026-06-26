@@ -80,8 +80,8 @@ import {
 export const educationData = [
   {
     school: "Comsats University Islamabad",
-    level: "Bachelors",
-    program: "Computer Science",
+    level: "Bachelors of Science in Computer Science",
+    program: "BSCS",
     year: "FA21 - SP25",
     image: cui, // Optional: Add an image if desired
   },

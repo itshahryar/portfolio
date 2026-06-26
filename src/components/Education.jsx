@@ -10,25 +10,68 @@ const EducationCard = ({ index, school, marks, percentage, year, program, level,
         hidden: { opacity: 0, y: 50 },
         visible: { opacity: 1, y: 0 },
       }}
-      transition={{ duration: 0.75, delay: index * 0.5 }}
-      className="bg-tertiary p-4 rounded-xl w-full max-w-[380px] lg:h-[340px] h-auto flex flex-col shadow-md"
+      transition={{ duration: 0.75, delay: index * 0.15, ease: [0.16, 1, 0.3, 1] }}
+      className="group bg-gradient-to-br from-[#1d1836] to-black/40 rounded-2xl w-full max-w-[380px] text-left shadow-lg transition-all duration-500 backdrop-blur-sm border border-white/[0.06] hover:ring-1 hover:ring-purple-500/25 overflow-hidden flex flex-col"
     >
-      <div className="relative w-full h-[160px] flex items-center justify-center bg-[#1d1836] rounded-xl overflow-hidden">
+      {/* Image */}
+      <div className="relative w-full h-[150px] overflow-hidden bg-[#12101f]">
         {image && (
           <img
             src={image}
             alt={school}
-            className="w-[100%] h-auto object-contain rounded-xl"
+            className="w-full h-full object-cover"
+            loading="lazy"
           />
         )}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#1d1836] via-transparent to-transparent pointer-events-none" />
       </div>
 
-      <div className="mt-3 flex-1 flex flex-col justify-between">
-        <h3 className="text-white font-bold text-[18px]">{school}</h3>
-        {level && <p className="mt-1 text-secondary text-[13px]">Education Level: {level}</p>}
-        {percentage && <p className="mt-1 text-secondary text-[13px]">Percentage: {percentage}</p>}
-        {program && <p className="mt-1 text-secondary text-[13px]">Program: {program}</p>}
-        {year && <p className="mt-1 text-secondary text-[13px]">Duration: {year}</p>}
+      {/* Content */}
+      <div className="p-5 flex flex-col flex-1">
+        <h3 className="text-white text-lg font-semibold leading-tight">
+          {school}
+        </h3>
+
+        {program && (
+          <p className="mt-2 text-gray-400 text-sm leading-relaxed">
+            {program}
+          </p>
+        )}
+
+        <div className="mt-3 space-y-1.5">
+          {level && (
+            <p className="text-[13px] flex items-center gap-2 text-gray-400">
+              <svg className="w-3.5 h-3.5 text-purple-600 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3z" />
+              </svg>
+              {level}
+            </p>
+          )}
+          {year && (
+            <p className="text-[13px] flex items-center gap-2 text-gray-400">
+              <svg className="w-3.5 h-3.5 text-purple-600 flex-shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                <rect x="3" y="4" width="18" height="18" rx="2" /><path d="M16 2v4M8 2v4M3 10h18" />
+              </svg>
+              {year}
+            </p>
+          )}
+          {percentage && (
+            <p className="text-[13px] flex items-center gap-2 text-gray-400">
+              <svg className="w-3.5 h-3.5 text-purple-600 flex-shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                <path d="M18 20V10M12 20V4M6 20v-6" />
+              </svg>
+              {percentage}%
+            </p>
+          )}
+          {marks && (
+            <p className="text-[13px] flex items-center gap-2 text-gray-400">
+              <svg className="w-3.5 h-3.5 text-purple-600 flex-shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+              </svg>
+              {marks}
+            </p>
+          )}
+        </div>
       </div>
     </motion.div>
   );
@@ -57,7 +100,7 @@ const Education = () => {
           transition={{ duration: 0.75, delay: 0.2 }}
           className="mt-4 text-secondary text-[17px] max-w-3xl mx-auto leading-[30px]"
         >
-          My education has laid a strong foundation, nurturing my passion for learning, problem-solving, and continuous growth in an ever-evolving field.
+          My education has laid a strong foundation for continuous learning, problem-solving, and growth in a rapidly evolving field.
         </motion.p>
       </div>
 
