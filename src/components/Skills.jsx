@@ -24,13 +24,14 @@ const skillGroups = [
     title: "Backend & Databases",
     subtitle: "APIs, data modeling, and reliable infrastructure.",
     techNames: [
-      "Node JS",
+      "Node.js",
       "Python",
       "FastAPI",
       "MongoDB",
-      "Prisma",
-      "Firebase",
+      "PostgreSQL",
       "MySQL",
+      "Prisma ORM",
+      "Firebase",
     ],
   },
   {
