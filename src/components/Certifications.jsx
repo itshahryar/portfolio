@@ -219,10 +219,9 @@ const Certifications = () => {
       <div className="px-6 sm:px-16 max-w-7xl mx-auto">
         <div className="mt-5">
           <p className="text-gray-400 uppercase text-sm tracking-wider">Documents & Credentials</p>
-          <h2 className="text-white text-3xl md:text-4xl font-bold mt-2">Credentials & Certifications</h2>
+          <h2 className="text-white text-3xl md:text-4xl font-bold mt-2">Credentials & <span className="text-[#915EFF]">Certifications</span></h2>
           <p className="text-gray-400 text-[17px] max-w-3xl leading-[30px] mt-4">
-            A curated collection of experience letters, certifications, workshops,
-            and recommendations to support academic and professional applications.
+            A curated collection of <span className="text-[#915EFF]">experience letters</span>, <span className="text-[#915EFF]">certifications</span>, <span className="text-[#915EFF]">workshops</span>, and <span className="text-[#915EFF]">bootcamps</span> showcasing my <span className="text-[#915EFF]">professional growth</span> and <span className="text-[#915EFF]">technical expertise</span>.
           </p>
         </div>
 
