@@ -79,27 +79,30 @@ const ProjectCard = ({
         <div className="border-t border-white/5 mt-4 mb-3" />
 
         {/* ── Actions ─────────────────────────────── */}
-        <div className="flex gap-2">
-          <button
-            onClick={handleViewDetails}
-            className="flex-1 py-2 px-3 bg-purple-600/80 hover:bg-purple-600 text-white rounded-lg text-xs font-medium transition-colors duration-200 flex items-center justify-center gap-1.5"
-          >
-            <FaEye className="text-[11px]" />
-            View Full Details
-          </button>
-          <button
-            onClick={handleGithubClick}
-            className="flex-1 py-2 px-3 bg-white/5 hover:bg-white/10 text-gray-300 hover:text-white rounded-lg text-xs font-medium transition-colors duration-200 border border-white/5 hover:border-white/10 flex items-center justify-center gap-1.5"
-          >
-            <FaGithub className="text-[11px]" />
-            Source Code
-          </button>
+        <div className="flex flex-col gap-2">
+          <div className="flex gap-2">
+            <button
+              onClick={handleViewDetails}
+              className="flex-1 py-2 px-3 bg-purple-600/80 hover:bg-purple-600 text-white rounded-lg text-xs font-medium transition-colors duration-200 flex items-center justify-center gap-1.5"
+            >
+              <FaEye className="text-[11px]" />
+              View Full Details
+            </button>
+            <button
+              onClick={handleGithubClick}
+              className="flex-1 py-2 px-3 bg-white/5 hover:bg-white/10 text-gray-300 hover:text-white rounded-lg text-xs font-medium transition-colors duration-200 border border-white/5 hover:border-white/10 flex items-center justify-center gap-1.5"
+            >
+              <FaGithub className="text-[11px]" />
+              Source Code
+            </button>
+          </div>
           {isLive && liveLink && (
             <button
               onClick={handleLiveLinkClick}
-              className="py-2 px-3 bg-white/5 hover:bg-white/10 text-gray-300 hover:text-white rounded-lg text-xs font-medium transition-colors duration-200 border border-white/5 hover:border-white/10 flex items-center justify-center gap-1.5"
+              className="w-full py-2 px-3 bg-white/5 hover:bg-white/10 text-gray-300 hover:text-white rounded-lg text-xs font-medium transition-colors duration-200 border border-white/5 hover:border-white/10 flex items-center justify-center gap-1.5"
             >
               <FaExternalLinkAlt className="text-[10px]" />
+              Live Demo
             </button>
           )}
         </div>
@@ -117,6 +120,7 @@ const Works = () => {
     'Solo Projects': 'solo',
     'Client Projects': 'client-project',
     'UI/UX Design': 'ui-ux',
+    'LLM & RAG': 'llm-rag',
   };
 
   const filteredProjects = activeFilter === 'All'
@@ -131,7 +135,7 @@ const Works = () => {
 
   const totalProjects = projects.length;
   const filteredCount = filteredProjects.length;
-  const categories = ['All', 'Academic Projects', 'Solo Projects', 'Client Projects', 'UI/UX Design'];
+  const categories = ['All', 'Academic Projects', 'Solo Projects', 'LLM & RAG', 'Client Projects', 'UI/UX Design'];
 
   return (
     <>
@@ -205,6 +209,13 @@ const Works = () => {
         <p className="mt-2 text-secondary text-xs md:text-sm max-w-3xl">
           UI/UX design projects demonstrate my ability to create intuitive, user-centered
           interfaces and experiences through thoughtful design principles.
+        </p>
+      )}
+      
+      {activeFilter === 'LLM & RAG' && (
+        <p className="mt-2 text-secondary text-xs md:text-sm max-w-3xl">
+          LLM & RAG projects showcase my expertise in building intelligent applications with
+          large language models, retrieval-augmented generation, and vector embeddings.
         </p>
       )}
 

@@ -60,6 +60,7 @@ import {
   bio,
   hamnaPortfolioImage,
   englishProef,
+  legal,
 } from "../assets";
 
 // export const navLinks = [
@@ -522,6 +523,39 @@ const projects = [
     source_code_link: "https://github.com/itshahryar/flood-risk-frontend/",
     isLive: false,
     type: "solo",
+  },
+  {
+    id: "legal-chatbot",
+    name: "𝐋𝐋𝐌-𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐋𝐞𝐠𝐚𝐥 𝐂𝐡𝐚𝐭𝐛𝐨𝐭",
+    description:
+      "A full-stack Legal LLM chatbot that lets you search legal case using natural language and instantly find the most relevant case law. Built on a RAG pipeline — documents are chunked, embedded, and stored in Pinecone. At query time, your question is matched by meaning, not by exact words.",
+    tags: [
+      {
+        name: "Next.js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "LangChain",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "Pinecone",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Voyage Embeddings",
+        color: "purple-text-gradient",
+      },
+      {
+        name: "Tailwind CSS",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: legal,
+    source_code_link: "https://github.com/itshahryar/legal-semantic-webapp",
+    isLive: true,
+    liveLink: "https://legal-semantic-search-kappa.vercel.app/",
+    type: "llm-rag",
   },
   {
     id: "aicareercoach",

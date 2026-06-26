@@ -52,6 +52,7 @@ import doctorPortfolioImage from "./projects/doctorPortfolioImage.png";
 import artistPortfolioImage from "./projects/artistPortfolioImage.png";
 import bio from "./projects/bio.png";
 import hamnaPortfolioImage from "./projects/hamnaPortfolioImage.png";
+import legal from "./projects/legal.png";
 
 import v3_letter from "./certifications/v3_letter.jpeg";
 import gender from "./certifications/gender.jpeg";
@@ -138,4 +139,5 @@ artistPortfolioImage,
 bio,
 hamnaPortfolioImage,
 englishProef,
+legal,
 };
