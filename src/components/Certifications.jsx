@@ -13,6 +13,7 @@ const CompanyLogosSlider = () => {
     { id: 4, name: 'Google Developers', logo: '/logos/google-developers.png' },
     { id: 5, name: 'Un Women', logo: '/logos/un-women.png' },
     { id: 6, name: 'Open Learn', logo: '/logos/open.png' },
+    { id: 7, name: 'COMSATS', logo: '/logos/cui-nobg.png' },
   ];
 
   return (
@@ -38,7 +39,7 @@ const CompanyLogosSlider = () => {
       >
         {companyLogos.concat(companyLogos).map((company, index) => (
           <SwiperSlide key={index}>
-            <div className="flex justify-center items-center h-24 w-24 opacity-40 hover:opacity-80 transition-opacity duration-300">
+            <div className="flex justify-center items-center h-24 w-24 opacity-80 transition-opacity duration-300">
               <img
                 src={company.logo}
                 alt={company.name}

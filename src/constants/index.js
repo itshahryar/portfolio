@@ -60,6 +60,7 @@ import {
   bio,
   hamnaPortfolioImage,
   englishProef,
+  cuiNobg,
   legal,
 } from "../assets";
 

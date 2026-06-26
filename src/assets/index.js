@@ -71,6 +71,7 @@ import englishProef from "./certifications/englishProef.jpg";
 import dps from "./education/dps.png";
 import pgc from "./education/pgc.png";
 import cui from "./education/cui.jpg";
+import cuiNobg from "./education/cui-nobg.png";
 
 export {
   logo,
@@ -123,6 +124,7 @@ export {
   dps,
   pgc,
   cui,
+  cuiNobg,
   careerCoach,
   finance,
   portusx,
