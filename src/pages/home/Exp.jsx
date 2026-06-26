@@ -6,43 +6,60 @@ import { motion } from "framer-motion";
 const ExperiencePreviewCard = ({ experience }) => {
   return (
     <motion.div
-      whileHover={{ y: -4 }}
-      transition={{ duration: 0.2 }}
-      className="flex flex-col justify-between p-6 rounded-2xl shadow-lg bg-[#1d1836] w-full h-full min-h-[340px] hover:shadow-purple-800/30 transition-all duration-300 border border-purple-500/15"
+      whileHover={{ y: -3 }}
+      transition={{ duration: 0.2, ease: "easeOut" }}
+      className="group relative bg-gradient-to-br from-[#1d1836] to-black/40 rounded-2xl p-6 border border-purple-500/10 hover:border-purple-500/25 shadow-lg hover:shadow-purple-800/10 transition-all duration-500 backdrop-blur-sm w-full text-left"
     >
-      {/* Header */}
-      <div>
-        <div className="flex items-center mb-5">
-          <div
-            className="flex justify-center items-center w-12 h-12 rounded-full flex-shrink-0"
-            style={{ background: experience.iconBg }}
-          >
-            <img
-              src={experience.icon}
-              alt={experience.company_name}
-              className="w-3/5 h-3/5 object-contain"
-            />
-          </div>
-
-          <div className="ml-4 text-left">
-            <h3 className="text-white text-base md:text-lg font-bold leading-tight">{experience.title}</h3>
-            <p className="text-secondary text-sm font-medium">{experience.company_name}</p>
-            <p className="text-gray-400 text-xs mt-1">{experience.date}</p>
-          </div>
+      {/* ── Header ────────────────────────────────── */}
+      <div className="flex items-start gap-4 mb-5">
+        {/* Icon */}
+        <div
+          className="flex-shrink-0 w-12 h-12 rounded-xl shadow-md flex items-center justify-center"
+          style={{ background: experience.iconBg }}
+        >
+          <img
+            src={experience.icon}
+            alt={experience.company_name}
+            className="w-6 h-6 object-contain"
+          />
         </div>
 
-        {/* Points (limited to 2 for preview) */}
-        <ul className="list-disc ml-5 space-y-2 text-left">
-          {experience.points.slice(0, 2).map((point, index) => (
-            <li
-              key={`experience-preview-point-${index}`}
-              className="text-white/90 text-sm leading-relaxed"
-            >
-              {point}
-            </li>
-          ))}
-        </ul>
+        {/* Title Block */}
+        <div className="flex-1 min-w-0">
+          <h3 className="text-white text-base font-semibold leading-tight truncate">
+            {experience.title}
+          </h3>
+          <p className="text-purple-400 text-sm font-medium mt-0.5">
+            {experience.company_name}
+          </p>
+          <p className="text-gray-500 text-xs mt-1 font-mono tracking-wide">
+            {experience.date}
+          </p>
+        </div>
       </div>
+
+      {/* ── Divider ───────────────────────────────── */}
+      <div className="border-t border-white/5 mb-4" />
+
+      {/* ── Preview Points ────────────────────────── */}
+      <ul className="space-y-2.5">
+        {experience.points.slice(0, 2).map((point, index) => (
+          <li
+            key={`experience-preview-point-${index}`}
+            className="text-gray-400 text-sm leading-relaxed flex items-start gap-3"
+          >
+            <span className="flex-shrink-0 w-1 h-1 bg-purple-500 rounded-full mt-2" />
+            <span className="flex-1">{point}</span>
+          </li>
+        ))}
+      </ul>
+
+      {/* ── More Indicator ────────────────────────── */}
+      {experience.points.length > 2 && (
+        <p className="text-purple-500/50 text-xs font-medium mt-4 pl-4">
+          +{experience.points.length - 2} more
+        </p>
+      )}
     </motion.div>
   );
 };
