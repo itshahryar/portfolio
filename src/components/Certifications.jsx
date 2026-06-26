@@ -159,10 +159,10 @@ const Certifications = () => {
   const displayNameToType = {
     'Experience Letters': 'experience',
     'Workshops & Bootcamps': 'workshop',
-    'Credentials': 'credential',
+    'Credentials / Learnings': 'credential',
     'Social Impact & Awareness': 'social-impact',
-    'Language Learning': 'language',
-    'Letters of Recommendation': 'recommendation',
+    'Language Proficiency': 'language',
+    // 'Letters of Recommendation': 'recommendation',
   };
 
   const groupedCertifications = {
@@ -175,7 +175,7 @@ const Certifications = () => {
     recommendation: certifications.filter(cert => cert.type === "recommendation")
   };
 
-  const categories = ['All', 'Experience Letters', 'Workshops & Bootcamps', 'Credentials', 'Social Impact & Awareness', 'Language Learning', 'Letters of Recommendation'];
+  const categories = ['All', 'Experience Letters', 'Workshops & Bootcamps', 'Credentials / Learnings', 'Social Impact & Awareness', 'Language Proficiency'/*, 'Letters of Recommendation'*/];
 
   const filteredCertifications = activeFilter === 'All'
     ? certifications
@@ -267,10 +267,10 @@ const Certifications = () => {
           <>
             {renderSection('Experience Letters', groupedCertifications.experience, 'experience')}
             {renderSection('Workshops & Bootcamps', groupedCertifications.workshops, 'workshops')}
-            {renderSection('Credentials', groupedCertifications.credentials, 'credentials')}
+            {renderSection('Credentials / Learnings', groupedCertifications.credentials, 'credentials')}
             {renderSection('Social Impact & Awareness', groupedCertifications.socialImpact, 'social')}
-            {renderSection('Language Learning', groupedCertifications.language, 'language')}
-            {renderSection('Letters of Recommendation', groupedCertifications.recommendation, 'recommendation')}
+            {renderSection('Language Proficiency', groupedCertifications.language, 'language')}
+            {/* {renderSection('Letters of Recommendation', groupedCertifications.recommendation, 'recommendation')} */}
           </>
         ) : (
           <div className="mt-12">
