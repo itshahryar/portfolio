@@ -54,7 +54,7 @@ const skillGroups = [
   {
     title: "Computer Vision",
     subtitle: "Visual understanding with YOLO and OpenCV.",
-    techNames: ["YOLO", "CV"],
+    techNames: ["YOLO", "OpenCV"],
   },
  {
     title: "Tools & Workflow",
