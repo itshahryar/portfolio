@@ -64,20 +64,6 @@ import {
   legal,
 } from "../assets";
 
-// export const navLinks = [
-//   {
-//     id: "about",
-//     title: "About",
-//   },
-//   {
-//     id: "work",
-//     title: "Work",
-//   },
-//   {
-//     id: "contact",
-//     title: "Contact",
-//   },
-// ];
 // src/constants/index.js
 export const educationData = [
   {
@@ -1169,10 +1155,5 @@ const projects = [
 
 ];
 
-export {
-  services,
-  technologies,
-  experiences,
-  projects,
-  certifications,
-};
+
+export { services, technologies, experiences, projects, certifications };
