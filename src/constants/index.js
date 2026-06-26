@@ -243,20 +243,20 @@ const experiences = [
     iconBg: "#E6DEDD",
     date: "Aug 2025 – Present",
     points: [
-      "Developing scalable web applications using MERN stack, Next.js, and React Native, with API and cloud service integrations for end-to-end functionality.",
-      "Collaborating with cross-functional teams on feature planning, code reviews, and deployment to deliver user-friendly, reliable, and high-quality software.",
+      "Developing scalable web applications using the MERN stack and Next.js with API and cloud integrations.",
+      "Collaborating on feature development, code reviews, and deployments to deliver reliable, user-focused software.",
     ],
   },
 
   {
     title: "MERN Stack Developer",
-    company_name: "Portus X",
+    company_name: "PortusX",
     icon: portusx,
     iconBg: "#E6DEDD",
     date: "Jul 2024 – Sep 2024",
     points: [
-      "Built web applications using MongoDB, Express.js, React.js, and Node.js, implementing REST APIs and interactive UI components.",
-      "Designed database schemas and optimized queries to enhance performance and ensure data reliability.",
+      "Built MERN stack web applications with REST APIs and interactive user interfaces.",
+      "Designed efficient database schemas and optimized queries for performance and reliability.",
     ],
   },
   {
@@ -266,8 +266,8 @@ const experiences = [
     iconBg: "#E6DEDD",
     date: "Jul 2023 – Aug 2023",
     points: [
-      "Built responsive React Native UI components and integrated APIs under guidance, gaining foundational mobile development skills.",
-      "Assisted in identifying and fixing UI/performance issues, contributing to overall app stability.",
+      "Built mobile applications using React Native with API integrations.",
+      "Resolved UI and performance issues to improve app stability.",
     ],
   },
 ];
